@@ -20,15 +20,16 @@
         <h2 class="text-uppercase pt-5">Språk vi pratar</h2>
         <ScrollingCardComponent/>
     </section>
-<!-- Map Section -->
-    <section>
-        
+<!-- Faq Section -->
+    <section id="faq">
+        <h2 class="py-5">Vanliga Frågor</h2>
+        <FaqComponent/>
     </section>
 </template>
 
 <script>
 import CardComponent from './CardComponent.vue';
-import GoogleMap from './GoogleMap.vue';
+import FaqComponent from './FaqComponent.vue';
 import ScrollingCardComponent from './ScrollingCardComponent.vue';
 
 export default {
@@ -41,7 +42,7 @@ export default {
     components: {
         CardComponent,
         ScrollingCardComponent,
-        GoogleMap
+        FaqComponent
     },
 };
 </script>
@@ -52,6 +53,13 @@ export default {
 /* Font Family */
 #general-content, #concept-statement, #treatments-content, #spoken-languages {
     font-family: $secondaryfont;
+}
+
+/* Gradient-Background */
+#treatments-content, #faq {
+    background: $backgroundGradient;
+    width: 100%;
+    height: auto;
 }
 
 /* General content statement section */
@@ -99,13 +107,6 @@ export default {
 }
 
 /* Treatments Section with Cards */
-#treatments-content{
-    background: $backgroundGradient;
-    width: 100%;
-    height: auto;
-}
-
-// Card Text
 h2 {
         text-align: center;
         text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
