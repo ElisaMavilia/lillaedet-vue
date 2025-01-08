@@ -1,0 +1,115 @@
+<template>
+    <section id="cards-section" class="card-container" ref="cardSection">
+      <div
+        v-for="(card, index) in cards"
+        :key="index"
+        :class="['card', card.animationClass]"
+        ref="cardElements"
+      >
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.content }}</p>
+      </div>
+    </section>
+  </template>
+  
+  
+  <script>
+export default {
+  data() {
+    return {
+      cards: [
+        { title: "Svenska", content: "Välkommen!", animationClass: "" },
+        { title: "Engelska", content: "Welcome!", animationClass: "" },
+        { title: "Persiska", content: "خوش آمدید", animationClass: "" },
+        { title: "Italienska", content: "Benvenuti!", animationClass: "" },
+      ],
+      hasSectionEntered: false, // Flag to trigger animation only once
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const section = this.$refs.cardSection;
+
+      // Ensure section reference is valid
+      if (!section) return;
+
+      // Check if the section is in the viewport
+      const rect = section.getBoundingClientRect();
+      if (!this.hasSectionEntered && rect.top < window.innerHeight && rect.bottom > 0) {
+        this.hasSectionEntered = true; // Prevent re-triggering
+        this.animateCards();
+      }
+    },
+    animateCards() {
+      // Ensure refs is an array
+      const cardElements = Array.isArray(this.$refs.cardElements)
+        ? this.$refs.cardElements
+        : [this.$refs.cardElements];
+
+      // Iterate over cards and apply animations
+      cardElements.forEach((card, index) => {
+        setTimeout(() => {
+          if (index % 2 === 0) {
+            this.cards[index].animationClass = "slide-in-left";
+          } else {
+            this.cards[index].animationClass = "slide-in-right";
+          }
+        }, index * 150); // Stagger the animations
+      });
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 80px 0;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: $light_pink;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Start hidden */
+  transform: translateX(0); /* Start position */
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+}
+
+/* Slide-in animations */
+.slide-in-left {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Return to default position */
+}
+
+.slide-in-right {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Return to default position */
+}
+
+/* Initial states for cards before animation */
+.card:not(.slide-in-left):not(.slide-in-right):nth-child(odd) {
+  transform: translateX(-150%); /* Slide in from the left */
+}
+
+.card:not(.slide-in-left):not(.slide-in-right):nth-child(even) {
+  transform: translateX(150%); /* Slide in from the right */
+}
+</style>
+

@@ -1,0 +1,137 @@
+<template>
+ <!-- Statement Section -->
+    <section id="general-content" class="d-flex">
+        <div class="image-container container">
+            <img id="statement-image" src="../assets/img/treatment.jpg" alt="Dental care Treatment">
+        </div>
+        <div class="general-text-content">
+            <p id="concept-statement" class="">
+                Högkvalitativ tandvård och <br> personlig service i en <br> varm och välkomnande miljö
+            </p>
+        </div>
+    </section>
+<!-- Treatments Section -->
+    <section id="treatments-content">
+        <h2 class="text-uppercase py-5">Våra Behandlingar</h2>
+        <CardComponent/>
+    </section>
+<!-- Spoken Languages Section -->
+    <section class="container text-center" id="spoken-languages">
+        <h2 class="text-uppercase pt-5">Språk vi pratar</h2>
+        <ScrollingCardComponent/>
+    </section>
+<!-- Map Section -->
+    <section>
+        <GoogleMap/>    
+    </section>
+</template>
+
+<script>
+import CardComponent from './CardComponent.vue';
+import GoogleMap from './GoogleMap.vue';
+import ScrollingCardComponent from './ScrollingCardComponent.vue';
+
+export default {
+    name: 'MainComponent',
+    data() {
+        return {
+            
+        };
+    },
+    components: {
+        CardComponent,
+        ScrollingCardComponent,
+        GoogleMap
+    },
+};
+</script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+
+/* Font Family */
+#general-content, #concept-statement, #treatments-content, #spoken-languages {
+    font-family: $secondaryfont;
+}
+
+/* General content statement section */
+#general-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 40px; 
+    z-index: 0; 
+    width: 100%;
+    height: auto;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 180px;
+}
+
+#statement-image {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    margin: 50px 0 50px 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+// Text
+.general-text-content {
+    flex: 1; // Proportional text width
+    padding: 20px;
+    text-align: left; 
+}
+
+#concept-statement {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #333;
+    text-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* Treatments Section with Cards */
+#treatments-content{
+    background: $backgroundGradient;
+    width: 100%;
+    height: auto;
+}
+
+// Card Text
+h2 {
+        text-align: center;
+        text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 400;
+    }
+
+/* Spoken Languages Section */
+#spoken-languages {
+    width: 100%;
+    height: auto;
+
+    p, li {
+        color: #333;
+        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    li {
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+}
+</style>
+
+
+
