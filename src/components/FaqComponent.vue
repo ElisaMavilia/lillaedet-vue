@@ -134,8 +134,4 @@ details[open] .control-icon-close {
 details[open] .control-icon-expand {
   display: none;
 }
-
-
-
-
 </style>

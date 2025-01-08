@@ -25,13 +25,26 @@
             </div>
         </div>
     </section>
+    <section>
+       <WaveComponent/>
+    </section>
 </template>
 
 <script>
+import WaveComponent from './WaveComponent.vue';
+
 export default {
-    name: 'HeroComponent'
+    name: 'HeroComponent',
+    data() {
+        return {
+        };
+    },
+    components: {
+        WaveComponent
+    }
 };
 </script>
+
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
@@ -62,7 +75,7 @@ body {
 .background-half {
     width: 100%;
     height: 100%;
-    background: $backgroundGradient;
+    background: $light_pink;
     display: flex;
     align-items: center;
     position: relative;
@@ -168,6 +181,7 @@ img {
                 inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
                 inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
+
 </style>
 
 

@@ -22,7 +22,7 @@
     </section>
 <!-- Faq Section -->
     <section id="faq">
-        <h2 class="py-5">Vanliga Frågor</h2>
+        <h2 class="py-5">Vånliga Frågor</h2>
         <FaqComponent/>
     </section>
 </template>
