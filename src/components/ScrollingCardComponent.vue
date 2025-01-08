@@ -4,14 +4,14 @@
         v-for="(card, index) in cards"
         :key="index"
         :class="['card', card.animationClass]"
+        :style="card.title === 'Italienska' ? { paddingTop: '22px' } : {}"
         ref="cardElements"
       >
         <h3>{{ card.title }}</h3>
-        <p>{{ card.content }}</p>
+        <p class="ps-2">{{ card.content }}</p>
       </div>
     </section>
   </template>
-  
   
   <script>
 export default {
@@ -20,8 +20,8 @@ export default {
       cards: [
         { title: "Svenska", content: "Välkommen!", animationClass: "" },
         { title: "Engelska", content: "Welcome!", animationClass: "" },
-        { title: "Persiska", content: "خوش آمدید", animationClass: "" },
-        { title: "Italienska", content: "Benvenuti!", animationClass: "" },
+        { title: "Persiska", content: "!خوش آمدید", animationClass: "" },
+        { title: "Italienska", content: "Benvenuti e Benvenute!", animationClass: "" },
       ],
       hasSectionEntered: false, // Flag to trigger animation only once
     };
