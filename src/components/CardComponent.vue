@@ -3,7 +3,7 @@
         <div id="card-box" class="card">
             <img src="../assets/img/dental-treatment1.png" class="card-img-top" alt="Dental Treatment">
              <p class="card-text text-uppercase">Undersökning</p>
-            <a href="#" class="btn btn1">Mer Info</a>
+            <a href="#" class="btn btn1">Läs mer</a>
         </div>
     </div>
 </template>

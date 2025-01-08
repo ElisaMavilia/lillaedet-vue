@@ -6,15 +6,20 @@
                 <h2 class="ps-5 pt-3">
                     <span class="text-down text-uppercase">Din Tandklinik i Lilla Edet</span>
                 </h2>
-                <!-- Button pastel for booking (Muntra) -->
+            <!-- Button pastel for booking (Muntra) -->
+            <div id="pastel-button-container" class="d-flex align-items-center align-content-center">
                 <div class="frame">
-                    <a href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv" class="btn btn1">Boka Tid</a>
+                    <a href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv" class="btn btn1">Boka Tid Online</a>
+                </div>
+                <div class="frame ms-3">
+                    <a href="tel:+46520657724" class="btn btn2 btn-right">Ring Oss</a>
                 </div>
             </div>
+        </div>
             <!-- Image -->
             <div class="image-container">
                 <img src="../assets/img/equipment5.png" alt="Dental care equipment">
-        </div>
+            </div>
         </div>
     </section>
 </template>
@@ -47,7 +52,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: visible; /* Permette all'immagine di uscire */
+    overflow: visible; // Allow the image to overflow
     z-index: 1;
 }
 
@@ -60,13 +65,14 @@ body {
     position: relative;
 }
 
+// Text
 .text-container {
     display: flex;
     flex: 1;
     text-align: left;
     flex-direction: column;
     align-items: center;
-    z-index: 10; /* Assicura che il testo rimanga sopra */
+    z-index: 10; // Assure that the text is above the image
 }
 
 .text-up {
@@ -85,19 +91,20 @@ body {
     text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
 }
 
+// Image
 .image-container {
     position: absolute;
-    top: 60%; /* Centra verticalmente rispetto alla sezione hero */
-    right: -150px; /* L'immagine esce parzialmente dalla sezione */
+    top: 60%; // Center the image vertically relatively to the Hero 
+    right: -70px; // Modify this value with Media Query
     transform: translateY(-50%);
     z-index: 5;
-    pointer-events: none; /* Assicura che non interferisca con altri contenuti */
+    pointer-events: none; // Assure that the image doesn't interfere with scrolling 
 }
 
 img {
     width: 800px;
     height: auto;
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
 }
 
 
@@ -108,6 +115,7 @@ img {
     align-items: center;
 }
 
+// Pastel Button 
 .btn {
     position: relative;
     padding: 10px 20px;
@@ -133,8 +141,17 @@ img {
     color: #ce9eff;
 }
 
+.btn2 {
+    background-color: #d3b1f5;
+    color: #f2edf7;
+}
+
 .btn:hover {
     color: #fff;
+}
+
+.btn-right:hover {
+    color: $purple_light;
 }
 
 .btn:active {

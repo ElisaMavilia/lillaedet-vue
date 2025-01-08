@@ -22,7 +22,7 @@
     </section>
 <!-- Map Section -->
     <section>
-        <GoogleMap/>    
+        
     </section>
 </template>
 
