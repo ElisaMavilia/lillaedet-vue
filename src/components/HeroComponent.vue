@@ -1,22 +1,25 @@
 <template>
     <section id="hero">
         <div class="background-half d-flex align-items-center h-100">
+            <!-- Text Section -->
             <div class="text-container">
                 <div class="text-up text-uppercase">Lilla Edet Tandläkarcenter</div>
                 <h2 class="ps-5 pt-3">
                     <span class="text-down text-uppercase">Din Tandklinik i Lilla Edet</span>
                 </h2>
-            <!-- Button pastel for booking (Muntra) -->
+            <!-- Buttons Section -->
             <div id="pastel-button-container" class="d-flex align-items-center align-content-center">
+                <!-- Boka Tid Online Button (Muntra)-->
                 <div class="frame">
                     <a href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv" class="btn btn1">Boka Tid Online</a>
                 </div>
+                <!-- Ring Oss Button -->
                 <div class="frame ms-3">
                     <a href="tel:+46520657724" class="btn btn2 btn-right">Ring Oss</a>
                 </div>
             </div>
         </div>
-            <!-- Image -->
+            <!-- Image with overflow to general-content in the MainComponent -->
             <div class="image-container">
                 <img src="../assets/img/equipment5.png" alt="Dental care equipment">
             </div>
@@ -33,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
-// General
+ /* General Customization */
 body {
     margin: 0;
     display: flex;
@@ -65,7 +68,7 @@ body {
     position: relative;
 }
 
-// Text
+/* Text */
 .text-container {
     display: flex;
     flex: 1;
@@ -91,7 +94,7 @@ body {
     text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
 }
 
-// Image
+/* Image */
 .image-container {
     position: absolute;
     top: 60%; // Center the image vertically relatively to the Hero 
@@ -115,7 +118,7 @@ img {
     align-items: center;
 }
 
-// Pastel Button 
+ /* Pastel Button Customization */
 .btn {
     position: relative;
     padding: 10px 20px;
@@ -136,32 +139,35 @@ img {
     text-decoration: none;
 }
 
+// Button Boka Tid Online
 .btn1 {
     background-color: #e8d1ff;
     color: #ce9eff;
 }
 
+// Button Ring Oss
 .btn2 {
     background-color: #d3b1f5;
     color: #f2edf7;
 }
 
+// Hover Boka Tid Online Button
 .btn:hover {
     color: #fff;
 }
 
+// Hover Ring Oss Button
 .btn-right:hover {
     color: $purple_light;
 }
 
-.btn:active {
+// Click effect on buttons
+.btn:active { 
     box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
                 -4px -4px 6px 0 rgba(116, 125, 136, .2),
                 inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
                 inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }
-
-
 </style>
 
 
