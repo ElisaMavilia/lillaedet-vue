@@ -104,7 +104,7 @@ body {
 img {
     width: 800px;
     height: auto;
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
 }
 
 
