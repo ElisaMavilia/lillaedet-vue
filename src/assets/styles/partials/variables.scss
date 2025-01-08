@@ -10,7 +10,7 @@ $pink: #D879F1;
 $purple_basic: #6C4572;
 $purple_light: #81568C;
 $purple_medium: #563958;
-$light_pink: #f4e9f2;
+$light_pink: #fef7fc;
 
 // Color Palette Bordeaux
 $warm_ligth_pink: #e5ccd5;
@@ -24,6 +24,4 @@ $basefont: 'Roboto', sans-serif;
 $secondaryfont: 'Montserrat', sans-serif;
 
 /* Background Styles */
-$backgroundGradient: linear-gradient(to right, white 60%, $warm_ligth_pink);
-
-
+$backgroundGradient: linear-gradient(to right, white 20%, $light_pink);

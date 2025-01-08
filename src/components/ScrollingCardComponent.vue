@@ -75,14 +75,15 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  margin: 80px 0;
+  margin: 50px 0 150px 50px;
 }
 
 .card {
   width: 200px;
   height: 200px;
-  background-color: $light_pink;
+  background-color: white;
   border-radius: 20px;
+  border: 2px solid $purple_basic;
   display: flex;
   flex-direction: column;
   align-items: center;

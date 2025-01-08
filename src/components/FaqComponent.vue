@@ -1,5 +1,5 @@
 <template>
-<section class="pb-5">
+<section id="faq-content" class="pb-5">
     <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
     <svg xmlns="http://www.w3.org/2000/svg">
         <symbol viewBox="0 0 24 24" id="expand-more">
@@ -58,15 +58,21 @@
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
-  
+
+
+#faq-content {
+    margin-right: -0px;
+}
+
 details {
-  width: 75%;
+  width: 900px;
   min-height: 5px;
   max-width: 700px;
   padding: 45px 70px 45px 45px;
   margin: 0 auto;
   position: relative;
   font-size: 22px;
+  background-color: #fff;
   border: 1px solid rgba(0,0,0,.1);
   border-radius: 15px;
   box-sizing: border-box;

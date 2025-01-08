@@ -13,7 +13,6 @@
   </header>
 </template>
 
-
 <script>
 export default {
   name: "HeaderComponent",
@@ -57,7 +56,7 @@ export default {
   height: 80px;
   display: flex;
   align-items: center; 
-  background: $backgroundGradient;
+  background: $light_pink;
 }
 
 nav {

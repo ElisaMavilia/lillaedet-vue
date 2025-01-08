@@ -10,27 +10,37 @@
             </p>
         </div>
     </section>
-<!-- Treatments Section -->
+    <!-- Treatments Section -->
     <section id="treatments-content">
         <h2 class="text-uppercase py-5">Våra Behandlingar</h2>
         <CardComponent/>
     </section>
-<!-- Spoken Languages Section -->
-    <section class="container text-center" id="spoken-languages">
-        <h2 class="text-uppercase pt-5">Språk vi pratar</h2>
-        <ScrollingCardComponent/>
-    </section>
-<!-- Faq Section -->
-    <section id="faq">
-        <h2 class="py-5">Vånliga Frågor</h2>
-        <FaqComponent/>
-    </section>
+    <WaveComponent/>
+<!-- Languages Section -->
+<section class="container text-center pb-5" id="spoken-languages">
+    <h2 class="text-uppercase pt-5">Språk vi pratar</h2>
+    <ScrollingCardComponent />
+</section>
+
+<section id="faq" class="d-flex flex-column">
+    <h2 class="py-5 w-100 text-center">Vånliga Frågor</h2>
+    <div class="faq-content d-flex align-items-center">
+        <div class="faq-image-wrapper">
+            <img id="faq-image" src="../assets/img/faq.png" alt="FAQ Image">
+        </div>
+        <div class="faq-component-wrapper">
+            <FaqComponent />
+        </div>
+    </div>
+  
+</section>
 </template>
 
 <script>
 import CardComponent from './CardComponent.vue';
 import FaqComponent from './FaqComponent.vue';
 import ScrollingCardComponent from './ScrollingCardComponent.vue';
+import WaveComponent from './WaveComponent.vue';
 
 export default {
     name: 'MainComponent',
@@ -42,13 +52,15 @@ export default {
     components: {
         CardComponent,
         ScrollingCardComponent,
-        FaqComponent
+        FaqComponent,
+        WaveComponent
     },
 };
 </script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
+
 
 /* Font Family */
 #general-content, #concept-statement, #treatments-content, #spoken-languages {
@@ -57,9 +69,10 @@ export default {
 
 /* Gradient-Background */
 #treatments-content, #faq {
-    background: $backgroundGradient;
+    background: $light_pink;
     width: 100%;
     height: auto;
+    padding-bottom: 70px;
 }
 
 /* General content statement section */
@@ -132,6 +145,52 @@ h2 {
         padding-bottom: 20px;
     }
 }
+
+/* FAQ Section */
+
+#faq {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+/* FAQ Content Layout */
+.faq-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+/* FAQ Image Wrapper */
+.faq-image-wrapper {
+    position: relative;
+    max-width: 60%; 
+    margin-top: -300px;
+    top: -90px; /* Overlaps into the previous section */
+    left: -400px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* FAQ Image Styles */
+#faq-image {
+    width: 1150px;
+    height: auto;
+    border-radius: 20px;
+    transform: rotate(-12deg); // Tilt the image slightly to the left 
+    position: relative;
+    z-index: 1; // Ensure it stays above other elements */
+}
+
+/*Wave Component Styling */
+#faq WaveComponent {
+    position: relative;
+    z-index: 1;
+}
+
 </style>
 
 
