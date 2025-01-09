@@ -46,6 +46,24 @@
     </summary>
     <p>Only your imagination my friend. Go forth!</p>
     </details>
+
+    <details>
+    <summary>
+        Är ni anslutna till Försäkringskassan?    
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Only your imagination my friend. Go forth!</p>
+    </details>
+
+    <details>
+    <summary>
+        Är ni anslutna till Försäkringskassan?    
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    </summary>
+    <p>Only your imagination my friend. Go forth!</p>
+    </details>
 </section>    
    
     </template>
@@ -61,17 +79,18 @@
 
 
 #faq-content {
-    margin-right: -0px;
+    margin-right: 100px;
+    margin-top: 50px;
 }
 
 details {
   width: 900px;
   min-height: 5px;
   max-width: 700px;
-  padding: 45px 70px 45px 45px;
+  padding: 30px 70px 25px 45px;
   margin: 0 auto;
   position: relative;
-  font-size: 22px;
+  font-size: 1.2rem;
   background-color: #fff;
   border: 1px solid rgba(0,0,0,.1);
   border-radius: 15px;

@@ -15,24 +15,18 @@
         <h2 class="text-uppercase py-5">Våra Behandlingar</h2>
         <CardComponent/>
     </section>
-    <WaveComponent/>
 <!-- Languages Section -->
-<section class="container text-center pb-5" id="spoken-languages">
-    <h2 class="text-uppercase pt-5">Språk vi pratar</h2>
+<section class="container text-center py-5" id="spoken-languages">
+    <h2 class="text-uppercase pt-5 text-center">Språk vi pratar</h2>
     <ScrollingCardComponent />
 </section>
-
+<!-- Faq Section -->
 <section id="faq" class="d-flex flex-column">
-    <h2 class="py-5 w-100 text-center">Vånliga Frågor</h2>
-    <div class="faq-content d-flex align-items-center">
-        <div class="faq-image-wrapper">
-            <img id="faq-image" src="../assets/img/faq.png" alt="FAQ Image">
-        </div>
-        <div class="faq-component-wrapper">
-            <FaqComponent />
-        </div>
-    </div>
-  
+    <h2 class="py-5 w-100 text-center text-uppercase">Tandläkaren svarar</h2>
+    <div class="container faq-content d-flex">
+        <img id="faq-image" src="../assets/img/nima.png" alt="FAQ Image">
+        <FaqComponent />
+    </div>  
 </section>
 </template>
 
@@ -147,50 +141,37 @@ h2 {
 }
 
 /* FAQ Section */
-
 #faq {
     width: 100%;
-    height: auto;
-    position: relative;
+    background-color: $shocking_purple;
 }
 
-/* FAQ Content Layout */
+//FAQ Content Layout 
 .faq-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    display: flex; 
+    align-items: flex-start;
+    justify-content: space-between; 
+    gap: 20px; 
     width: 100%;
     padding: 20px;
-    position: relative;
+   
+    min-height: 500px; 
 }
 
-/* FAQ Image Wrapper */
-.faq-image-wrapper {
-    position: relative;
-    max-width: 60%; 
-    margin-top: -300px;
-    top: -90px; /* Overlaps into the previous section */
-    left: -400px;
-    z-index: 2;
-    overflow: hidden;
-}
-
-/* FAQ Image Styles */
-#faq-image {
-    width: 1150px;
+//FAQ Image
+ #faq-image {
+    width: 400px; 
     height: auto;
-    border-radius: 20px;
-    transform: rotate(-12deg); // Tilt the image slightly to the left 
-    position: relative;
-    z-index: 1; // Ensure it stays above other elements */
+    transform: translateY(65px); // Move the image down
+    flex-shrink: 0; // Avoid image shrinking
 }
 
-/*Wave Component Styling */
-#faq WaveComponent {
-    position: relative;
-    z-index: 1;
+//FAQ Component Styles 
+.faq-content FaqComponent {
+    flex: 1; 
+    overflow: auto; 
 }
-
 </style>
 
 
