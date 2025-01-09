@@ -16,7 +16,7 @@
         <CardComponent/>
     </section>
 <!-- Languages Section -->
-<section class="container text-center py-5" id="spoken-languages">
+<section class="container text-center" id="spoken-languages">
     <h2 class="text-uppercase pt-5 text-center">Språk vi pratar</h2>
     <ScrollingCardComponent />
 </section>
