@@ -96,6 +96,7 @@ details {
   border-radius: 15px;
   box-sizing: border-box;
   transition: all .3s;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
 }
 
 details + details {

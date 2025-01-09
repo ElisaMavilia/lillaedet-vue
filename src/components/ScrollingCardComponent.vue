@@ -83,7 +83,6 @@ export default {
   height: 200px;
   background-color: white;
   border-radius: 20px;
-  border: 2px solid $purple_basic;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,6 +90,7 @@ export default {
   opacity: 0; /* Start hidden */
   transform: translateX(0); /* Start position */
   transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
 }
 
 /* Slide-in animations */

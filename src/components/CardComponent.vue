@@ -33,7 +33,7 @@
     height: 300px;
     margin: 0; 
     border-radius: 20px;
-    border: 2px solid $purple_basic;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
     display: flex;
     flex-direction: column;
     align-items: center;
