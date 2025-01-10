@@ -1,0 +1,133 @@
+<template>
+    <div id="comparison">
+      <figure>
+        <div id="divisor" :style="{ width: divisorWidth }"></div>
+      </figure>
+      <input 
+        type="range" 
+        min="0" 
+        max="100" 
+        v-model="sliderValue" 
+        @input="moveDivisor"
+      />
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'BeforeAfterComponent',
+    data() {
+      return {
+        sliderValue: 50, // valore iniziale dello slider
+      };
+    },
+    computed: {
+      divisorWidth() {
+        return `${this.sliderValue}%`; // Imposta la larghezza in percentuale
+      }
+    },
+    methods: {
+      moveDivisor() {
+        // Eventuale logica aggiuntiva quando lo slider viene spostato
+        console.log(`Divisor width: ${this.divisorWidth}`);
+      }
+    }
+  };
+  </script>
+  
+  <style lang="scss" scoped>
+  @use '../assets/styles/partials/variables' as *;
+  
+  div#comparison { 
+    width: 25vw;
+    height: 25vw;
+    max-width: 600px;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  div#comparison figure { 
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-before.jpg); 
+    background-size: cover;
+    position: relative;
+    font-size: 0;
+    width: 100%; 
+    height: 100%;
+    margin: 0; 
+  }
+  
+  div#comparison figure > img { 
+    position: relative;
+    width: 100%;
+  }
+  
+  div#comparison figure div { 
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-after.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 50%; 
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    overflow: hidden;
+    bottom: 0;
+    height: 100%;
+  }
+  
+  input[type=range] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    top: -2rem; 
+    left: -2%;
+    background-color: rgba(255,255,255,0.1);
+    width: 102%;
+  }
+  
+  input[type=range]:focus { 
+    outline: none; 
+  }
+  
+  input[type=range]:active { 
+    outline: none;  
+  }
+  
+  input[type=range]::-moz-range-track { 
+    -moz-appearance: none;
+    height: 15px;
+    width: 98%;
+    background-color: rgba(255,255,255,0.1); 
+    position: relative;
+    outline: none;    
+  }
+  
+  input[type=range]::active { 
+    border: none; 
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; 
+    height: 15px;   
+    background: #fff;
+    border-radius: 0;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 20px;
+    height: 15px;
+    background: #fff;
+    border-radius: 0;
+  }   
+  
+  input[type=range]:focus::-webkit-slider-thumb {
+    background: rgba(255,255,255,0.5);
+  }
+  
+  input[type=range]:focus::-moz-range-thumb {
+    background: rgba(255,255,255,0.5);
+  }
+  </style>
+  

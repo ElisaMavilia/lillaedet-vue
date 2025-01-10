@@ -37,11 +37,13 @@
     <div class="wave wave-purple"></div>
     <!-- Galleri -->
     <section id="gallery">
-
+        <p>Vi skapar leenden</p>
+        <BeforeAfterComponent />
     </section>
 </template>
 
 <script>
+import BeforeAfterComponent from './BeforeAfterComponent.vue';
 import CardComponent from './CardComponent.vue';
 import FaqComponent from './FaqComponent.vue';
 import ScrollingCardComponent from './ScrollingCardComponent.vue';
@@ -58,7 +60,8 @@ export default {
         CardComponent,
         ScrollingCardComponent,
         FaqComponent,
-        WaveComponent
+        WaveComponent,
+        BeforeAfterComponent
     },
 };
 </script>
@@ -189,6 +192,14 @@ h2 {
 .faq-content FaqComponent {
     flex: 1; 
     overflow: auto; 
+}
+
+/* Galleri Section */
+#gallery {
+  display: flex;
+  justify-content: space-around; /* Centra orizzontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Assicurati che la sezione abbia un'altezza sufficiente per il centering */
 }
 
 /* Waves */
