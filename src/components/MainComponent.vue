@@ -41,9 +41,8 @@
             <p id="before-after-title">Vi skapar leenden</p>
             <BeforeAfterComponent />
         </div>
-    <!-- White Wave -->
-    <div class="wave wave-white gallery-wave"></div>
     </section>
+   <!--  <FooterComponent /> -->
 </template>
 
 <script>
@@ -65,7 +64,8 @@ export default {
         ScrollingCardComponent,
         FaqComponent,
         WaveComponent,
-        BeforeAfterComponent
+        BeforeAfterComponent,
+        
     },
 };
 </script>
@@ -191,7 +191,8 @@ h2 {
   align-items: center;
   width: 100%;
   height:auto;
-  margin-top: 90px;
+  margin-top: 50px;
+  margin-bottom: 80px;
 }
 
 #before-after-title {
