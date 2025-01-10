@@ -24,6 +24,7 @@
     justify-content: space-between; 
     padding: 20px; 
     width: 100%;
+    cursor: pointer;
 }
 
 #card-box {

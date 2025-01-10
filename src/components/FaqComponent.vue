@@ -81,6 +81,7 @@
 #faq-content {
     margin-right: 100px;
     margin-top: 50px;
+    cursor: pointer;
 }
 
 details {
@@ -136,6 +137,7 @@ summary:focus::after {
   top: 0;
   left: 0;
   box-shadow: 0 0 0 1px $purple_light;
+  border-radius: 15px;
 }
 
 summary::-webkit-details-marker {
