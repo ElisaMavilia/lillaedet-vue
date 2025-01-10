@@ -39,8 +39,8 @@
   @use '../assets/styles/partials/variables' as *;
   
   div#comparison { 
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
     max-width: 600px;
     max-height: 600px;
     overflow: hidden;

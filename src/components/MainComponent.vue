@@ -37,8 +37,12 @@
     <div class="wave wave-purple"></div>
     <!-- Galleri -->
     <section id="gallery">
-        <p>Vi skapar leenden</p>
-        <BeforeAfterComponent />
+        <div id="before-after" class="container">
+            <p id="before-after-title">Vi skapar leenden</p>
+            <BeforeAfterComponent />
+        </div>
+    <!-- White Wave -->
+    <div class="wave wave-white gallery-wave"></div>
     </section>
 </template>
 
@@ -71,7 +75,7 @@ export default {
 
 
 /* Font Family */
-#general-content, #concept-statement, #treatments-content, #spoken-languages {
+#general-content, #concept-statement, #treatments-content, #spoken-languages, #before-after-title {
     font-family: $secondaryfont;
 }
 
@@ -142,20 +146,6 @@ h2 {
 #spoken-languages {
     width: 100%;
     height: auto;
-
-    p, li {
-        color: #333;
-        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    p {
-        font-size: 1.5rem;
-    }
-
-    li {
-        font-size: 2rem;
-        padding-bottom: 20px;
-    }
 }
 
 /* FAQ Section */
@@ -195,11 +185,19 @@ h2 {
 }
 
 /* Galleri Section */
-#gallery {
+#before-after {
   display: flex;
-  justify-content: space-around; /* Centra orizzontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 100vh; /* Assicurati che la sezione abbia un'altezza sufficiente per il centering */
+  justify-content: space-around; 
+  align-items: center;
+  width: 100%;
+  height:auto;
+  margin-top: 90px;
+}
+
+#before-after-title {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Waves */
@@ -221,6 +219,7 @@ h2 {
     background: white;
     margin-bottom: -150px;
 }
+
 </style>
 
 
