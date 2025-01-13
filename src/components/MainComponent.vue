@@ -226,6 +226,11 @@ h2 {
     margin-bottom: -150px;
 }
 
+/* Footer */
+#footer {
+  width: 100%;
+  height: auto;
+}
 </style>
 
 

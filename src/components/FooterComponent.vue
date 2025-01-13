@@ -1,6 +1,6 @@
 <template>
     <div id="footer-container-up">
-      <div id="footer-content" class="container d-flex justify-content-around align-items-center align-content-center flex-wrap">
+      <div id="footer-content" class="container d-flex justify-content-around align-content-center flex-wrap">
         <div id="opening-hours">
           <h4 class="text-uppercase">Öppettider</h4>
           <table>
@@ -11,12 +11,45 @@
           </table>
         </div>
         <div id="address">
-          <h4 class="text-uppercase">Adress</h4>
+          <h4 class="text-uppercase">Address</h4>
+          <div>Majorsgatan 3A</div>
+          <div class="pt-2">46330 Lilla Edet</div>
         </div>
         <div id="contact-info">
           <h4 class="text-uppercase">Kontakta Oss</h4>
+          <div>Telefon: 0520 65 77 244</div>
+          <div class="pt-2">email: info@lillaedetandlakarcenter.se</div>
         </div>
       </div>
+    </div>
+    <div id="footer-container-down">
+        <div class="container d-flex justify-content-center align-content-around flex-wrap">
+            <a 
+            href="https://www.facebook.com/profile.php?id=61564619731548&name=xhp_nt__fb__action__open_user&_rdr" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Facebook"
+        >
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a 
+            href="https://www.instagram.com/lilla_edet_tandlakarcenter/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Instagram"
+        >
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a 
+            href="https://www.linkedin.com/company/lilla-edet-tandl%C3%A4karcenter/posts/?feedView=allm" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        </div>
+        
     </div>
   </template>
   
@@ -43,14 +76,13 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
-#footer-container-up {
+#footer-container-up, #footer-container-down {
     background-color: $footer_primary;
     width: 100%;
-    height: 400px;
     color: white;
    
     #footer-content {
-        padding: 60px;
+        padding: 90px;
     }
 
     h4 {
@@ -61,6 +93,20 @@ export default {
     .opening-time {
         padding-left: 20px;
     }
+}
+
+#footer-container-up {
+   height: 400px;
+}
+
+#footer-container-down {
+    height: 100px;
+}
+
+.fa-brands {
+    font-size: 1.5rem;
+    padding-right: 80px;
+    color: #f9fafa;
 }
 
 </style>
