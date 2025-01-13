@@ -42,13 +42,17 @@
             <BeforeAfterComponent />
         </div>
     </section>
-   <!--  <FooterComponent /> -->
+   <!-- Footer -->
+     <section id="footer">
+        <FooterComponent />
+     </section>
 </template>
 
 <script>
 import BeforeAfterComponent from './BeforeAfterComponent.vue';
 import CardComponent from './CardComponent.vue';
 import FaqComponent from './FaqComponent.vue';
+import FooterComponent from './FooterComponent.vue';
 import ScrollingCardComponent from './ScrollingCardComponent.vue';
 import WaveComponent from './WaveComponent.vue';
 
@@ -65,6 +69,7 @@ export default {
         FaqComponent,
         WaveComponent,
         BeforeAfterComponent,
+        FooterComponent
         
     },
 };

@@ -58,7 +58,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1; 
-  pointer-events: none; // Assure that the text doesn't interfere with scrolling
+  pointer-events: none; // Assures that the text doesn't interfere with scrolling
   color: rgb(103, 96, 96);
   padding: 10px 20px;
   font-size: 1rem;
