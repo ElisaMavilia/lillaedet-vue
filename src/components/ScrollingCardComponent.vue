@@ -75,7 +75,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  margin: 50px 0 150px 50px;
+  margin: 100px 0 150px 50px;
 }
 
 .card {

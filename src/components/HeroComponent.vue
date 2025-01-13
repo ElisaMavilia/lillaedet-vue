@@ -14,7 +14,7 @@
               <a
                 href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv"
                 class="btn btn1"
-                :class="{'sticky-btn': isScrolled}"
+                :class="{'fixed-btn': isScrolled}"
               >
                 Boka Tid Online
               </a>
@@ -156,10 +156,11 @@
     justify-content: flex-start; 
   }
   
-  .sticky-btn {
+  // Position fixed Boka tid button
+  .fixed-btn {
   position: fixed !important; 
   bottom: 30px !important; 
-  right: 50px !important; 
+  right: 40px !important; 
   z-index: 99999 !important;
   background-color: #e8d1ff;
   color: #ce9eff;
