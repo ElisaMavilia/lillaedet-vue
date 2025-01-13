@@ -53,7 +53,6 @@
 import BeforeAfterComponent from '../components/BeforeAfterComponent.vue';
    import CardComponent from '../components/CardComponent.vue';
    import FaqComponent from '../components/FaqComponent.vue';
-   import FooterComponent from '../components/FooterComponent.vue';
    import ScrollingCardComponent from '../components/ScrollingCardComponent.vue';
    import WaveComponent from '../components/WaveComponent.vue';
    

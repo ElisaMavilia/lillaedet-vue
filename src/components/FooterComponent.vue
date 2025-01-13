@@ -81,7 +81,7 @@ export default {
     color: white;
    
     #footer-content {
-        padding: 90px;
+        padding: 90px; 
     }
 
     h4 {

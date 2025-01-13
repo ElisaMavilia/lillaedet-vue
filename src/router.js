@@ -10,20 +10,18 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomePageComponent, // Mostra HeroComponent nella home
+      component: HomePageComponent, 
     },
     {
       path: '/about-us',
       name: 'about-us',
-      component: AboutUsComponent, // Mostra AboutUsComponent nella pagina "About Us"
+      component: AboutUsComponent, 
     },
     {
       path: '/main',
       name: 'main',
-      component: MainComponent, // Mostra MainComponent in una pagina separata
+      component: MainComponent,
     },
-
-    
   ],
 });
 

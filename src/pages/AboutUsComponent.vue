@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div id="about-us">
       <h1>About Us</h1>
-      <p>Welcome to the About Us page!</p>
+      <p> Hello About Us page!</p>
+      
     </div>
   </template>
   
@@ -11,7 +12,12 @@
   };
   </script>
   
-  <style scoped>
-  /* Aggiungi il tuo stile qui */
+  <style lang="scss" scoped>
+   @use '../assets/styles/partials/variables' as *;
+
+   #about-us {
+    margin-top: 200px;
+   }
+   
   </style>
   
