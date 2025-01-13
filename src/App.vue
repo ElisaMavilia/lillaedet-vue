@@ -21,7 +21,7 @@ export default {
     HeaderComponent,
     HeroComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
   },
   data() {
     return {
