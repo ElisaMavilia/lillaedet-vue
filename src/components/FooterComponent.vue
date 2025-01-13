@@ -12,13 +12,13 @@
         </div>
         <div id="address">
           <h4 class="text-uppercase">Address</h4>
-          <div>Majorsgatan 3A</div>
+          <div>Majorsgatan 3A,</div>
           <div class="pt-2">46330 Lilla Edet</div>
         </div>
         <div id="contact-info">
           <h4 class="text-uppercase">Kontakta Oss</h4>
           <div>Telefon: 0520 65 77 244</div>
-          <div class="pt-2">email: info@lillaedetandlakarcenter.se</div>
+          <div class="pt-2">e-mail: info@lillaedetandlakarcenter.se</div>
         </div>
       </div>
     </div>
@@ -72,7 +72,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
@@ -88,6 +87,7 @@ export default {
     h4 {
         font-weight: 600;
         font-size: 1.3rem;
+        padding-bottom: 10px;
     }
 
     .opening-time {
