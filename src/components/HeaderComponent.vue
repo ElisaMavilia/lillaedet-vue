@@ -50,7 +50,6 @@ export default {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: white;
   z-index: 3000;
   padding: 0; 
   height: 80px;

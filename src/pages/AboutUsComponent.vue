@@ -1,6 +1,6 @@
 <template>
     <div id="about-us">
-      <h2 class="text-center text-uppercase text-general">Om oss</h2>
+      <h1 class="text-center text-uppercase text-general">Om oss</h1>
       <section class="container d-flex justify-content-around align-items-center">
         <img src="../assets/img/nima.png" alt="Nimas bild">
         <div class="text-container flex-direction-column">
@@ -26,8 +26,12 @@
   </template>
   
   <script>
+
   export default {
     name: 'AboutUsComponent',
+    components: {
+       
+    }
   };
   </script>
   
@@ -35,11 +39,14 @@
    @use '../assets/styles/partials/variables' as *;
 
    #about-us {
-    margin-top: 200px;
+    width: 100%;
+    background-color: $light_pink;
+   /*  margin-top: 200px; */
+
    }
 
    img {
-    margin: 50px 0 50px;
+    margin: 0 0 50px;
     width: 400px;
     height: auto;
    }
@@ -48,9 +55,17 @@
     margin-left: -70px;
    }
 
+   h1 {
+    padding-top: 150px;
+   }
+
    h2, p {
-    padding: 0 200px;
     color: $fadedFont;
+    padding-left: 140px;
+   }
+
+   h2 {
+    padding-top: 100px;
    }
 
    p {
