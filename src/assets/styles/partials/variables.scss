@@ -26,9 +26,18 @@ $box_color: #bfb4be;
 /* Font Styles */
 $basefont: 'Roboto', sans-serif;
 $secondaryfont: 'Montserrat', sans-serif;
+$fadedFont:  #6e6969;
 
 /* Background Styles */
 $backgroundGradient: linear-gradient(to right, white 20%, $light_pink);
 
 /* Footer */
 $footer_primary: #291a29;
+
+.text-general {
+        font-size: 3rem;
+        font-weight: 400;
+        font-family: $secondaryfont;
+        color: #6e6969;
+        text-shadow: 6px 6px 9px rgba(0, 0, 0, 0.3);
+}

@@ -232,6 +232,7 @@ import BeforeAfterComponent from '../components/BeforeAfterComponent.vue';
      width: 100%;
      height: auto;
    }
+
    </style>
    
    
