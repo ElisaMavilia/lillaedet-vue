@@ -18,7 +18,7 @@ const router = createRouter({
       component: AboutUsComponent,
     },
     {
-      path: "/treatments/:slug",
+      path: "/behandlingar/:slug",
       name: "treatment-detail",
       component: TreatmentsDetailComponent,
     },

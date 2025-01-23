@@ -35,7 +35,7 @@ export default {
   methods: {
     getSingleTreatment() {
       axios
-        .get(`${this.store.apiBaseUrl}/treatments/${this.$route.params.slug}`)
+        .get(`${this.store.apiBaseUrl}/behandlingar/${this.$route.params.slug}`)
         .then((res) => {
           console.log("Treatment-detail:", res.data);
           this.treatment = res.data.results;
