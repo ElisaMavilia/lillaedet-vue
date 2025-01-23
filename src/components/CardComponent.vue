@@ -2,24 +2,40 @@
   <!-- {{ treatments }} -->
   <div class="container d-flex card-container">
     <div id="card-box" class="card">
-      <img
-        src="../assets/img/dental-treatment1.png"
-        class="card-img-top"
-        alt="Dental Treatment"
-      />
+      <img :src="getImage" class="card-img-top" alt="Dental Treatment" />
       <p class="card-text text-uppercase">{{ treatment.name }}</p>
-      <a href="#" class="btn btn1">Läs mer</a>
+      <RouterLink
+        :to="{ name: 'treatment-detail', params: { slug: treatment.slug } }"
+        class="btn btn1"
+      >
+        Läs mer
+      </RouterLink>
     </div>
   </div>
 </template>
 
 <script>
+import { store } from "../store";
+
 export default {
   name: "CardComponent",
   props: {
     treatment: {
       type: Object,
       required: true,
+    },
+  },
+  data() {
+    return {
+      store,
+    };
+  },
+
+  computed: {
+    getImage() {
+      return this.treatment.image
+        ? this.store.imgBasePath + this.treatment.image
+        : "treatments/placeholder.png";
     },
   },
 };
