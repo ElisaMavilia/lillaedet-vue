@@ -1,19 +1,19 @@
 <template>
-    <section id="cards-section" class="card-container" ref="cardSection">
-      <div
-        v-for="(card, index) in cards"
-        :key="index"
-        :class="['card', card.animationClass]"
-        :style="card.title === 'Italienska' ? { paddingTop: '22px' } : {}"
-        ref="cardElements"
-      >
-        <h3>{{ card.title }}</h3>
-        <p class="ps-2">{{ card.content }}</p>
-      </div>
-    </section>
-  </template>
-  
-  <script>
+  <section id="cards-section" class="language-card-container" ref="cardSection">
+    <div
+      v-for="(card, index) in cards"
+      :key="index"
+      :class="['card', card.animationClass]"
+      :style="card.title === 'Italienska' ? { paddingTop: '22px' } : {}"
+      ref="cardElements"
+    >
+      <h3>{{ card.title }}</h3>
+      <p class="ps-2">{{ card.content }}</p>
+    </div>
+  </section>
+</template>
+
+<script>
 export default {
   data() {
     return {
@@ -21,7 +21,11 @@ export default {
         { title: "Svenska", content: "Välkommen!", animationClass: "" },
         { title: "Engelska", content: "Welcome!", animationClass: "" },
         { title: "Persiska", content: "!خوش آمدید", animationClass: "" },
-        { title: "Italienska", content: "Benvenuti e Benvenute!", animationClass: "" },
+        {
+          title: "Italienska",
+          content: "Benvenuti e Benvenute!",
+          animationClass: "",
+        },
       ],
       hasSectionEntered: false, // Flag to trigger animation only once
     };
@@ -41,7 +45,11 @@ export default {
 
       // Check if the section is in the viewport
       const rect = section.getBoundingClientRect();
-      if (!this.hasSectionEntered && rect.top < window.innerHeight && rect.bottom > 0) {
+      if (
+        !this.hasSectionEntered &&
+        rect.top < window.innerHeight &&
+        rect.bottom > 0
+      ) {
         this.hasSectionEntered = true; // Prevent re-triggering
         this.animateCards();
       }
@@ -68,9 +76,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/styles/partials/variables' as *;
+@use "../assets/styles/partials/variables" as *;
 
-.card-container {
+.language-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -90,7 +98,7 @@ export default {
   opacity: 0; /* Start hidden */
   transform: translateX(0); /* Start position */
   transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Slide-in animations */
@@ -113,4 +121,3 @@ export default {
   transform: translateX(150%); /* Slide in from the right */
 }
 </style>
-

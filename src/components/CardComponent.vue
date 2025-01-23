@@ -1,13 +1,13 @@
 <template>
-  {{ treatments }}
-  <div class="container card-container">
+  <!-- {{ treatments }} -->
+  <div class="container d-flex card-container">
     <div id="card-box" class="card">
       <img
         src="../assets/img/dental-treatment1.png"
         class="card-img-top"
         alt="Dental Treatment"
       />
-      <p class="card-text text-uppercase">Undersökning</p>
+      <p class="card-text text-uppercase">{{ treatment.name }}</p>
       <a href="#" class="btn btn1">Läs mer</a>
     </div>
   </div>
@@ -17,8 +17,8 @@
 export default {
   name: "CardComponent",
   props: {
-    treatments: {
-      type: Array,
+    treatment: {
+      type: Object,
       required: true,
     },
   },
@@ -29,6 +29,7 @@ export default {
 @use "../assets/styles/partials/variables" as *;
 
 .card-container {
+  flex: 0 1 calc((100% - (20px * 3)) / 4);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -39,10 +40,9 @@ export default {
 }
 
 #card-box {
-  width: calc((100% / 6) - 20px);
   box-sizing: border-box;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: 0;
   border-radius: 20px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);

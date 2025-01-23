@@ -23,7 +23,14 @@
   <!-- Treatments Section -->
   <section id="treatments-content">
     <h2 id="treatments-title" class="text-uppercase">Våra Behandlingar</h2>
-    <CardComponent :treatments="treatments" />
+    <div class="container d-flex justify-content-around flex-wrap">
+      <CardComponent
+        v-if="treatments.length"
+        v-for="treatment in treatments"
+        :key="treatment.id"
+        :treatment="treatment"
+      />
+    </div>
   </section>
   <!-- Purple Wave -->
   <div class="wave wave-purple"></div>
@@ -178,6 +185,11 @@ h2 {
 }
 
 /* Treatments Section with Cards */
+
+.card-container {
+  width: calc((100% / 6) - 20px);
+}
+
 #treatments-title {
   padding: 150px 0 80px 0;
 }
