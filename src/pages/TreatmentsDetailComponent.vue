@@ -1,16 +1,16 @@
 <template>
   <div class="container mt-4">
-    <!-- Controllo se il trattamento è presente -->
+    <!-- Checking if treatment is loaded -->
     <div class="card" v-if="treatment">
-      <!-- Nome del trattamento -->
+      <!-- Treatment name -->
       <h1>{{ treatment.name }}</h1>
-      <!-- Immagine del trattamento -->
+      <!-- Treatment image -->
       <img
         v-if="treatment.image"
         :src="store.imgBasePath + treatment.image"
         :alt="treatment.name"
       />
-      <!-- Descrizione del trattamento -->
+      <!-- Treatment description -->
       <p>{{ treatment.description }}</p>
     </div>
     <!-- Messaggio di caricamento -->
@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       store,
-      treatment: null, // Variabile per il singolo trattamento
+      treatment: null,
     };
   },
   methods: {
@@ -37,20 +37,17 @@ export default {
       axios
         .get(`${this.store.apiBaseUrl}/treatments/${this.$route.params.slug}`)
         .then((res) => {
-          console.log("Dettaglio trattamento:", res.data);
-          this.treatment = res.data.results; // Assicurati che sia un oggetto singolo
+          console.log("Treatment-detail:", res.data);
+          this.treatment = res.data.results;
         })
         .catch((err) => {
-          console.error("Errore nel caricamento del trattamento:", err);
+          console.error("Error fetching treatment:", err);
           if (err.response) {
-            console.error("Risposta dell'errore:", err.response);
+            console.error("Server response:", err.response);
           } else if (err.request) {
-            console.error("Richiesta senza risposta:", err.request);
+            console.error("Request without response:", err.request);
           } else {
-            console.error(
-              "Errore nella configurazione della richiesta:",
-              err.message
-            );
+            console.error("Error configuring request:", err.message);
           }
         });
     },
