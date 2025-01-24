@@ -21,7 +21,7 @@
   </section>
   <div class="wave wave-white"></div>
   <!-- Treatments Section -->
-  <section id="treatments-content">
+  <section id="behandlingar">
     <h2 id="treatments-title" class="text-uppercase">Våra Behandlingar</h2>
     <div class="container d-flex justify-content-around flex-wrap">
       <CardComponent
@@ -119,14 +119,14 @@ export default {
 /* Font Family */
 #general-content,
 #concept-statement,
-#treatments-content,
+#behandlingar,
 #spoken-languages,
 #before-after-title {
   font-family: $secondaryfont;
 }
 
 /* Gradient-Background */
-#treatments-content,
+#behandlingar,
 #faq {
   background: $shocking_purple;
   width: 100%;

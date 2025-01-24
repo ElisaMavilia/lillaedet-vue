@@ -28,7 +28,7 @@ const router = createRouter({
     },
     {
       path: "/behandlingar", //
-      redirect: "/#treatments-content", // redirect to the treatments section in the home page
+      redirect: "/#behandlingar", // redirect to the treatments section in the home page
     },
   ],
 });
