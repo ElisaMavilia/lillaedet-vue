@@ -22,10 +22,13 @@ const router = createRouter({
       name: "treatment-detail",
       component: TreatmentsDetailComponent,
     },
-
     {
-      path: "/:pathMatch(om|om-)", // if the path doesn't match any of the above routes redirect to home
+      path: "/:pathMatch(om|om-)", // if the path doesn't match any of the above routes redirect to om-os
       redirect: "om-oss",
+    },
+    {
+      path: "/behandlingar", //
+      redirect: "/#treatments-content", // redirect to the treatments section in the home page
     },
   ],
 });
