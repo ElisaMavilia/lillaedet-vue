@@ -22,6 +22,10 @@ const router = createRouter({
       name: "treatment-detail",
       component: TreatmentsDetailComponent,
     },
+    {
+      path: "/behandlingar",
+      redirect: "/", // Reindirizza all'homepage
+    },
   ],
 });
 
