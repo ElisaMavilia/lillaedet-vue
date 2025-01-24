@@ -2,45 +2,18 @@
   <!--  {{ employees }} -->
   <div id="about-us">
     <h1 class="text-center text-uppercase text-general">Om oss</h1>
-    <section class="container d-flex justify-content-around align-items-center">
+    <section
+      class="container d-flex justify-content-around align-items-center"
+      v-for="(employee, index) in employees"
+      :key="employee.id"
+      :class="{ 'reverse-layout': index % 2 !== 0 }"
+    >
       <img src="../assets/img/nima.png" alt="Nimas bild" />
       <div class="text-container flex-direction-column">
-        <h2>Nima Farasati</h2>
+        <h2>{{ employee.name }} {{ employee.surname }}</h2>
+        <p>{{ employee.role }}</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-          consectetur. Eligendi, voluptas a laboriosam cum ratione vitae minima
-          architecto fugiat amet quisquam corporis, similique impedit quasi at
-          tenetur cumque, ab perspiciatis quibusdam voluptatibus ex qui
-          molestias sequi sint obcaecati? Molestias quod reprehenderit sint qui
-          consequatur? Ipsa debitis quos explicabo quod dolore ad voluptate
-        </p>
-      </div>
-    </section>
-    <section class="container d-flex justify-content-around align-items-center">
-      <div class="text-container flex-direction-column">
-        <h2>Shadi</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-          consectetur. Eligendi, voluptas a laboriosam cum ratione vitae minima
-          architecto fugiat amet quisquam corporis, similique impedit quasi at
-          tenetur cumque, ab perspiciatis quibusdam voluptatibus ex qui
-          molestias sequi sint obcaecati? Molestias quod reprehenderit sint qui
-          consequatur? Ipsa debitis quos explicabo quod dolore ad voluptate
-        </p>
-      </div>
-      <img src="../assets/img/nima.png" alt="Nimas bild" />
-    </section>
-    <section class="container d-flex justify-content-around align-items-center">
-      <img src="../assets/img/elisa.png" alt="Nimas bild" />
-      <div class="text-container flex-direction-column">
-        <h2>Elisa Mavilia</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-          consectetur. Eligendi, voluptas a laboriosam cum ratione vitae minima
-          architecto fugiat amet quisquam corporis, similique impedit quasi at
-          tenetur cumque, ab perspiciatis quibusdam voluptatibus ex qui
-          molestias sequi sint obcaecati? Molestias quod reprehenderit sint qui
-          consequatur? Ipsa debitis quos explicabo quod dolore ad voluptate
+          {{ employee.notes }}
         </p>
       </div>
     </section>
@@ -55,7 +28,7 @@ export default {
   name: "AboutUsComponent",
   data() {
     return {
-      employees: [], // Array per memorizzare i dipendenti
+      employees: [],
     };
   },
   methods: {
@@ -64,7 +37,7 @@ export default {
         .get(`${store.apiBaseUrl}/om-oss`)
         .then((response) => {
           console.log("Api Response:", response.data);
-          this.employees = response.data.results; // Salva i dati ottenuti nella proprietà employees
+          this.employees = response.data.results;
         })
         .catch((error) => {
           console.error("Error fetching employees:", error);
@@ -120,5 +93,9 @@ h2 {
 
 p {
   font-size: 1.1rem;
+}
+
+.reverse-layout {
+  flex-direction: row-reverse; /* Image on the right, Text on the left */
 }
 </style>
