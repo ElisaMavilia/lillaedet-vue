@@ -13,7 +13,7 @@ const router = createRouter({
       component: HomePageComponent,
     },
     {
-      path: "/about-us",
+      path: "/om-oss",
       name: "about-us",
       component: AboutUsComponent,
     },
