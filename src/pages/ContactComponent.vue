@@ -1,32 +1,63 @@
 <template>
   <div id="contact-container" class="container">
+    <!-- Loader -->
+    <div v-if="loading" class="loader-overlay">
+      <div
+        class="loader d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="my-2">Meddelandet skickas...</div>
+        <div class="loader-image">
+          <img src="../../public/images/tooth-loader.png" alt="loading" />
+        </div>
+      </div>
+    </div>
+
     <h2 class="text-center text-uppercase">Kontakta oss</h2>
     <div class="row">
-      <form @submit.prevent="sendForm()" class="col-12 text-start">
+      <form @submit.prevent="sendForm" class="col-12 text-start">
         <div class="mb-3">
           <input
             type="text"
             class="form-control"
             placeholder="Skriv ditt Namn"
             v-model="name"
+            @input="validateName"
+            :disabled="loading"
           />
+          <span v-if="errors.name" class="text-danger">{{ errors.name }}</span>
         </div>
         <div class="mb-3">
           <input
             type="email"
             class="form-control"
-            placeholder="Skriv ditt Email Address"
+            placeholder="Skriv ditt Email"
             v-model="email"
+            @input="validateEmail"
+            :disabled="loading"
           />
+          <span v-if="errors.email" class="text-danger">{{
+            errors.email
+          }}</span>
         </div>
         <div class="mb-3">
           <textarea
             class="form-control"
             placeholder="Skriv ditt Meddelande"
             v-model="message"
+            @input="validateMessage"
+            :disabled="loading"
           ></textarea>
+          <span v-if="errors.message" class="text-danger">{{
+            errors.message
+          }}</span>
         </div>
-        <button type="submit" class="btn btn1">Skicka</button>
+        <button
+          type="submit"
+          class="btn btn1"
+          :disabled="loading || !isFormValid"
+        >
+          Skicka
+        </button>
       </form>
     </div>
   </div>
@@ -35,6 +66,7 @@
 <script>
 import { store } from "../store";
 import axios from "axios";
+
 export default {
   name: "ContactComponent",
   data() {
@@ -43,28 +75,103 @@ export default {
       name: "",
       email: "",
       message: "",
+      loading: false,
+      errors: {}, // Oggetto per tracciare gli errori
     };
   },
+  computed: {
+    // Proprietà calcolata che restituisce true se il form è valido
+    isFormValid() {
+      return !this.errors.name && !this.errors.email && !this.errors.message;
+    },
+  },
   methods: {
-    sendForm() {
-      const data = {
-        name: this.name,
-        address: this.email,
-        message: this.message,
-      };
-      console.log(data);
-      axios
-        .post(`${this.store.apiBaseUrl}/kontakta-oss`, data)
-        .then((res) => {
+    async sendForm() {
+      console.log("sendForm function called");
+
+      if (this.validateForm()) {
+        console.log("Form is valid, sending data...");
+
+        this.loading = true;
+
+        const data = {
+          name: this.name,
+          address: this.email,
+          message: this.message,
+        };
+
+        console.log("Data to send:", data);
+        try {
+          const res = await axios.post(
+            `${this.store.apiBaseUrl}/kontakta-oss`,
+            data
+          );
           console.log(res.data);
-          this.success = true;
+          this.loading = false;
           this.name = "";
           this.email = "";
           this.message = "";
-        })
-        .then((res) => {})
-        .catch((error) => {})
-        .finally(() => {});
+          this.errors = {}; // Cleans errors
+        } catch (error) {
+          console.error("Error in sending data:", error);
+          this.loading = false; // Hides loader in case of error
+        }
+      } else {
+        console.log("Form validation failed");
+      }
+    },
+
+    validateName() {
+      if (this.name.trim() === "") {
+        this.errors.name = "Detta fält är obligatoriskt.";
+      } else if (this.name.trim().length < 2) {
+        this.errors.name = "Namnet skall vara minst 2 tecken.";
+      } else {
+        this.errors.name = null; // Rimuovi l'errore se valido
+      }
+      console.log("Name validation:", this.errors.name);
+    },
+
+    validateEmail() {
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (this.email.trim() === "") {
+        this.errors.email = "Detta fält är obligatoriskt.";
+      } else if (!regexEmail.test(this.email)) {
+        this.errors.email = "Emailadressen är ogiltig.";
+      } else {
+        this.errors.email = null;
+      }
+      console.log("Email validation:", this.errors.email);
+    },
+
+    validateMessage() {
+      if (this.message.trim() === "") {
+        this.errors.message = "Detta fält är obligatoriskt.";
+      } else {
+        this.errors.message = null;
+      }
+      console.log("Message validation:", this.errors.message);
+    },
+
+    // Funzione di validazione del form globale
+    validateForm() {
+      // Reset degli errori
+      this.errors = {};
+
+      // Chiamata delle funzioni di validazione
+      this.validateName();
+      this.validateEmail();
+      this.validateMessage();
+
+      // Verifica se ci sono errori
+      const formValid = !Object.values(this.errors).some(
+        (error) => error !== null && error !== ""
+      );
+
+      console.log("Validation result:", formValid); // Log per vedere se la validazione passa o meno
+      console.log("Errors:", this.errors); // Log per vedere gli errori nel dettaglio
+
+      return formValid;
     },
   },
 };
@@ -139,16 +246,34 @@ textarea {
   color: #fff;
 }
 
-/* Hover: Ring Oss Button */
-.btn-right:hover {
-  color: $purple_light;
+/* LOADER */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* Click effect on buttons */
-.btn:active {
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+.loader {
+  font-size: 1.5rem;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: $fadedFont;
+}
+
+.loader-image {
+  width: 300px;
+  height: 300px;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
