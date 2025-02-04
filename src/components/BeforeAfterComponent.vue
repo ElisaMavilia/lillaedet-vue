@@ -2,49 +2,48 @@
   <div id="comparison" class="before-after-wrapper">
     <!-- Overlay di testo -->
     <div class="overlay-text">
-      <p>Dra pinnen för före och efter </p>
+      <p>Dra pinnen för före och efter</p>
     </div>
 
     <!-- Before-After Slider -->
     <figure>
       <div id="divisor" :style="{ width: divisorWidth }"></div>
     </figure>
-    <input 
-      type="range" 
-      min="0" 
-      max="100" 
-      v-model="sliderValue" 
+    <input
+      type="range"
+      min="0"
+      max="100"
+      v-model="sliderValue"
       @input="moveDivisor"
     />
   </div>
 </template>
 
-  
-  <script>
-  export default {
-    name: 'BeforeAfterComponent',
-    data() {
-      return {
-        sliderValue: 50, // valore iniziale dello slider
-      };
+<script>
+export default {
+  name: "BeforeAfterComponent",
+  data() {
+    return {
+      sliderValue: 50, // valore iniziale dello slider
+    };
+  },
+  computed: {
+    divisorWidth() {
+      return `${this.sliderValue}%`; // Imposta la larghezza in percentuale
     },
-    computed: {
-      divisorWidth() {
-        return `${this.sliderValue}%`; // Imposta la larghezza in percentuale
-      }
+  },
+  methods: {
+    moveDivisor() {
+      // Eventuale logica aggiuntiva quando lo slider viene spostato
+      console.log(`Divisor width: ${this.divisorWidth}`);
     },
-    methods: {
-      moveDivisor() {
-        // Eventuale logica aggiuntiva quando lo slider viene spostato
-        console.log(`Divisor width: ${this.divisorWidth}`);
-      }
-    }
-  };
-  </script>
-  
-  <style lang="scss" scoped>
-  @use '../assets/styles/partials/variables' as *;
- 
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@use "../assets/styles/partials/variables" as *;
+
 .before-after-wrapper {
   position: relative;
   display: inline-block;
@@ -57,18 +56,17 @@
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1; 
+  z-index: 1;
   pointer-events: none; // Assures that the text doesn't interfere with scrolling
-  color: rgb(103, 96, 96);
+  color: black;
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap; //Avoids line breaks
-  overflow: hidden; 
+  overflow: hidden;
   text-overflow: ellipsis; //Adds ... if text overflows
 }
-
 
 #comparison {
   width: 20vw;
@@ -81,7 +79,7 @@
 }
 
 #comparison figure {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-before.jpg);
+  background-image: url("../assets/img/before_card.jpg");
   background-size: cover;
   position: relative;
   font-size: 0;
@@ -91,17 +89,17 @@
 }
 
 #comparison figure div {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-after.jpg);
+  background-image: url("../assets/img/after_card.jpeg");
   background-size: cover;
   position: absolute;
-  width: 50%;
+  width: 100%;
   box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  bottom: 0;
+  bottom: 0px;
   height: 100%;
 }
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: relative;
@@ -112,15 +110,15 @@ input[type=range] {
   z-index: 2; /* Lo slider deve stare sopra l'overlay */
 }
 
-input[type=range]:focus {
+input[type="range"]:focus {
   outline: none;
 }
 
-input[type=range]:active {
+input[type="range"]:active {
   outline: none;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   -moz-appearance: none;
   height: 15px;
   width: 98%;
@@ -129,12 +127,12 @@ input[type=range]::-moz-range-track {
   outline: none;
 }
 
-input[type=range]::active {
+input[type="range"]::active {
   border: none;
   outline: none;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 15px;
@@ -142,7 +140,7 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 0;
 }
 
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   -moz-appearance: none;
   width: 20px;
   height: 15px;
@@ -150,13 +148,11 @@ input[type=range]::-moz-range-thumb {
   border-radius: 0;
 }
 
-input[type=range]:focus::-webkit-slider-thumb {
+input[type="range"]:focus::-webkit-slider-thumb {
   background: rgba(255, 255, 255, 0.5);
 }
 
-input[type=range]:focus::-moz-range-thumb {
+input[type="range"]:focus::-moz-range-thumb {
   background: rgba(255, 255, 255, 0.5);
 }
 </style>
-
-  
