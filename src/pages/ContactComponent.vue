@@ -66,6 +66,7 @@
 <script>
 import { store } from "../store";
 import axios from "axios";
+import DOMPurify from "dompurify";
 
 export default {
   name: "ContactComponent",
@@ -106,15 +107,25 @@ export default {
             `${this.store.apiBaseUrl}/kontakta-oss`,
             data
           );
+
+          // Pulisci il nome con DOMPurify
+          const sanitizedName = DOMPurify.sanitize(this.name); // Sanitize the name
+          sessionStorage.setItem("userName", sanitizedName); // Save the sanitized name
+
           console.log(res.data);
           this.loading = false;
+
+          // Reset del form
           this.name = "";
           this.email = "";
           this.message = "";
-          this.errors = {}; // Cleans errors
+          this.errors = {}; // Pulisce gli errori
+
+          // Redirect to the Thank you page
+          this.$router.push({ name: "TackComponent" });
         } catch (error) {
           console.error("Error in sending data:", error);
-          this.loading = false; // Hides loader in case of error
+          this.loading = false;
         }
       } else {
         console.log("Form validation failed");
@@ -122,10 +133,14 @@ export default {
     },
 
     validateName() {
+      const regexName = /^[a-zA-Z\s']+$/; // Permette solo lettere, spazi e apostrofi
       if (this.name.trim() === "") {
-        this.errors.name = "Detta fält är obligatoriskt.";
+        this.errors.name = "Detta fält är obligatoriskt";
       } else if (this.name.trim().length < 2) {
-        this.errors.name = "Namnet skall vara minst 2 tecken.";
+        this.errors.name = "Namnet skall vara minst 2 tecken";
+      } else if (!regexName.test(this.name)) {
+        this.errors.name =
+          "Namnet får endast innehålla bokstäver och mellanslag";
       } else {
         this.errors.name = null; // Rimuovi l'errore se valido
       }
@@ -137,7 +152,7 @@ export default {
       if (this.email.trim() === "") {
         this.errors.email = "Detta fält är obligatoriskt.";
       } else if (!regexEmail.test(this.email)) {
-        this.errors.email = "Emailadressen är ogiltig.";
+        this.errors.email = "Email adressen är ogiltig.";
       } else {
         this.errors.email = null;
       }
