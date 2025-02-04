@@ -1,9 +1,17 @@
 <template>
-  <div class="container wrapper">
+  <div class="wrapper">
     <div class="box">
-      <h2 v-if="contacts.length > 0">
-        Hej {{ contacts[0].name }}! Tack för ditt email!
-      </h2>
+      <i class="fa-regular fa-envelope pb-4"></i>
+      <h2 v-if="contacts.length > 0">Hej {{ contacts[0].name }}!</h2>
+      <div class="meddelande-text-up">Tack för ditt meddelande.</div>
+      <div class="meddelande-text-under">
+        Vi har tagit emot ditt meddelande och vi kommer att svara snart.
+      </div>
+      <div class="text-redirect countdown text-center">
+        Du kommer att vara omredigerat till hemsidan om
+        {{ countdown }} sekunder. <br />
+        Gå till <a href="/">hemsidan</a>
+      </div>
     </div>
   </div>
 </template>
@@ -23,7 +31,7 @@ export default {
   },
   mounted() {
     this.GetContactEl();
-    /*  this.startCountdown();  */ // Se vuoi il countdown
+    this.startCountdown();
   },
   methods: {
     GetContactEl() {
@@ -32,7 +40,7 @@ export default {
         .then((response) => {
           console.log("Api Response:", response.data);
           if (response.data.success && response.data.result) {
-            this.contacts = [response.data.result]; // Converte in array
+            this.contacts = [response.data.result];
           }
         })
         .catch((error) => {
@@ -40,7 +48,7 @@ export default {
         });
     },
 
-    /* startCountdown() {
+    startCountdown() {
       const interval = setInterval(() => {
         if (this.countdown > 0) {
           this.countdown--;
@@ -49,7 +57,7 @@ export default {
           window.location.href = "/";
         }
       }, 1000);
-    }, */
+    },
   },
 };
 </script>
@@ -58,17 +66,46 @@ export default {
 @use "../assets/styles/partials/variables" as *;
 
 .wrapper {
-  margin-top: 200px;
-  margin-bottom: 100px;
+  background: $light_pink; /* Impostato come background */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Per centrare verticalmente */
 }
 
 .box {
-  width: 800px;
-  height: 800px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 800px; /* Limita la larghezza */
+  background-color: white; /* Sfondo bianco */
+  border-radius: 8px; /* Raggio arrotondato */
+  border: 1px solid #ccc; /* Bordo grigio chiaro */
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.fa-envelope {
+  font-size: 100px;
+  color: #b197fc;
+}
+
+.meddelande-text-up {
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+
+.meddelande-text-under {
+  font-size: 1rem;
+  padding-top: 20px;
+}
+
+.text-redirect {
+  font-size: 0.9rem;
+  padding-top: 20px;
+}
+
+a {
+  color: #7850f3;
 }
 </style>
