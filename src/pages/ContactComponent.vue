@@ -126,8 +126,11 @@ export default {
         } catch (error) {
           console.error("Error in sending data:", error);
           this.loading = false;
+
+          this.$router.push({ name: "ErrorPageComponent" }); // Redirect to the error page
         }
       } else {
+        this.$router.push({ name: "ErrorPageComponent" });
         console.log("Form validation failed");
       }
     },
