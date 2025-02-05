@@ -6,6 +6,7 @@
         class="loader d-flex flex-column justify-content-center align-items-center"
       >
         <div class="my-2">Meddelandet skickas...</div>
+        <div>Vänligen uppdatera inte sidan</div>
         <div class="loader-image">
           <img src="../../public/images/tooth-loader.png" alt="loading" />
         </div>
