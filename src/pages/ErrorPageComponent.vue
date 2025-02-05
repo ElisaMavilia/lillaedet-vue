@@ -1,16 +1,16 @@
 <template>
   <div class="wrapper">
     <div class="box">
-      <i class="fa-regular fa-envelope pb-4"></i>
-      <h2 v-if="contacts.length > 0">Hej {{ contacts[0].name }}!</h2>
-      <div class="meddelande-text-up">Tack för ditt meddelande.</div>
-      <div class="meddelande-text-under">
-        Vi har tagit emot ditt meddelande och vi kommer att svara snart.
+      <img src="../assets/img/oh-no.png" alt="Oh-no image" />
+      <h2 class="text-danger">Åjda!</h2>
+      <div class="meddelande-text-up text-danger">
+        Ett fel uppstod och vi kunde inte leverera ditt meddelande.
       </div>
+      <div class="meddelande-text-under">Prova igen om en stund</div>
       <div class="text-redirect countdown text-center">
-        Du kommer att vara omredigerat till hemsidan om
+        Du kommer att vara omredigerat till vara Kontaktsida om
         {{ countdown }} sekunder. <br />
-        Gå direkt till <a href="/">hemsidan</a>
+        Gå direkt till <a href="/kontakta-oss">Kontaktsida</a>
       </div>
     </div>
   </div>
@@ -18,43 +18,24 @@
 
 <script>
 import { store } from "../store";
-import axios from "axios";
-
 export default {
-  name: "TackComponent",
+  name: "ErrorPageComponent",
   data() {
     return {
-      store,
       countdown: 20,
-      contacts: [],
     };
   },
   mounted() {
-    this.GetContactEl();
     this.startCountdown();
   },
   methods: {
-    GetContactEl() {
-      axios
-        .get(`${this.store.apiBaseUrl}/latest-lead`)
-        .then((response) => {
-          console.log("Api Response:", response.data);
-          if (response.data.success && response.data.result) {
-            this.contacts = [response.data.result];
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching latest contact:", error);
-        });
-    },
-
     startCountdown() {
       const interval = setInterval(() => {
         if (this.countdown > 0) {
           this.countdown--;
         } else {
           clearInterval(interval);
-          window.location.href = "/";
+          window.location.href = "/kontakta-oss";
         }
       }, 1000);
     },
@@ -85,11 +66,10 @@ export default {
   text-align: center;
 }
 
-.fa-envelope {
-  font-size: 100px;
-  color: #b197fc;
+img {
+  width: 100px;
+  padding-bottom: 20px;
 }
-
 .meddelande-text-up {
   font-size: 1.5rem;
   padding-top: 10px;

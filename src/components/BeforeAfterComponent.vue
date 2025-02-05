@@ -79,7 +79,7 @@ export default {
 }
 
 #comparison figure {
-  background-image: url("../assets/img/before_card.jpg");
+  background-image: url("../assets/img/after_card.jpeg");
   background-size: cover;
   position: relative;
   font-size: 0;
@@ -89,7 +89,7 @@ export default {
 }
 
 #comparison figure div {
-  background-image: url("../assets/img/after_card.jpeg");
+  background-image: url("../assets/img/before_card.jpg");
   background-size: cover;
   position: absolute;
   width: 100%;

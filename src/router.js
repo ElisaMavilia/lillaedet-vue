@@ -5,6 +5,7 @@ import HomePageComponent from "./pages/HomePageComponent.vue";
 import TreatmentsDetailComponent from "./pages/TreatmentsDetailComponent.vue";
 import ContactComponent from "./pages/ContactComponent.vue";
 import TackComponent from "./pages/TackComponent.vue";
+import ErrorPageComponent from "./pages/ErrorPageComponent.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -34,6 +35,11 @@ const router = createRouter({
       path: "/tack", // Parametro 'name'
       name: "TackComponent",
       component: TackComponent,
+    },
+    {
+      path: "/oh-nej",
+      name: "oh-nej",
+      component: ErrorPageComponent,
     },
 
     {
