@@ -6,6 +6,7 @@ import TreatmentsDetailComponent from "./pages/TreatmentsDetailComponent.vue";
 import ContactComponent from "./pages/ContactComponent.vue";
 import TackComponent from "./pages/TackComponent.vue";
 import ErrorPageComponent from "./pages/ErrorPageComponent.vue";
+import PricesListComponent from "./pages/PricesListComponent.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -30,6 +31,11 @@ const router = createRouter({
       name: "kontakta-oss",
       component: ContactComponent,
     },
+    {
+      path: "/prislista",
+      name: "prislista",
+      component: PricesListComponent,
+    },
 
     {
       path: "/tack", // Parametro 'name'
@@ -47,7 +53,7 @@ const router = createRouter({
       redirect: "om-oss",
     },
     {
-      path: "/behandlingar", //
+      path: "/behandlingar",
       redirect: "/#behandlingar", // redirect to the treatments section in the home page
     },
   ],
