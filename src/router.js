@@ -7,6 +7,7 @@ import ContactComponent from "./pages/ContactComponent.vue";
 import TackComponent from "./pages/TackComponent.vue";
 import ErrorPageComponent from "./pages/ErrorPageComponent.vue";
 import PricesListComponent from "./pages/PricesListComponent.vue";
+import GalleryComponent from "./pages/GalleryComponent.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -36,7 +37,11 @@ const router = createRouter({
       name: "prislista",
       component: PricesListComponent,
     },
-
+    {
+      path: "/galleri",
+      name: "galleri",
+      component: GalleryComponent,
+    },
     {
       path: "/tack", // Parametro 'name'
       name: "TackComponent",
