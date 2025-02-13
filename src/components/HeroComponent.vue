@@ -26,9 +26,7 @@
           </div>
           <!-- Ring Oss Button -->
           <div class="frame ms-3">
-            <a href="tel:+46520657724" class="btn btn2 btn-right"
-              >Ring 0520657724</a
-            >
+            <a href="tel:+46520657724" class="btn btn2 btn-right">Ringa oss</a>
           </div>
         </div>
       </div>
