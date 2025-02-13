@@ -6,7 +6,7 @@
         class="card-img-top"
         :alt="gallery.description"
       />
-      <div class="card-text text-uppercase">
+      <div class="card-text">
         <p class="text-center">{{ gallery.description }}</p>
       </div>
     </div>
