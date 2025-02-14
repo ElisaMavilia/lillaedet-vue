@@ -1,28 +1,43 @@
 <template>
   <SpinnerComponent v-if="loading" :loading="loading" />
-  <div class="container mt-4">
-    <!-- Checking if treatment is loaded -->
-    <div class="card" v-if="treatment">
-      <!-- Treatment name -->
-      <h1>{{ treatment.name }}</h1>
-      <!-- Treatment image -->
-      <img
-        v-if="treatment.image"
-        :src="store.imgBasePath + treatment.image"
-        :alt="treatment.name"
-      />
-      <!-- Treatment description -->
-      <p>{{ treatment.description }}</p>
+  <section id="treatment-detail-wrapper">
+    <div class="container">
+      <!-- Checking if treatment is loaded -->
+      <div class="card" v-if="treatment">
+        <!-- Treatment name -->
+        <h2 class="text-uppercase treatment-name">{{ treatment.name }}</h2>
+
+        <!-- Treatment image -->
+        <div class="treatment-image-wrapper">
+          <img
+            v-if="treatment.image"
+            :src="store.imgBasePath + treatment.image"
+            :alt="treatment.name"
+            class="treatment-image"
+          />
+        </div>
+
+        <!-- Treatment description -->
+        <div class="treatment-description">
+          <p>{{ treatment.description }}</p>
+        </div>
+        <!-- Button -->
+        <div class="frame">
+          <a
+            href="/#behandlingar"
+            class="btn btn1"
+            :class="{ 'fixed-btn': isScrolled }"
+          >
+            Tillbaka till Behandlingar
+          </a>
+        </div>
+      </div>
     </div>
-    <!-- Messaggio di caricamento -->
-    <div v-else>
-      <p>Caricamento in corso...</p>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import SpinnerComponent from "@/components/SpinnerComponent.vue";
+import SpinnerComponent from "../components/SpinnerComponent.vue";
 import { store } from "../store";
 import axios from "axios";
 
@@ -65,12 +80,110 @@ export default {
         });
     },
   },
-
   mounted() {
-    // Recupero i dettagli del trattamento al montaggio del componente
+    // Retrieve treatment details when the component is mounted
     this.getSingleTreatment();
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/variables" as *;
+
+#treatment-detail-wrapper {
+  background: $light_pink;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding: 150px;
+}
+
+.card {
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden; /* Prevent content overflow */
+  padding: 30px;
+  margin-top: 30px;
+  background-color: #f5eaf2;
+}
+
+.treatment-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.treatment-image-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.treatment-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eee;
+  display: block;
+  margin: 0 auto;
+}
+
+.treatment-description {
+  font-size: 1.1rem;
+  color: $fadedFont;
+  line-height: 1.8;
+  padding: 20px;
+}
+
+h2 {
+  color: $fadedFont;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+/* Button */
+.frame {
+  margin: 30px 0 0 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn {
+  position: relative;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3),
+    -4px -4px 6px rgba(116, 125, 136, 0.2);
+  border-radius: 50px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Button Boka Tid Online */
+.btn1 {
+  background-color: #e8d1ff;
+  color: #ce9eff;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+</style>
