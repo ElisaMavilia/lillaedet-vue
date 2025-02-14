@@ -63,7 +63,8 @@ const router = createRouter({
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    return { top: 0, behavior: "smooth" }; // Scorri in alto con effetto smooth
+    //to: destination route, from: origin route, savedPosition: If the navigation occurs through the browser's "back" button or an action that saves the scroll position, this parameter contains the previous scroll position. If no saved position exists, it will be null or undefined.
+    return { top: 0, behavior: "smooth" };
   },
 });
 
