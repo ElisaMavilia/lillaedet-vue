@@ -71,6 +71,7 @@ import DOMPurify from "dompurify";
 
 export default {
   name: "ContactComponent",
+
   data() {
     return {
       store,

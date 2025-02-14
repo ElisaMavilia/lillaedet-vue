@@ -1,10 +1,22 @@
 <template>
   <SpinnerComponent v-if="loading" :loading="loading" />
   <section id="list">
-    <div class="container">
-      <ul v-for="pricelist in priceslist" :key="pricelist.id" class="mt-5">
-        <li>{{ pricelist.name }}: {{ pricelist.price }}</li>
-      </ul>
+    <h2 class="text-center text-uppercase">Prislista</h2>
+    <div class="table-container">
+      <table class="modern-table">
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Pris</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="pricelist in priceslist" :key="pricelist.id">
+            <td>{{ pricelist.name }}</td>
+            <td>{{ pricelist.price }} kr</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 </template>
@@ -58,5 +70,51 @@ export default {
 
 #list {
   background-color: $light_pink;
+  padding: 150px 0 150px 0;
+}
+
+h2 {
+  color: $fadedFont;
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+  padding-bottom: 20px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modern-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+
+  thead {
+    background: $purple_basic;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  th,
+  td {
+    padding: 15px;
+    text-align: left;
+  }
+
+  tbody tr:nth-child(even) {
+    background: $shocking_purple;
+  }
+
+  tbody tr:hover {
+    background: $box_color;
+    transition: background 0.3s ease-in-out;
+  }
 }
 </style>
