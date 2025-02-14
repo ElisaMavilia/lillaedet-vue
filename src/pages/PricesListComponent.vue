@@ -1,4 +1,5 @@
 <template>
+  <SpinnerComponent v-if="loading" :loading="loading" />
   <section id="list">
     <div class="container">
       <ul v-for="pricelist in priceslist" :key="pricelist.id" class="mt-5">
@@ -11,16 +12,23 @@
 <script>
 import axios from "axios";
 import { store } from "../store";
+import SpinnerComponent from "@/components/SpinnerComponent.vue";
 
 export default {
   name: "PricesListComponent",
+  components: {
+    SpinnerComponent,
+  },
   data() {
     return {
       priceslist: [],
+      loading: false,
     };
   },
   methods: {
     GetPriceslist() {
+      this.loading = true;
+      console.log(this.loading);
       axios
         .get(`${store.apiBaseUrl}/prislista`)
         .then((response) => {
@@ -29,6 +37,12 @@ export default {
         })
         .catch((error) => {
           console.error("Error fetching prices list:", error);
+        })
+        .finally(() => {
+          // Aggiunto `()` per `finally`
+          setTimeout(() => {
+            this.loading = false;
+          }, 200);
         });
     },
   },
