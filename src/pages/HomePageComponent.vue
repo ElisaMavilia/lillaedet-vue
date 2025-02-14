@@ -1,5 +1,5 @@
 <template>
-  <LoaderSpinner :loading="loading" />
+  <SpinnerComponent v-if="loading" :loading="loading" />
   <!-- Statement Section -->
   <section>
     <HeroComponent />
@@ -110,7 +110,10 @@ export default {
           console.error("Error fetching treatments:", error);
         })
         .finally(() => {
-          this.loading = false; // Nasconde lo spinner
+          // Aggiunto `()` per `finally`
+          setTimeout(() => {
+            this.loading = false;
+          }, 200);
         });
     },
   },

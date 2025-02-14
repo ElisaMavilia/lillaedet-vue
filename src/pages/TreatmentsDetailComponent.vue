@@ -1,4 +1,5 @@
 <template>
+  <SpinnerComponent v-if="loading" :loading="loading" />
   <div class="container mt-4">
     <!-- Checking if treatment is loaded -->
     <div class="card" v-if="treatment">
@@ -21,19 +22,25 @@
 </template>
 
 <script>
+import SpinnerComponent from "@/components/SpinnerComponent.vue";
 import { store } from "../store";
 import axios from "axios";
 
 export default {
   name: "TreatmentsDetailComponent",
+  components: {
+    SpinnerComponent,
+  },
   data() {
     return {
       store,
       treatment: null,
+      loading: false,
     };
   },
   methods: {
     getSingleTreatment() {
+      this.loading = true;
       axios
         .get(`${this.store.apiBaseUrl}/behandlingar/${this.$route.params.slug}`)
         .then((res) => {
@@ -49,6 +56,12 @@ export default {
           } else {
             console.error("Error configuring request:", err.message);
           }
+        })
+        .finally(() => {
+          // Aggiunto `()` per `finally`
+          setTimeout(() => {
+            this.loading = false;
+          }, 200);
         });
     },
   },
