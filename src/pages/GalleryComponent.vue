@@ -1,4 +1,5 @@
 <template>
+  <SpinnerComponent v-if="loading" :loading="loading" />
   <section id="gallery">
     <h2 id="gallery-title" class="text-uppercase text-center">Galleri</h2>
     <div class="container d-flex justify-content-around flex-wrap">
@@ -15,28 +16,37 @@
 import { store } from "../store";
 import axios from "axios";
 import GalleryCardComponent from "../components/GalleryCardComponent.vue";
+import SpinnerComponent from "../components/SpinnerComponent.vue"; // Nome corretto
 
 export default {
   name: "GalleryComponent",
   components: {
     GalleryCardComponent,
+    SpinnerComponent,
   },
   data() {
     return {
       store,
       galleries: [],
+      loading: false,
     };
   },
   mounted() {
-    this.fetchGalleries(); // Carica le immagini al montaggio
+    this.fetchGalleries();
   },
   methods: {
     async fetchGalleries() {
+      this.loading = true;
+      console.log(this.loading); // Mostra il loader
       try {
         const response = await axios.get(`${store.apiBaseUrl}/galleri`);
         this.galleries = response.data.results;
       } catch (error) {
         console.error("Errore nel caricamento della galleria:", error);
+      } finally {
+        setTimeout(() => {
+          this.loading = false;
+        }, 200);
       }
     },
   },

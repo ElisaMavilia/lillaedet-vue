@@ -1,4 +1,5 @@
 <template>
+  <LoaderSpinner :loading="loading" />
   <!-- Statement Section -->
   <section>
     <HeroComponent />
@@ -70,6 +71,7 @@ import CardComponent from "../components/CardComponent.vue";
 import FaqComponent from "../components/FaqComponent.vue";
 import ScrollingCardComponent from "../components/ScrollingCardComponent.vue";
 import WaveComponent from "../components/WaveComponent.vue";
+import SpinnerComponent from "../components/SpinnerComponent.vue";
 import axios from "axios";
 import { store } from "../store";
 
@@ -82,15 +84,18 @@ export default {
     FaqComponent,
     WaveComponent,
     BeforeAfterComponent,
+    SpinnerComponent,
   },
   data() {
     return {
       store,
       treatments: [],
+      loading: false,
     };
   },
   methods: {
     GetTreatments() {
+      this.loading = true;
       axios
         .get(`${store.apiBaseUrl}/treatments`)
         .then((response) => {
@@ -103,6 +108,9 @@ export default {
         })
         .catch((error) => {
           console.error("Error fetching treatments:", error);
+        })
+        .finally(() => {
+          this.loading = false; // Nasconde lo spinner
         });
     },
   },
