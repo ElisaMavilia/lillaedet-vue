@@ -1,4 +1,5 @@
 <template>
+  <SpinnerComponent v-if="loading" :loading="loading" />
   <!--  {{ employees }} -->
   <div id="about-us">
     <h1 class="text-center text-uppercase text-general">Om oss</h1>
@@ -23,16 +24,22 @@
 <script>
 import axios from "axios";
 import { store } from "../store";
+import SpinnerComponent from "@/components/SpinnerComponent.vue";
 
 export default {
   name: "AboutUsComponent",
+  components: {
+    SpinnerComponent,
+  },
   data() {
     return {
       employees: [],
+      loading: false,
     };
   },
   methods: {
     GetEmployees() {
+      this.loading = true;
       axios
         .get(`${store.apiBaseUrl}/om-oss`)
         .then((response) => {
@@ -41,6 +48,12 @@ export default {
         })
         .catch((error) => {
           console.error("Error fetching employees:", error);
+        })
+        .finally(() => {
+          // Aggiunto `()` per `finally`
+          setTimeout(() => {
+            this.loading = false;
+          }, 200);
         });
     },
   },
