@@ -62,6 +62,9 @@ const router = createRouter({
       redirect: "/#behandlingar", // redirect to the treatments section in the home page
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0, behavior: "smooth" }; // Scorri in alto con effetto smooth
+  },
 });
 
 export { router };

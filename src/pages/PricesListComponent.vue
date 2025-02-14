@@ -113,7 +113,8 @@ h2 {
   }
 
   tbody tr:hover {
-    background: $box_color;
+    background: $purple_basic;
+    color: white;
     transition: background 0.3s ease-in-out;
   }
 }
