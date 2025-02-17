@@ -84,6 +84,11 @@ export default {
   mounted() {
     // Retrieve treatment details when the component is mounted
     this.getSingleTreatment();
+    const { slug } = this.$route.params;
+    if (!slug || slug.length < 3) {
+      // Controllo se il parametro è incompleto o non valido
+      this.$router.push({ name: "not-found" }); // Reindirizza alla pagina NotFound
+    }
   },
 };
 </script>
