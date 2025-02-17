@@ -93,7 +93,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible; // Permette all'immagine di fuoriuscire
+  overflow: visible;
   z-index: 1;
 }
 
@@ -113,7 +113,7 @@ body {
   text-align: left;
   flex-direction: column;
   align-items: center;
-  z-index: 10; // Assicurati che il testo sia sopra l'immagine
+  z-index: 10; // with this the text is on top of the image
 }
 
 .text-up {
@@ -135,11 +135,11 @@ body {
 /* Image */
 .image-container {
   position: absolute;
-  top: 60%; // Centra l'immagine verticalmente rispetto all'eroe
-  right: -70px; // Modifica questo valore con la media query
+  top: 60%;
+  right: -70px; // Modifica questo valore con la media query -> @MEDIA QUERY
   transform: translateY(-50%);
   z-index: 5;
-  pointer-events: none; // Assicura che l'immagine non interferisca con lo scrolling
+  pointer-events: none; // Assures that the image doesn't interfere with scrolling
 }
 
 img {

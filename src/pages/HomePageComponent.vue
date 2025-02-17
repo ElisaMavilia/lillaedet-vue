@@ -110,7 +110,6 @@ export default {
           console.error("Error fetching treatments:", error);
         })
         .finally(() => {
-          // Aggiunto `()` per `finally`
           setTimeout(() => {
             this.loading = false;
           }, 200);
@@ -343,8 +342,8 @@ h2 {
     98.57% 77.29%,
     100% 76.04%
   );
-  position: relative; /* Impostiamo una posizione relativa per la wave */
-  z-index: 0; /* Imposta un z-index basso */
+  position: relative;
+  z-index: 0;
 }
 
 /* Purple Wave */

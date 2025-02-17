@@ -37,7 +37,7 @@ export default {
   methods: {
     async fetchGalleries() {
       this.loading = true;
-      console.log(this.loading); // Mostra il loader
+      console.log(this.loading);
       try {
         const response = await axios.get(`${store.apiBaseUrl}/galleri`);
         this.galleries = response.data.results;

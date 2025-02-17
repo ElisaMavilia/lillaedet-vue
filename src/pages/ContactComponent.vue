@@ -79,11 +79,10 @@ export default {
       email: "",
       message: "",
       loading: false,
-      errors: {}, // Oggetto per tracciare gli errori
+      errors: {},
     };
   },
   computed: {
-    // Proprietà calcolata che restituisce true se il form è valido
     isFormValid() {
       return !this.errors.name && !this.errors.email && !this.errors.message;
     },
@@ -110,18 +109,18 @@ export default {
             data
           );
 
-          // Pulisci il nome con DOMPurify
+          // DOMPurify sanitization
           const sanitizedName = DOMPurify.sanitize(this.name); // Sanitize the name
           sessionStorage.setItem("userName", sanitizedName); // Save the sanitized name
 
           console.log(res.data);
           this.loading = false;
 
-          // Reset del form
+          // Form reset
           this.name = "";
           this.email = "";
           this.message = "";
-          this.errors = {}; // Pulisce gli errori
+          this.errors = {};
 
           // Redirect to the Thank you page
           this.$router.push({ name: "TackComponent" });
@@ -138,7 +137,7 @@ export default {
     },
 
     validateName() {
-      const regexName = /^[a-zA-Z\s']+$/; // Permette solo lettere, spazi e apostrofi
+      const regexName = /^[a-zA-Z\s']+$/; // Allows just letters, spaces and apostrophes
       if (this.name.trim() === "") {
         this.errors.name = "Detta fält är obligatoriskt";
       } else if (this.name.trim().length < 2) {
@@ -173,23 +172,22 @@ export default {
       console.log("Message validation:", this.errors.message);
     },
 
-    // Funzione di validazione del form globale
+    // Global form validation
     validateForm() {
       // Reset degli errori
       this.errors = {};
 
-      // Chiamata delle funzioni di validazione
       this.validateName();
       this.validateEmail();
       this.validateMessage();
 
-      // Verifica se ci sono errori
+      // Verifies if all fields are valid
       const formValid = !Object.values(this.errors).some(
         (error) => error !== null && error !== ""
       );
 
-      console.log("Validation result:", formValid); // Log per vedere se la validazione passa o meno
-      console.log("Errors:", this.errors); // Log per vedere gli errori nel dettaglio
+      console.log("Validation result:", formValid);
+      console.log("Errors:", this.errors);
 
       return formValid;
     },
@@ -233,7 +231,7 @@ textarea {
   }
 
   &:focus {
-    outline: 2px solid $warm_ligth_pink; // Rimuove l'effetto di outline predefinito del browser
+    outline: 2px solid $warm_ligth_pink;
   }
 }
 

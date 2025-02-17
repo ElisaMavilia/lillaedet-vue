@@ -24,7 +24,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Occupa l'intera altezza della finestra */
+  height: 100vh;
   background-color: $light_pink;
   font-family: "Arial", sans-serif;
 }
@@ -69,6 +69,6 @@ img {
 
 .btn-return-home:hover {
   background-color: #ce9eff;
-  color: white; /* Colore più scuro al passaggio del mouse */
+  color: white;
 }
 </style>

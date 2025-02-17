@@ -88,11 +88,11 @@ export default {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; // Assicura che il contenuto riempia l'altezza della pagina
+  min-height: 100vh;
 }
 
 main {
-  flex-grow: 1; // Permette al contenuto principale di occupare tutto lo spazio disponibile
+  flex-grow: 1;
 }
 
 #footer-container-up,
@@ -105,15 +105,15 @@ main {
   flex-wrap: wrap;
 
   #footer-content {
-    max-width: 1200px; // Limita la larghezza per non espandere troppo gli elementi
+    max-width: 1200px;
     padding: 40px;
     text-align: center;
     padding: 90px;
   }
 
   #footer-container-up {
-    min-height: 400px; // Altezza minima per evitare il sovrapporsi
-    padding: 50px 20px; // Aggiunto spazio interno
+    min-height: 400px;
+    padding: 50px 20px;
   }
 
   h4 {

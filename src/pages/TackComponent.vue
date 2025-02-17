@@ -66,20 +66,20 @@ export default {
 @use "../assets/styles/partials/variables" as *;
 
 .wrapper {
-  background: $light_pink; /* Impostato come background */
+  background: $light_pink;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Per centrare verticalmente */
+  min-height: 100vh;
 }
 
 .box {
   width: 100%;
-  max-width: 800px; /* Limita la larghezza */
-  background-color: white; /* Sfondo bianco */
-  border-radius: 8px; /* Raggio arrotondato */
-  border: 1px solid #ccc; /* Bordo grigio chiaro */
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   padding: 30px;
   text-align: center;

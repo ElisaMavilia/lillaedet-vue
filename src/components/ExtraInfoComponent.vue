@@ -30,7 +30,7 @@ export default {
 #extra-info {
   background: $shocking_purple;
   width: 100%;
-  min-height: 400px; // Altezza minima per evitare che la sezione sia troppo piccola
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;

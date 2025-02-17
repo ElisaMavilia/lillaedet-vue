@@ -24,17 +24,16 @@ export default {
   name: "BeforeAfterComponent",
   data() {
     return {
-      sliderValue: 50, // valore iniziale dello slider
+      sliderValue: 50, // Slider initial value
     };
   },
   computed: {
     divisorWidth() {
-      return `${this.sliderValue}%`; // Imposta la larghezza in percentuale
+      return `${this.sliderValue}%`; // Sets the procentage of the width
     },
   },
   methods: {
     moveDivisor() {
-      // Eventuale logica aggiuntiva quando lo slider viene spostato
       console.log(`Divisor width: ${this.divisorWidth}`);
     },
   },
@@ -107,7 +106,7 @@ input[type="range"] {
   left: -2%;
   background-color: rgba(255, 255, 255, 0.1);
   width: 102%;
-  z-index: 2; /* Lo slider deve stare sopra l'overlay */
+  z-index: 2; //Slider has to stay on top of the image
 }
 
 input[type="range"]:focus {

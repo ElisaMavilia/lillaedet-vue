@@ -58,7 +58,6 @@ export default {
     },
   },
   mounted() {
-    // Carica automaticamente i dipendenti quando il componente è montato
     this.GetEmployees();
   },
 };
