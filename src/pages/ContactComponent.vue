@@ -1,67 +1,89 @@
 <template>
-  <div id="contact-container" class="container">
-    <!-- Loader -->
-    <div v-if="loading" class="loader-overlay">
-      <div
-        class="loader d-flex flex-column justify-content-center align-items-center"
-      >
-        <div class="my-2">Meddelandet skickas...</div>
-        <div>Vänligen uppdatera inte sidan</div>
-        <div class="loader-image">
-          <img src="../../public/images/tooth-loader.png" alt="loading" />
+  <section id="contact">
+    <div id="contact-container" class="container">
+      <!-- Loader -->
+      <div v-if="loading" class="loader-overlay">
+        <div
+          class="loader d-flex flex-column justify-content-center align-items-center"
+        >
+          <div class="my-2">Meddelandet skickas...</div>
+          <div>Vänligen uppdatera inte sidan</div>
+          <div class="loader-image">
+            <img src="../../public/images/tooth-loader.png" alt="loading" />
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-center text-uppercase">Kontakta oss</h2>
+
+      <!-- Card Wrapper -->
+      <div class="card">
+        <div class="row">
+          <form @submit.prevent="sendForm" class="col-12 text-start">
+            <div class="mb-3">
+              <label for="name" class="form-label">Namn*</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Skriv ditt Namn"
+                v-model="name"
+                @input="validateName"
+                :disabled="loading"
+              />
+              <span v-if="errors.name" class="text-danger">{{
+                errors.name
+              }}</span>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail address*</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Skriv ditt Email"
+                v-model="email"
+                @input="validateEmail"
+                :disabled="loading"
+              />
+              <span v-if="errors.email" class="text-danger">{{
+                errors.email
+              }}</span>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Meddelande*</label>
+              <textarea
+                id="message"
+                class="form-control"
+                placeholder="Skriv ditt Meddelande"
+                v-model="message"
+                @input="validateMessage"
+                :disabled="loading"
+              ></textarea>
+              <span v-if="errors.message" class="text-danger">{{
+                errors.message
+              }}</span>
+            </div>
+            <div id="asterisk">* Fältet är obligatorisk</div>
+            <div id="privacy-policy">
+              Genom att skicka ditt meddelande godkänner du att vi behandlar
+              dina personuppgifter i enlighet med vår Integritetspolicy. Läs vår
+              policy för mer information.
+            </div>
+            <div class="text-center frame">
+              <button
+                type="submit"
+                class="btn btn1"
+                :disabled="loading || !isFormValid"
+              >
+                Skicka
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-
-    <h2 class="text-center text-uppercase">Kontakta oss</h2>
-    <div class="row">
-      <form @submit.prevent="sendForm" class="col-12 text-start">
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Skriv ditt Namn"
-            v-model="name"
-            @input="validateName"
-            :disabled="loading"
-          />
-          <span v-if="errors.name" class="text-danger">{{ errors.name }}</span>
-        </div>
-        <div class="mb-3">
-          <input
-            type="email"
-            class="form-control"
-            placeholder="Skriv ditt Email"
-            v-model="email"
-            @input="validateEmail"
-            :disabled="loading"
-          />
-          <span v-if="errors.email" class="text-danger">{{
-            errors.email
-          }}</span>
-        </div>
-        <div class="mb-3">
-          <textarea
-            class="form-control"
-            placeholder="Skriv ditt Meddelande"
-            v-model="message"
-            @input="validateMessage"
-            :disabled="loading"
-          ></textarea>
-          <span v-if="errors.message" class="text-danger">{{
-            errors.message
-          }}</span>
-        </div>
-        <button
-          type="submit"
-          class="btn btn1"
-          :disabled="loading || !isFormValid"
-        >
-          Skicka
-        </button>
-      </form>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -71,7 +93,6 @@ import DOMPurify from "dompurify";
 
 export default {
   name: "ContactComponent",
-
   data() {
     return {
       store,
@@ -89,11 +110,7 @@ export default {
   },
   methods: {
     async sendForm() {
-      console.log("sendForm function called");
-
       if (this.validateForm()) {
-        console.log("Form is valid, sending data...");
-
         this.loading = true;
 
         const data = {
@@ -102,42 +119,31 @@ export default {
           message: this.message,
         };
 
-        console.log("Data to send:", data);
         try {
           const res = await axios.post(
             `${this.store.apiBaseUrl}/kontakta-oss`,
             data
           );
-
-          // DOMPurify sanitization
-          const sanitizedName = DOMPurify.sanitize(this.name); // Sanitize the name
-          sessionStorage.setItem("userName", sanitizedName); // Save the sanitized name
-
-          console.log(res.data);
+          const sanitizedName = DOMPurify.sanitize(this.name);
+          sessionStorage.setItem("userName", sanitizedName);
           this.loading = false;
 
-          // Form reset
           this.name = "";
           this.email = "";
           this.message = "";
           this.errors = {};
 
-          // Redirect to the Thank you page
           this.$router.push({ name: "TackComponent" });
         } catch (error) {
-          console.error("Error in sending data:", error);
           this.loading = false;
-
-          this.$router.push({ name: "ErrorPageComponent" }); // Redirect to the error page
+          this.$router.push({ name: "ErrorPageComponent" });
         }
       } else {
         this.$router.push({ name: "ErrorPageComponent" });
-        console.log("Form validation failed");
       }
     },
-
     validateName() {
-      const regexName = /^[a-zA-Z\s']+$/; // Allows just letters, spaces and apostrophes
+      const regexName = /^[a-zA-Z\s']+$/;
       if (this.name.trim() === "") {
         this.errors.name = "Detta fält är obligatoriskt";
       } else if (this.name.trim().length < 2) {
@@ -146,11 +152,9 @@ export default {
         this.errors.name =
           "Namnet får endast innehålla bokstäver och mellanslag";
       } else {
-        this.errors.name = null; // Rimuovi l'errore se valido
+        this.errors.name = null;
       }
-      console.log("Name validation:", this.errors.name);
     },
-
     validateEmail() {
       const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (this.email.trim() === "") {
@@ -160,36 +164,22 @@ export default {
       } else {
         this.errors.email = null;
       }
-      console.log("Email validation:", this.errors.email);
     },
-
     validateMessage() {
       if (this.message.trim() === "") {
         this.errors.message = "Detta fält är obligatoriskt.";
       } else {
         this.errors.message = null;
       }
-      console.log("Message validation:", this.errors.message);
     },
-
-    // Global form validation
     validateForm() {
-      // Reset degli errori
       this.errors = {};
-
       this.validateName();
       this.validateEmail();
       this.validateMessage();
-
-      // Verifies if all fields are valid
-      const formValid = !Object.values(this.errors).some(
+      return !Object.values(this.errors).some(
         (error) => error !== null && error !== ""
       );
-
-      console.log("Validation result:", formValid);
-      console.log("Errors:", this.errors);
-
-      return formValid;
     },
   },
 };
@@ -198,41 +188,69 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/styles/partials/variables" as *;
 
+#contact {
+  width: 100%;
+  background-color: $light_pink;
+}
+
 #contact-container {
   margin-top: 200px;
   width: 100%;
   height: auto;
+  padding-bottom: 100px;
 }
 
 h2 {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
   font-weight: 400;
   color: $fadedFont;
+  text-align: center;
 }
 
-form {
-  margin-bottom: 200px;
+/* Card */
+.card {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f5eaf2;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+label,
+#asterisk,
+#privacy-policy {
+  color: $fadedFont;
+  font-size: 0.9rem;
 }
 
 input,
 textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
   border-radius: 5px;
   font-size: 16px;
   border: none;
   border-bottom: 1px solid $warm_ligth_pink;
+  background-color: #fff;
 
   &::placeholder {
     color: rgb(167, 164, 164);
-    opacity: 1;
   }
 
   &:focus {
     outline: 2px solid $warm_ligth_pink;
   }
+}
+
+/* Button */
+.frame {
+  margin-top: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .btn {
@@ -264,7 +282,7 @@ textarea {
   color: #fff;
 }
 
-/* LOADER */
+/* Loader */
 .loader-overlay {
   position: fixed;
   top: 0;
