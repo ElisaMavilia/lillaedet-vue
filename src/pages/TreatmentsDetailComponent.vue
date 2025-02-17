@@ -129,29 +129,37 @@ export default {
 .treatment-image-wrapper {
   text-align: center;
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .treatment-image {
   width: 300px;
   height: 300px;
+  max-width: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #eee;
+  object-position: center;
   display: block;
-  margin: 0 auto;
 }
 
 .treatment-description {
   font-size: 1rem;
   color: $fadedFont;
   line-height: 1.8;
-  padding: 20px;
+  padding: 10px 0 10px 30px;
 }
 
 h2 {
   color: $fadedFont;
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
 /* Button */
 .frame {
   margin: 0 0 10px 20px;
