@@ -50,6 +50,7 @@ export default {
       store,
       treatment: null,
       loading: false,
+      isScrolled: false,
     };
   },
   methods: {
