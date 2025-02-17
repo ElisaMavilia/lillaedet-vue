@@ -5,15 +5,14 @@
       <!-- Checking if treatment is loaded -->
       <div class="card" v-if="treatment">
         <!-- Treatment name -->
-        <h2 class="text-uppercase treatment-name">{{ treatment.name }}</h2>
+        <h2 class="text-uppercase treatment-name pt-5">{{ treatment.name }}</h2>
 
         <!-- Treatment image -->
         <div class="treatment-image-wrapper">
           <img
-            v-if="treatment.image"
-            :src="store.imgBasePath + treatment.image"
-            :alt="treatment.name"
+            :src="store.imgBasePath + treatment.detail_image"
             class="treatment-image"
+            :alt="treatment.name"
           />
         </div>
 
@@ -60,6 +59,7 @@ export default {
         .get(`${this.store.apiBaseUrl}/behandlingar/${this.$route.params.slug}`)
         .then((res) => {
           console.log("Treatment-detail:", res.data);
+          console.log("Detail image path:", res.data.results.detail_image);
           this.treatment = res.data.results;
         })
         .catch((err) => {
@@ -96,17 +96,20 @@ export default {
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   padding: 150px;
 }
 
 .card {
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  overflow: hidden; /* Prevent content overflow */
-  padding: 30px;
-  margin-top: 30px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 18px;
+  margin: 30px auto;
   background-color: #f5eaf2;
 }
 
@@ -133,7 +136,7 @@ export default {
 }
 
 .treatment-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: $fadedFont;
   line-height: 1.8;
   padding: 20px;
@@ -145,7 +148,7 @@ h2 {
 }
 /* Button */
 .frame {
-  margin: 30px 0 0 15px;
+  margin: 0 0 10px 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
