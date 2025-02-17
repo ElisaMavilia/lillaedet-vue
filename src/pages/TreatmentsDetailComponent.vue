@@ -76,7 +76,7 @@ export default {
           // Aggiunto `()` per `finally`
           setTimeout(() => {
             this.loading = false;
-          }, 200);
+          }, 300);
         });
     },
   },
