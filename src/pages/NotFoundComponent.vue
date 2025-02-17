@@ -1,7 +1,7 @@
 <template>
   <div class="not-found-container">
     <div class="not-found-content">
-      <img src="../assets/img/ops.png" alt="Embarassed" />
+      <img src="../assets/img/oh-no.png" alt="Embarassed" />
       <h1 class="not-found-title">404</h1>
       <p class="not-found-message">Oops! Sidan du söker kunde inte hittas</p>
       <router-link to="/" class="btn-return-home"
