@@ -123,7 +123,7 @@ body {
   display: flex;
   text-align: left;
   color: #6e6969;
-  text-shadow: 6px 6px 9px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
 }
 
 .text-down {

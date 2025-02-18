@@ -195,7 +195,6 @@ h2 {
 }
 
 /* Treatments Section with Cards */
-
 .card-container {
   width: calc((100% / 6) - 20px);
 }
@@ -207,7 +206,7 @@ h2 {
 /* Spoken Languages Section */
 #spoken-languages {
   width: 100%;
-  height: auto;
+  height: 430px;
 }
 
 /* FAQ Section */

@@ -91,7 +91,7 @@ img {
 
 #title {
   margin-bottom: 50px;
-  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   font-weight: 400;
   color: $fadedFont;
   text-align: center;
