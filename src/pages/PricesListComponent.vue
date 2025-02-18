@@ -73,9 +73,11 @@ export default {
 }
 
 h2 {
+  margin-bottom: 50px;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
   color: $fadedFont;
-  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
-  padding-bottom: 20px;
+  text-align: center;
 }
 
 .table-container {
@@ -108,13 +110,19 @@ h2 {
   }
 
   tbody tr:nth-child(even) {
-    background: $shocking_purple;
+    background: #f5eaf2;
   }
 
   tbody tr:hover {
     background: $purple_basic;
     color: white;
     transition: background 0.3s ease-in-out;
+  }
+
+  th,
+  td,
+  tbody {
+    padding-left: 40px;
   }
 }
 </style>

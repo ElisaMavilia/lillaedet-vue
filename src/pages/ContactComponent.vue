@@ -194,7 +194,7 @@ export default {
 }
 
 #contact-container {
-  margin-top: 200px;
+  margin-top: 150px;
   width: 100%;
   height: auto;
   padding-bottom: 100px;
@@ -223,7 +223,7 @@ label,
 #asterisk,
 #privacy-policy {
   color: $fadedFont;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 input,

@@ -139,20 +139,21 @@ export default {
 }
 
 .treatment-image {
-  width: 300px;
-  height: 300px;
-  max-width: 300px;
+  width: 320px;
+  height: 320px;
+  max-width: 320px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
   display: block;
+  margin-top: 5px;
 }
 
 .treatment-description {
   font-size: 1rem;
   color: $fadedFont;
   line-height: 1.8;
-  padding: 10px 0 10px 30px;
+  padding: 30px 0 10px 30px;
 }
 
 h2 {

@@ -60,7 +60,8 @@ export default {
   background: $light_pink;
   width: 100%;
   height: auto;
-  padding-bottom: 150px;
+  padding-top: 150px;
+  margin-bottom: 150px;
 }
 
 .card-container {
@@ -68,8 +69,10 @@ export default {
 }
 
 h2 {
-  padding: 150px 0 80px 0;
+  margin-bottom: 50px;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
   color: $fadedFont;
-  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 </style>

@@ -2,7 +2,7 @@
   <SpinnerComponent v-if="loading" :loading="loading" />
   <!--  {{ employees }} -->
   <div id="about-us">
-    <h1 class="text-center text-uppercase text-general">Om oss</h1>
+    <h2 id="title" class="text-center text-uppercase">Vilka vi är</h2>
     <section
       class="container d-flex justify-content-around align-items-center"
       v-for="(employee, index) in employees"
@@ -11,7 +11,7 @@
     >
       <img src="../assets/img/nima.png" alt="Nimas bild" />
       <div class="text-container flex-direction-column">
-        <h2>{{ employee.name }} {{ employee.surname }}</h2>
+        <h2 id="name-text">{{ employee.name }} {{ employee.surname }}</h2>
         <p>{{ employee.role }}</p>
         <p>
           {{ employee.notes }}
@@ -89,11 +89,16 @@ img {
   margin-left: -70px;
 }
 
-h1 {
+#title {
+  margin-bottom: 50px;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  color: $fadedFont;
+  text-align: center;
   padding-top: 150px;
 }
 
-h2,
+#name-text,
 p {
   color: $fadedFont;
   padding-left: 140px;
