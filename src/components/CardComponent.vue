@@ -139,4 +139,38 @@ export default {
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
+/* MEDIA QUERIES Computer first */
+
+@media (max-width: 1199.98px) {
+  .card-container {
+    flex: 0 1 calc((100% - (15px * 3)) / 4);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  #card-box {
+    width: 200px;
+    height: 200px;
+  }
+
+  // Image
+  .card-img-top {
+    object-fit: cover;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  // Text
+  .card-text {
+    text-align: center;
+    font-size: 0.9rem;
+    padding-bottom: 4px;
+  }
+
+  // Button
+  .btn {
+    margin-bottom: 30px;
+  }
+}
 </style>

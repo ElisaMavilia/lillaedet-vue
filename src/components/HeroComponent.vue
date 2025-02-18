@@ -21,7 +21,8 @@
               class="btn btn1"
               :class="{ 'fixed-btn': isScrolled }"
             >
-              Boka Tid Online
+              <span class="full-text">Boka Tid Online</span>
+              <span class="d-none short-text">Boka</span>
             </a>
           </div>
           <!-- Ring Oss Button -->
@@ -233,5 +234,60 @@ img {
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+// Quando il bottone è fisso (scroll attivato), mostra solo "Boka"
+.fixed-btn .full-text {
+  display: none !important;
+}
+
+.fixed-btn .short-text {
+  display: inline !important;
+  font-size: 1.2rem; // Aggiungi un font-size per assicurarti che il testo sia visibile
+  color: #ce9eff; // Assicurati che il colore sia leggibile
+}
+
+/* MEDIA QUERIES Computer first */
+
+/* Large (lg) ≥992px -> laptop */
+@media (max-width: 1199.98px) {
+  .image-container {
+    position: absolute;
+    top: 75%;
+    right: -90px; // Modifica questo valore con la media query -> @MEDIA QUERY
+  }
+
+  .text-up {
+    font-size: 2.6rem;
+  }
+
+  .text-down {
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 680px;
+  }
+
+  // Buttons
+  .btn {
+    padding: 9px 19px;
+    font-size: 25px;
+  }
+
+  .fixed-btn {
+    right: 20px;
+    bottom: 30px !important;
+    right: 18px !important;
+  }
+
+  .fixed-btn .full-text {
+    display: none;
+  }
+
+  .fixed-btn .short-text {
+    display: inline;
+    font-size: 1.5rem;
+  }
 }
 </style>

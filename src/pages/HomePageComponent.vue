@@ -362,4 +362,32 @@ h2 {
   width: 100%;
   height: auto;
 }
+
+/* MEDIA QUERIES Computer first */
+
+/* Large (lg) ≥992px -> laptop */
+@media (max-width: 1199.98px) {
+  // General Statement Section
+  #general-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 30px;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container {
+    padding-left: 100px;
+    padding-top: 50px;
+  }
+
+  #concept-statement {
+    padding-top: 50px;
+    font-size: 1.5rem;
+  }
+}
 </style>
