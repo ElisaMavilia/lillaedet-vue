@@ -120,4 +120,13 @@ export default {
 .card:not(.slide-in-left):not(.slide-in-right):nth-child(even) {
   transform: translateX(150%); /* Slide in from the right */
 }
+
+/* MEDIA QUERIES Computer first */
+
+/* Large (lg) ≥992px -> laptop */
+@media (max-width: 1199.98px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
 </style>

@@ -178,7 +178,20 @@ img {
   padding: 10px 20px;
   margin: 0;
   box-sizing: border-box;
-  transform: none !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.fixed-btn:hover {
+  color: white !important;
+}
+
+.fixed-btn .full-text {
+  display: none !important;
+}
+
+.fixed-btn .short-text {
+  display: inline !important;
+  font-size: 1.2rem;
 }
 
 #pastel-button-container {
@@ -220,7 +233,7 @@ img {
 
 /* Hover: Boka Tid Online Button */
 .btn:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 /* Hover: Ring Oss Button */
@@ -234,17 +247,6 @@ img {
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-}
-
-// Quando il bottone è fisso (scroll attivato), mostra solo "Boka"
-.fixed-btn .full-text {
-  display: none !important;
-}
-
-.fixed-btn .short-text {
-  display: inline !important;
-  font-size: 1.2rem; // Aggiungi un font-size per assicurarti che il testo sia visibile
-  color: #ce9eff; // Assicurati che il colore sia leggibile
 }
 
 /* MEDIA QUERIES Computer first */
@@ -287,7 +289,7 @@ img {
 
   .fixed-btn .short-text {
     display: inline;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 </style>
