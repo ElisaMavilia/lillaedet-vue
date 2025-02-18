@@ -389,5 +389,11 @@ h2 {
     padding-top: 50px;
     font-size: 1.5rem;
   }
+
+  /* FAQ Section */
+  #faq-image {
+    width: 350px;
+    transform: translateY(110px); // Moves the image down
+  }
 }
 </style>
