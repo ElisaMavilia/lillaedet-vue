@@ -395,5 +395,10 @@ h2 {
     width: 350px;
     transform: translateY(110px); // Moves the image down
   }
+
+  /* Before & After Section */
+  #before-after-title {
+    font-size: 1.8rem;
+  }
 }
 </style>

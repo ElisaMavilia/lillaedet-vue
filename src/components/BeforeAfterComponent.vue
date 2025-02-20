@@ -154,4 +154,17 @@ input[type="range"]:focus::-webkit-slider-thumb {
 input[type="range"]:focus::-moz-range-thumb {
   background: rgba(255, 255, 255, 0.5);
 }
+
+/* Media Queries */
+
+@media (max-width: 1199.98px) {
+  .overlay-text {
+    font-size: 0.9rem;
+  }
+
+  #comparison {
+    width: 25vw;
+    height: 25vw;
+  }
+}
 </style>
