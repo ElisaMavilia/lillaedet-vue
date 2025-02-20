@@ -140,4 +140,10 @@ main {
   padding-right: 80px;
   color: #f9fafa;
 }
+
+@media screen and (max-width: 991.98px) {
+  #footer-content {
+    font-size: 0.9rem;
+  }
+}
 </style>
