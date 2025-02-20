@@ -251,6 +251,19 @@ img {
 
 /* MEDIA QUERIES Computer first */
 
+/* Extra Large (xl) ≥1400px -> desktop */
+@media (max-width: 1399.98px) {
+  .image-container {
+    position: absolute;
+    top: 65%;
+    right: -90px; // Modifica questo valore con la media query -> @MEDIA QUERY
+  }
+  // Fixed button
+  .fixed-btn {
+    right: 15px !important;
+  }
+}
+
 /* Large (lg) ≥992px -> laptop */
 @media screen and (max-width: 1199.98px) {
   .image-container {
@@ -278,7 +291,6 @@ img {
   }
 
   .fixed-btn {
-    right: 20px;
     bottom: 30px !important;
     right: 18px !important;
   }

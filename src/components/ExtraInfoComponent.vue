@@ -60,7 +60,4 @@ iframe {
   border-radius: 10px;
   padding: 20px 0 40px 0px;
 }
-/* MEDIA QUERIES Computer first */
-@media screen and (max-width: 1199.98px) {
-}
 </style>

@@ -156,6 +156,15 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 /* Media Queries */
+@media (max-width: 1399.98px) {
+  .overlay-text {
+    font-size: 1rem;
+  }
+  #comparison {
+    width: 26vw;
+    height: 26vw;
+  }
+}
 
 @media screen and (max-width: 1199.98px) {
   .overlay-text {
