@@ -219,13 +219,13 @@ li {
     font-size: 1rem;
   }
 
-  .nav-link:hover {
+  /* .nav-link:hover {
     background: rgba(206, 158, 255, 0.2);
-  }
+  } */
 
-  /* .nav-link.active {
+  .nav-link.active {
     background: rgba(206, 158, 255, 0.2);
     border-radius: 5px;
-  } */
+  }
 }
 </style>
