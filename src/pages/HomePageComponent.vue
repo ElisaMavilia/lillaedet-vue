@@ -415,7 +415,7 @@ h2 {
     /* FAQ Section */
     #faq-image {
       width: 340px;
-      transform: translateY(70px); // Moves the image down
+      transform: translateY(75px); // Moves the image down
     }
   }
 }
