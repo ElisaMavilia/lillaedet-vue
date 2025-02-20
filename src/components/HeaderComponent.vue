@@ -148,11 +148,11 @@ li {
   }
 
   .logo {
-    width: 180px;
+    width: 200px;
     height: auto;
     position: relative;
     z-index: 1001;
-    margin-top: -30px; // Moves the logo up
+    margin-top: -45px; // Moves the logo up
   }
 
   .navbar-toggler {
