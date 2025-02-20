@@ -139,7 +139,7 @@ li {
   font-size: 0.9rem;
 }
 
-@media (max-width: 991.98px) {
+@media screen and (max-width: 991.98px) {
   .nav-container {
     padding: 0px 20px !important;
     height: 70px;

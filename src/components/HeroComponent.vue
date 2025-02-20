@@ -303,5 +303,11 @@ img {
     display: inline;
     font-size: 1.2rem;
   }
+
+  @media screen and (max-width: 991.98px) {
+    img {
+      width: 650px;
+    }
+  }
 }
 </style>
