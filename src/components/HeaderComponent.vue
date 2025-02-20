@@ -44,7 +44,7 @@ export default {
   name: "HeaderComponent",
   data() {
     return {
-      isMenuOpen: false, // Controlla se il menu è aperto o chiuso
+      isMenuOpen: false, // Menu state initially closed
       menuItems: [
         { label: "Home", routeName: "home" },
         { label: "Träffa vårt team", routeName: "about-us" },
@@ -56,17 +56,17 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen; // Cambia lo stato del menu
+      this.isMenuOpen = !this.isMenuOpen; // Changes the menu state
     },
     closeMenu() {
-      this.isMenuOpen = false; // Chiude il menu quando si clicca un link
+      this.isMenuOpen = false; // Closes the menu after navigation click
     },
     goToHome() {
       if (this.$route.name === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         this.$router.push({ name: "home" }).then(() => {
-          this.isMenuOpen = false; // Chiude il menu dopo la navigazione
+          this.isMenuOpen = false; // Closes the menu after navigation
         });
       }
     },
@@ -141,18 +141,18 @@ li {
 
 @media (max-width: 991.98px) {
   .nav-container {
-    padding: 0px 20px !important; // Ridotto il padding superiore per avvicinare logo e toggle
+    padding: 0px 20px !important;
     height: 70px;
     position: relative;
     z-index: 1000;
   }
 
   .logo {
-    width: 180px; // Leggermente ridotto per adattarsi meglio
+    width: 180px;
     height: auto;
     position: relative;
     z-index: 1001;
-    margin-top: -30px; // Spostato più in alto
+    margin-top: -30px; // Moves the logo up
   }
 
   .navbar-toggler {
@@ -162,7 +162,7 @@ li {
     position: relative;
     z-index: 1002;
     margin-top: -20px;
-    color: $fadedFont; // Spostato più in alto per allinearlo al logo
+    color: $fadedFont;
   }
 
   .navbar-toggler-icon {
@@ -172,8 +172,8 @@ li {
 
   .navbar-toggler:focus,
   .navbar-toggler:active {
-    outline: none; // Rimuove il bordo predefinito
-    box-shadow: 0 0 5px 2px $fadedFont; // Usa una variabile SCSS per il colore
+    outline: none;
+    box-shadow: 0 0 5px 2px $fadedFont;
   }
 
   .navbar-collapse {
