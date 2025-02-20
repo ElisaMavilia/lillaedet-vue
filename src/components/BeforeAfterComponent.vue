@@ -157,7 +157,7 @@ input[type="range"]:focus::-moz-range-thumb {
 
 /* Media Queries */
 
-@media (max-width: 1199.98px) {
+@media screen and (max-width: 1199.98px) {
   .overlay-text {
     font-size: 0.9rem;
   }

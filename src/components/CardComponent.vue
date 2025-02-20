@@ -142,7 +142,7 @@ export default {
 /* MEDIA QUERIES Computer first */
 
 /* Large (lg) ≥992px -> laptop */
-@media (max-width: 1199.98px) {
+@media screen and (max-width: 1199.98px) {
   .card-container {
     flex: 0 1 calc((100% - (15px * 3)) / 4);
     gap: 15px;

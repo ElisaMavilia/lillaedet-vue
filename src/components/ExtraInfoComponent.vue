@@ -51,12 +51,16 @@ img {
 
 #parking-text {
   font-size: 1.3rem;
+  padding-right: 50px;
 }
 
 iframe {
   max-width: 100%;
   height: 350px;
   border-radius: 10px;
-  padding: 20px 0 40px 120px;
+  padding: 20px 0 40px 0px;
+}
+/* MEDIA QUERIES Computer first */
+@media screen and (max-width: 1199.98px) {
 }
 </style>

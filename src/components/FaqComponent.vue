@@ -271,7 +271,7 @@ details[open] .control-icon-expand {
 /* MEDIA QUERIES Computer first */
 
 /* Large (lg) ≥992px -> laptop */
-@media (max-width: 1199.98px) {
+@media screen and (max-width: 1199.98px) {
   #faq-content {
     margin-right: 100px;
     margin-top: 50px;

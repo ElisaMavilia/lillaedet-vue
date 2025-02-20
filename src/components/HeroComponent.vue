@@ -252,7 +252,7 @@ img {
 /* MEDIA QUERIES Computer first */
 
 /* Large (lg) ≥992px -> laptop */
-@media (max-width: 1199.98px) {
+@media screen and (max-width: 1199.98px) {
   .image-container {
     position: absolute;
     top: 75%;
