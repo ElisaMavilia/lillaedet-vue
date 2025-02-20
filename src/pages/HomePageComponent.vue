@@ -47,7 +47,7 @@
     <h2 id="faq-title" class="w-100 text-center text-uppercase">
       Tandläkaren svarar
     </h2>
-    <div class="container faq-content d-flex">
+    <div class="faq-content d-flex justify-content-center pt-5">
       <img id="faq-image" src="../assets/img/nima.png" alt="FAQ Image" />
       <FaqComponent />
     </div>
@@ -235,8 +235,8 @@ h2 {
 #faq-image {
   width: 400px;
   height: auto;
-  transform: translateY(65px); // Move the image down
-  flex-shrink: 0; // Avoid image shrinking
+  transform: translate(-50px, 70px); // Combina X e Y in un'unica trasformazione
+  flex-shrink: 0; // Evita che l'immagine si riduca
 }
 
 //FAQ Component Styles
@@ -399,6 +399,24 @@ h2 {
   /* Before & After Section */
   #before-after-title {
     font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    // Treatment Section
+    .card-container {
+      width: calc(100% / 2);
+    }
+    // Spoken Languages Section
+    #spoken-languages {
+      width: 100%;
+      gap: 30px;
+      height: 430px;
+    }
+    /* FAQ Section */
+    #faq-image {
+      width: 340px;
+      transform: translateY(70px); // Moves the image down
+    }
   }
 }
 </style>

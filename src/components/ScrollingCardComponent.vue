@@ -1,3 +1,4 @@
+<
 <template>
   <section id="cards-section" class="language-card-container" ref="cardSection">
     <div
@@ -8,7 +9,7 @@
       ref="cardElements"
     >
       <h3>{{ card.title }}</h3>
-      <p class="ps-2">{{ card.content }}</p>
+      <p class="p-2">{{ card.content }}</p>
     </div>
   </section>
 </template>
@@ -127,6 +128,36 @@ export default {
 @media screen and (max-width: 1199.98px) {
   h3 {
     font-size: 1.5rem;
+  }
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 991.98px) {
+  .language-card-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+  }
+
+  .card {
+    width: 150px;
+    height: 150px;
+    margin: 2px;
+  }
+
+  /* Effetto fade-in */
+  .fade-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .card:not(.slide-in-left):not(.slide-in-right):nth-child(odd),
+  .card:not(.slide-in-left):not(.slide-in-right):nth-child(even) {
+    transform: scale(0.8);
+  }
+
+  p {
+    padding-left: 0;
   }
 }
 </style>

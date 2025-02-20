@@ -355,5 +355,91 @@ details[open] .control-icon-expand {
   details[open] .control-icon-expand {
     display: none;
   }
+
+  @media screen and (max-width: 991.98px) {
+    #faq-content {
+      margin-right: 100px;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+
+    details {
+      width: 400px;
+      min-height: 50px;
+      max-width: 400px;
+      padding: 15px 70px 15px 45px;
+      margin: 0 auto;
+      position: relative;
+      font-size: 1rem;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      box-sizing: border-box;
+      transition: all 0.3s;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    details + details {
+      margin-top: 20px;
+    }
+
+    details[open] {
+      min-height: 50px;
+      background-color: #f6f7f8;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    details p {
+      color: #96999d;
+      font-weight: 300;
+    }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    summary:focus {
+      outline: none;
+    }
+
+    summary:focus::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0 0 0 1px $purple_light;
+      border-radius: 15px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .control-icon {
+      fill: rebeccapurple;
+      transition: 0.3s ease;
+      pointer-events: none;
+    }
+
+    .control-icon-close {
+      display: none;
+    }
+
+    details[open] .control-icon-close {
+      display: initial;
+      transition: 0.3s ease;
+    }
+
+    details[open] .control-icon-expand {
+      display: none;
+    }
+  }
 }
 </style>

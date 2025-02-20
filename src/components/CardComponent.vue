@@ -173,5 +173,19 @@ export default {
   .btn {
     margin-bottom: 30px;
   }
+
+  @media screen and (max-width: 991.98px) {
+    .card-container {
+      width: calc((100% - 10px) / 2);
+      gap: 5px;
+    }
+
+    #card-box {
+      box-sizing: border-box;
+      width: 230px;
+      height: 230px;
+      margin: 2px;
+    }
+  }
 }
 </style>
