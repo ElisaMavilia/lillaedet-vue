@@ -402,6 +402,10 @@ h2 {
   }
 
   @media screen and (max-width: 991.98px) {
+    // General Statement Section
+    #concept-statement {
+      font-size: 1.4rem;
+    }
     // Treatment Section
     .card-container {
       width: calc(100% / 2);
