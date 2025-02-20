@@ -1,28 +1,34 @@
 <template>
   <header>
-    <div class="nav-container navbar navbar-expand-lg text-uppercase py-5">
+    <div class="nav-container navbar navbar-expand-lg text-uppercase py-4">
       <router-link to="/" class="navbar-brand" @click.native="goToHome">
         <img src="../assets/img/logo-transparent.png" alt="Logo" class="logo" />
       </router-link>
+
+      <!-- Pulsante Toggle -->
       <button
         class="navbar-toggler"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
+        @click="toggleMenu"
         aria-controls="navbarNav"
-        aria-expanded="false"
+        :aria-expanded="isMenuOpen"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- Menu -->
+      <div
+        :class="['collapse', 'navbar-collapse', { show: isMenuOpen }]"
+        id="navbarNav"
+      >
         <ul class="navbar-nav">
           <li class="nav-item" v-for="(link, index) in menuItems" :key="index">
             <router-link
               :to="{ name: link.routeName }"
               class="nav-link"
               :class="{ active: $route.name === link.routeName }"
-              @click.native="resetActiveSection"
+              @click.native="closeMenu"
             >
               {{ link.label }}
             </router-link>
@@ -38,7 +44,7 @@ export default {
   name: "HeaderComponent",
   data() {
     return {
-      activeSection: "",
+      isMenuOpen: false, // Controlla se il menu è aperto o chiuso
       menuItems: [
         { label: "Home", routeName: "home" },
         { label: "Träffa vårt team", routeName: "about-us" },
@@ -49,16 +55,18 @@ export default {
     };
   },
   methods: {
-    resetActiveSection() {
-      this.activeSection = "";
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen; // Cambia lo stato del menu
     },
-
+    closeMenu() {
+      this.isMenuOpen = false; // Chiude il menu quando si clicca un link
+    },
     goToHome() {
       if (this.$route.name === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         this.$router.push({ name: "home" }).then(() => {
-          this.activeSection = "";
+          this.isMenuOpen = false; // Chiude il menu dopo la navigazione
         });
       }
     },
@@ -129,5 +137,95 @@ header {
 
 li {
   font-size: 0.9rem;
+}
+
+@media (max-width: 991.98px) {
+  .nav-container {
+    padding: 0px 20px !important; // Ridotto il padding superiore per avvicinare logo e toggle
+    height: 70px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .logo {
+    width: 180px; // Leggermente ridotto per adattarsi meglio
+    height: auto;
+    position: relative;
+    z-index: 1001;
+    margin-top: -30px; // Spostato più in alto
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1002;
+    margin-top: -20px;
+    color: $fadedFont; // Spostato più in alto per allinearlo al logo
+  }
+
+  .navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%)
+      hue-rotate(190deg) brightness(90%) contrast(90%);
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: none; // Rimuove il bordo predefinito
+    box-shadow: 0 0 5px 2px $fadedFont; // Usa una variabile SCSS per il colore
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $light_pink;
+    padding: 0;
+    z-index: 999;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .navbar-collapse:hover {
+    background: $light_pink;
+  }
+
+  .collapse:not(.show) {
+    display: none;
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .nav-link:hover {
+    background: rgba(206, 158, 255, 0.2);
+  }
+
+  /* .nav-link.active {
+    background: rgba(206, 158, 255, 0.2);
+    border-radius: 5px;
+  } */
 }
 </style>
