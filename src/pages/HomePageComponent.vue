@@ -37,7 +37,9 @@
   <div class="wave wave-purple"></div>
   <!-- Languages Section -->
   <section class="container text-center" id="spoken-languages">
-    <h2 class="text-uppercase pt-5 text-center">Språk vi pratar</h2>
+    <h2 id="spoken-languages-title" class="text-uppercase pt-5 text-center">
+      Språk vi pratar
+    </h2>
     <ScrollingCardComponent />
   </section>
   <!-- White Wave -->
@@ -442,6 +444,23 @@ h2 {
 
     .wave {
       height: 155px;
+    }
+
+    #spoken-languages {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #spoken-languages {
+      width: 100%;
+      height: 540px;
+    }
+
+    #spoken-languages-title {
+      padding-bottom: 20px;
     }
   }
   @media (max-width: 575.98px) {

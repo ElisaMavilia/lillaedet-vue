@@ -160,4 +160,29 @@ export default {
     padding-left: 0;
   }
 }
+
+@media screen and (max-width: 767.98px) {
+  .language-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Two columns
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; // Adapts the container to the content
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 170px;
+    height: 170px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
 </style>
