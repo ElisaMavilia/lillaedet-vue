@@ -173,8 +173,8 @@ export default {
   }
 
   .card {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
   }
 
   h3 {

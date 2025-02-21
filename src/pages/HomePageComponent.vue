@@ -417,6 +417,7 @@ h2 {
       width: 100%;
       gap: 30px;
       height: 430px;
+      margin-bottom: 25px;
     }
     /* FAQ Section */
     #faq-image {
@@ -446,6 +447,13 @@ h2 {
       height: 155px;
     }
 
+    /* Treatment Section */
+    #behandlingar {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Spoken Languages Section */
     #spoken-languages {
       width: 100%;
       height: auto;
