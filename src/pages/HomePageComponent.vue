@@ -430,10 +430,18 @@ h2 {
       padding-left: 0;
     }
 
+    .general-text-content {
+      flex: 1.2;
+    }
+
     #concept-statement {
       padding-top: 50px;
       padding-right: 10px;
       font-size: 1.2rem;
+    }
+
+    .wave {
+      height: 155px;
     }
   }
   @media (max-width: 575.98px) {
