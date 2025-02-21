@@ -309,5 +309,24 @@ img {
       width: 650px;
     }
   }
+  @media (max-width: 767.98px) {
+    .text-up {
+      font-size: 2.3rem;
+    }
+
+    .text-down {
+      font-size: 1.3rem;
+    }
+
+    .image-container {
+      position: absolute;
+      top: 75%;
+      right: -140px; // Modifica questo valore con la media query -> @MEDIA QUERY
+    }
+
+    img {
+      width: 580px;
+    }
+  }
 }
 </style>
