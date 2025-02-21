@@ -312,6 +312,7 @@ img {
   @media (max-width: 767.98px) {
     .text-up {
       font-size: 2.3rem;
+      padding-top: 0;
     }
 
     .text-down {
@@ -319,13 +320,15 @@ img {
     }
 
     .image-container {
-      position: absolute;
-      top: 75%;
       right: -140px; // Modifica questo valore con la media query -> @MEDIA QUERY
     }
 
     img {
       width: 580px;
+    }
+
+    .btn {
+      font-size: 22px;
     }
   }
 }
