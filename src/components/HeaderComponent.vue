@@ -227,5 +227,11 @@ li {
     background: rgba(206, 158, 255, 0.2);
     border-radius: 5px;
   }
+
+  @media screen and (max-width: 767.98px) {
+    .navbar-toggler {
+      padding-right: 20px;
+    }
+  }
 }
 </style>
