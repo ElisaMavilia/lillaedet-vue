@@ -230,7 +230,7 @@ li {
 
   @media screen and (max-width: 767.98px) {
     .navbar-toggler {
-      padding-right: 20px;
+      margin-right: 20px;
     }
   }
 }
