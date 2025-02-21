@@ -330,6 +330,10 @@ img {
     .btn {
       font-size: 22px;
     }
+
+    .fixed-btn {
+      right: 20px !important;
+    }
   }
 }
 </style>

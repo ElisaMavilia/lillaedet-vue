@@ -423,7 +423,18 @@ h2 {
     }
   }
 
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 767.98px) {
+    /* General Statement Section  */
+    .image-container {
+      flex: 1.5;
+      padding-left: 0;
+    }
+
+    #concept-statement {
+      padding-top: 50px;
+      padding-right: 10px;
+      font-size: 1.2rem;
+    }
   }
   @media (max-width: 575.98px) {
   }
