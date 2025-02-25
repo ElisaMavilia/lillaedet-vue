@@ -339,5 +339,35 @@ img {
       font-size: 1.1rem;
     }
   }
+  @media (max-width: 575.98px) {
+    .text-up {
+      font-size: 1.8rem;
+      padding-top: 0;
+    }
+
+    .text-down {
+      font-size: 1.1rem;
+    }
+
+    .image-container {
+      right: -170px; // Modifica questo valore con la media query -> @MEDIA QUERY
+    }
+
+    img {
+      width: 550px;
+    }
+
+    .btn {
+      font-size: 18px;
+    }
+
+    .fixed-btn {
+      right: 20px !important;
+    }
+    .fixed-btn .short-text {
+      display: inline;
+      font-size: 1rem;
+    }
+  }
 }
 </style>
