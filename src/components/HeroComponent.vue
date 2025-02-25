@@ -384,6 +384,28 @@ img {
         font-size: 0.9rem;
       }
     }
+    @media screen and (max-width: 480px) {
+      .text-up {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+
+      .text-down {
+        font-size: 1rem;
+      }
+
+      .image-container {
+        right: -140px; // Modifica questo valore con la media query -> @MEDIA QUERY
+      }
+
+      img {
+        width: 450px;
+      }
+
+      .btn {
+        font-size: 14px;
+      }
+    }
   }
 }
 </style>

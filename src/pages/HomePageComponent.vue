@@ -4,7 +4,7 @@
   <section>
     <HeroComponent />
   </section>
-  <section id="general-content" class="d-flex">
+  <section id="general-content" class="d-flex flex-wrap">
     <div class="image-container container">
       <img
         id="statement-image"
@@ -535,6 +535,42 @@ h2 {
     #before-after-title {
       font-size: 1rem;
       padding-left: 28px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    #general-content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #general-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      margin-top: 40px;
+      z-index: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
+    }
+
+    #statement-image {
+      max-width: 100%;
+      width: 300px;
+      margin: 30px 0 30px 30px;
+    }
+
+    #concept-statement {
+      font-size: 1rem;
     }
   }
 }
