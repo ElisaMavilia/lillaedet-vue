@@ -364,7 +364,7 @@ img {
     .fixed-btn {
       position: fixed !important;
       bottom: 30px !important;
-      right: 2px !important;
+      right: 8px !important;
       z-index: 99999 !important;
       background-color: #e8d1ff;
       color: #ce9eff;
