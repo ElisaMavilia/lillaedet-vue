@@ -56,6 +56,14 @@
       <img id="faq-image" src="../assets/img/nima.png" alt="FAQ Image" />
       <FaqComponent />
     </div>
+    <div id="faq-down" class="d-none">
+      <img
+        class="d-none"
+        id="faq-image-down"
+        src="../assets/img/nima.png"
+        alt="FAQ Image"
+      />
+    </div>
   </section>
   <!-- Purple Wave -->
   <div class="wave wave-purple"></div>
@@ -501,6 +509,27 @@ h2 {
     }
     #treatments-container {
       justify-content: center !important;
+    }
+    /* Faq section */
+    #faq-image {
+      display: none;
+    }
+
+    .faq-content {
+      padding: 0 !important;
+    }
+
+    #faq-down {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #faq-image-down {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      width: 300px;
     }
   }
 }
