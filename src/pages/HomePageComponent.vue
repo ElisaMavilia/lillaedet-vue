@@ -534,7 +534,7 @@ h2 {
 
     #before-after-title {
       font-size: 1rem;
-      padding-left: 50px;
+      padding-left: 28px;
     }
   }
 }

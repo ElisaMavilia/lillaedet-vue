@@ -95,7 +95,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: visible;
-  z-index: 1;
+  z-index: 10;
 }
 
 .background-half {
@@ -362,11 +362,27 @@ img {
     }
 
     .fixed-btn {
-      right: 20px !important;
-    }
-    .fixed-btn .short-text {
-      display: inline;
-      font-size: 1rem;
+      position: fixed !important;
+      bottom: 30px !important;
+      right: 15px !important;
+      z-index: 99999 !important;
+      background-color: #e8d1ff;
+      color: #ce9eff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin-left: 0;
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+
+      .short-text {
+        display: inline;
+        font-size: 0.9rem;
+      }
     }
   }
 }

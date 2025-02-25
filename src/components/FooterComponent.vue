@@ -165,4 +165,50 @@ main {
     font-size: 1.3rem;
   }
 }
+
+@media (max-width: 575.98px) {
+  #footer-container-up {
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #footer-container-down {
+    height: 100px;
+    padding: 0; /* Aggiungi un padding verticale (top e bottom) se necessario */
+  }
+
+  #footer-content {
+    font-size: 0.7rem;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Allinea gli elementi al centro */
+    gap: 45px; /* Spazio tra gli elementi */
+  }
+
+  #footer-container-up h4 {
+    font-size: 1rem;
+  }
+
+  #opening-hours,
+  #address,
+  #contact-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  table {
+    margin: 0 auto; /* Centra la tabella */
+  }
+
+  .fa-brands {
+    font-size: 1.5rem;
+    padding-right: 50px;
+    color: #f9fafa;
+  }
+}
 </style>

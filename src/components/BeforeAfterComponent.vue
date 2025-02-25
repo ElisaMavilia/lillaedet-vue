@@ -194,7 +194,10 @@ input[type="range"]:focus::-moz-range-thumb {
     #comparison {
       width: 40vw;
       height: 40vw;
-      margin-right: 50px;
+      margin-right: 80px;
+    }
+    .overlay-text {
+      font-size: 0.8rem;
     }
   }
 }

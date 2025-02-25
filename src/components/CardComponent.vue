@@ -203,8 +203,8 @@ export default {
     }
 
     #card-box {
-      max-width: 200px;
-      height: 200px;
+      max-width: 190px;
+      height: 190px;
     }
   }
 }
