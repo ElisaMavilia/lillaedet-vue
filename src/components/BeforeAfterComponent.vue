@@ -200,5 +200,13 @@ input[type="range"]:focus::-moz-range-thumb {
       font-size: 0.8rem;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    #comparison {
+      width: 50vw;
+      height: 50vw;
+      margin-right: 0 !important;
+    }
+  }
 }
 </style>

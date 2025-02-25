@@ -582,5 +582,19 @@ h2 {
   #faq-image-down {
     width: 280px;
   }
+  /* Before-After Section */
+  #before-after {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  #before-after-title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-left: 60px;
+    padding-bottom: 20px;
+  }
 }
 </style>
