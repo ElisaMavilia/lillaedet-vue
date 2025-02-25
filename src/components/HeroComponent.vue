@@ -386,12 +386,11 @@ img {
     }
     @media screen and (max-width: 480px) {
       .text-up {
-        font-size: 1.3rem;
-        font-weight: 400;
+        font-size: 1.5rem;
       }
 
       .text-down {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
       .image-container {
