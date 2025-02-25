@@ -472,12 +472,12 @@ h2 {
 
     /* Faq section */
     #faq-image {
-      width: 250px;
+      width: 340px;
       height: auto;
-      transform: translate(8px, 0px);
+      transform: translate(8px, 90px);
       flex-shrink: 0;
     }
-    /* Before & After Section */
+    /* Before & After Section  */
     #before-after-title {
       font-size: 1.2rem;
       padding-right: 70px;
