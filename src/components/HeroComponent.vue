@@ -407,5 +407,23 @@ img {
       }
     }
   }
+  @media screen and (max-width: 425px) {
+    .fixed-btn {
+      right: 18px !important;
+      z-index: 99999 !important;
+      background-color: #e8d1ff;
+      color: #ce9eff;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin-left: 0;
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
 </style>

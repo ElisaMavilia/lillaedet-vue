@@ -596,5 +596,9 @@ h2 {
     padding-left: 60px;
     padding-bottom: 20px;
   }
+
+  h2 {
+    font-size: 1.2rem;
+  }
 }
 </style>

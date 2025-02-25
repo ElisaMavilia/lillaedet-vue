@@ -194,5 +194,11 @@ export default {
       height: 150px;
     }
   }
+  @media screen and (max-width: 425px) {
+    .card {
+      width: 130px;
+      height: 130px;
+    }
+  }
 }
 </style>
