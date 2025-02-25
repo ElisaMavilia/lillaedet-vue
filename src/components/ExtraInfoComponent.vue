@@ -55,9 +55,21 @@ img {
 }
 
 iframe {
-  max-width: 100%;
+  max-width: 90%;
   height: 350px;
   border-radius: 10px;
   padding: 20px 0 40px 0px;
+}
+
+@media screen and (max-width: 767.98px) {
+  #pin {
+    width: 90px;
+  }
+  #parking-text {
+    font-size: 1rem;
+  }
+  iframe {
+    max-width: 85%;
+  }
 }
 </style>

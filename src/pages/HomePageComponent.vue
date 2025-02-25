@@ -474,7 +474,7 @@ h2 {
     #faq-image {
       width: 250px;
       height: auto;
-      transform: translate(8px, 190px);
+      transform: translate(8px, 0px);
       flex-shrink: 0;
     }
     /* Before & After Section */

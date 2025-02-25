@@ -3,7 +3,7 @@
   <div id="footer-container-up">
     <div
       id="footer-content"
-      class="container d-flex justify-content-around align-content-center flex-wrap"
+      class="container d-flex justify-content-around align-content-center"
     >
       <div id="opening-hours">
         <h4 class="text-uppercase">Öppettider</h4>
@@ -144,6 +144,25 @@ main {
 @media screen and (max-width: 991.98px) {
   #footer-content {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  #footer-container-up {
+    padding: 30px 10px;
+  }
+
+  #footer-content {
+    font-size: 0.7rem;
+    padding: 12px;
+  }
+
+  #footer-container-up h4 {
+    font-size: 1.2rem;
+  }
+
+  .fa-brands {
+    font-size: 1.3rem;
   }
 }
 </style>
