@@ -538,6 +538,7 @@ h2 {
     }
   }
   @media screen and (max-width: 480px) {
+    /* General Statement Section */
     #general-content {
       flex-direction: column;
       align-items: center;
@@ -572,6 +573,11 @@ h2 {
     #concept-statement {
       font-size: 1rem;
     }
+  }
+
+  /* Treatment Section */
+  #treatments-title {
+    padding: 150px 0 50px 0;
   }
 }
 </style>
