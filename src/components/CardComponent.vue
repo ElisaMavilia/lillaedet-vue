@@ -184,7 +184,6 @@ export default {
       box-sizing: border-box;
       width: 230px;
       height: 230px;
-      margin: 2px;
     }
   }
   @media screen and (max-width: 767.98px) {
@@ -192,6 +191,20 @@ export default {
       box-sizing: border-box;
       width: 220px;
       height: 220px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 !important;
+      gap: 0;
+    }
+
+    #card-box {
+      max-width: 200px;
+      height: 200px;
     }
   }
 }

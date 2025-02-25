@@ -24,7 +24,10 @@
   <!-- Treatments Section -->
   <section id="behandlingar">
     <h2 id="treatments-title" class="text-uppercase">Våra Behandlingar</h2>
-    <div class="container d-flex justify-content-around flex-wrap">
+    <div
+      id="treatments-container"
+      class="container d-flex justify-content-around flex-wrap"
+    >
       <CardComponent
         v-if="treatments.length"
         v-for="treatment in treatments"
@@ -411,6 +414,10 @@ h2 {
     .card-container {
       width: calc(100% / 2);
     }
+
+    #treatments-container {
+      justify-content: center !important;
+    }
     // Spoken Languages Section
     #spoken-languages {
       width: 100%;
@@ -484,6 +491,17 @@ h2 {
     }
   }
   @media (max-width: 575.98px) {
+    //General Statement image
+    .image-container {
+      flex: 1.9;
+      padding-left: 0;
+    }
+    #concept-statement {
+      font-size: 1rem;
+    }
+    #treatments-container {
+      justify-content: center !important;
+    }
   }
 }
 </style>
