@@ -531,6 +531,11 @@ h2 {
       align-items: center !important;
       width: 300px;
     }
+
+    #before-after-title {
+      font-size: 1rem;
+      padding-left: 50px;
+    }
   }
 }
 </style>
