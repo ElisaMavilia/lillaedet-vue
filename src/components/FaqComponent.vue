@@ -441,5 +441,21 @@ details[open] .control-icon-expand {
       display: none;
     }
   }
+
+  @media screen and (max-width: 767.98px) {
+    #faq-content {
+      margin-right: 100px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+    details {
+      min-height: 5px;
+      max-width: 350px;
+      padding: 25px 50px 20px 25px;
+      font-size: 0.8rem;
+      margin-right: 10px;
+    }
+  }
 }
 </style>

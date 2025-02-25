@@ -334,6 +334,10 @@ img {
     .fixed-btn {
       right: 20px !important;
     }
+    .fixed-btn .short-text {
+      display: inline;
+      font-size: 1.1rem;
+    }
   }
 }
 </style>

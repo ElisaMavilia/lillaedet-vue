@@ -237,8 +237,7 @@ h2 {
 #faq-image {
   width: 400px;
   height: auto;
-  transform: translate(-50px, 70px); // Combina X e Y in un'unica trasformazione
-  flex-shrink: 0; // Evita che l'immagine si riduca
+  flex-shrink: 0;
 }
 
 //FAQ Component Styles
@@ -469,6 +468,14 @@ h2 {
 
     #spoken-languages-title {
       padding-bottom: 20px;
+    }
+
+    /* Faq section */
+    #faq-image {
+      width: 280px;
+      height: auto;
+      transform: translate(5px, 155px);
+      flex-shrink: 0;
     }
   }
   @media (max-width: 575.98px) {
