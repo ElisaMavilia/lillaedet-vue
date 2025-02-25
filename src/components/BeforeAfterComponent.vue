@@ -182,5 +182,12 @@ input[type="range"]:focus::-moz-range-thumb {
       height: 30vw;
     }
   }
+
+  @media screen and (max-width: 767.98px) {
+    #comparison {
+      width: 35vw;
+      height: 35vw;
+    }
+  }
 }
 </style>
