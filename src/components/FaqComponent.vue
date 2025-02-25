@@ -457,5 +457,12 @@ details[open] .control-icon-expand {
       margin-left: 90px;
     }
   }
+  @media screen and (max-width: 480px) {
+    details {
+      width: 330px;
+      max-width: 330px;
+      font-size: 0.8rem;
+    }
+  }
 }
 </style>

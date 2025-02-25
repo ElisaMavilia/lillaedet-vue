@@ -184,5 +184,15 @@ export default {
   p {
     font-size: 0.9rem;
   }
+
+  @media screen and (max-width: 480px) {
+    .language-card-container {
+      grid-gap: 30px;
+    }
+    .card {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
 </style>

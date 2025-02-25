@@ -574,10 +574,13 @@ h2 {
       font-size: 1rem;
     }
   }
-
   /* Treatment Section */
   #treatments-title {
     padding: 150px 0 50px 0;
+  }
+  /* Faq section */
+  #faq-image-down {
+    width: 280px;
   }
 }
 </style>
