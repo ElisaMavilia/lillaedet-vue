@@ -454,7 +454,7 @@ details[open] .control-icon-expand {
       max-width: 350px;
       padding: 25px 50px 20px 25px;
       font-size: 0.8rem;
-      margin-right: 10px;
+      margin-right: 15px;
     }
   }
 }
