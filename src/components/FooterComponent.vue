@@ -210,5 +210,15 @@ main {
     padding-right: 50px;
     color: #f9fafa;
   }
+
+  @media screen and (max-width: 480px) {
+    #footer-container-up h4 {
+      font-size: 1.3rem;
+    }
+
+    table {
+      font-size: 0.8rem;
+    }
+  }
 }
 </style>

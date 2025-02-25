@@ -364,13 +364,13 @@ img {
     .fixed-btn {
       position: fixed !important;
       bottom: 30px !important;
-      right: 15px !important;
+      right: 2px !important;
       z-index: 99999 !important;
       background-color: #e8d1ff;
       color: #ce9eff;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       font-weight: bold;
       text-align: center;
       text-decoration: none;
@@ -386,7 +386,8 @@ img {
     }
     @media screen and (max-width: 480px) {
       .text-up {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        padding: 0 20px 0 20px;
       }
 
       .text-down {
