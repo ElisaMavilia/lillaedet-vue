@@ -3,7 +3,7 @@
     <div
       class="container d-flex align-items-center justify-content-center align-content-center flex-wrap"
     >
-      <img src="../../public/images/road.png" alt="Parkering Tavla" />
+      <img id="pin" src="../../public/images/road.png" alt="Parkering Tavla" />
       <div id="parking-text" class="text-uppercase">Alltid Fri Parkering</div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2106.21812054473!2d12.121493277512942!3d58.136442074058735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46456b007861e0e9%3A0x4cae5e85156b157c!2sLilla%20Edet%20Tandl%C3%A4karcenter!5e0!3m2!1ssv!2sse!4v1739529844476!5m2!1ssv!2sse"
@@ -70,6 +70,16 @@ iframe {
   }
   iframe {
     max-width: 85%;
+  }
+
+  @media (max-width: 575.98px) {
+    #pin {
+      width: 80px;
+    }
+
+    iframe {
+      max-width: 70%;
+    }
   }
 }
 </style>
