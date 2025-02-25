@@ -207,5 +207,22 @@ export default {
       height: 190px;
     }
   }
+  @media screen and (max-width: 480px) {
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100% !important;
+    }
+
+    #card-box {
+      max-width: 230px;
+      height: 230px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
 }
 </style>
