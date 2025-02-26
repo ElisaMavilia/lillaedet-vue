@@ -467,6 +467,11 @@ img {
         width: 500px;
       }
     }
+    @media (max-width: 494px) {
+      .text-up {
+        font-size: 1.5rem;
+      }
+    }
     @media screen and (max-width: 480px) {
       .text-up {
         font-size: 1.4rem;

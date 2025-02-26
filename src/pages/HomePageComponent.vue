@@ -249,6 +249,7 @@ h2 {
   width: 400px;
   height: auto;
   flex-shrink: 0;
+  transform: translateY(68px);
 }
 
 //FAQ Component Styles
