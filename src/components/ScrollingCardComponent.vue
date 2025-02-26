@@ -195,6 +195,9 @@ export default {
     }
   }
   @media screen and (max-width: 425px) {
+    .language-card-container {
+      margin: 20px 0 20px 0;
+    }
     .card {
       width: 130px;
       height: 130px;

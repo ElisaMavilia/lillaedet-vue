@@ -600,5 +600,10 @@ h2 {
   h2 {
     font-size: 1.2rem;
   }
+
+  .wave-white {
+    background: white;
+    margin-bottom: -120px;
+  }
 }
 </style>
