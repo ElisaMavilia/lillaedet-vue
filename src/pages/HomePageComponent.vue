@@ -412,6 +412,7 @@ h2 {
   /* Before & After Section */
   #before-after-title {
     font-size: 1.8rem;
+    padding-right: 55px;
   }
 
   @media screen and (max-width: 991.98px) {
@@ -497,6 +498,14 @@ h2 {
     #before-after-title {
       font-size: 1.2rem;
       padding-right: 70px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    #faq-image {
+      width: 310px;
+
+      transform: translate(8px, 85px);
+      flex-shrink: 0;
     }
   }
   @media (max-width: 575.98px) {

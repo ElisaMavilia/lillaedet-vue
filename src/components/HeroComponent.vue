@@ -351,71 +351,7 @@ img {
     img {
       width: 580px;
     }
-
-    .btn {
-      font-size: 22px;
-    }
-
-    .fixed-btn {
-      right: 20px !important;
-    }
-    .fixed-btn .short-text {
-      display: inline;
-      font-size: 1.1rem;
-    }
-  }
-  @media screen and (max-width: 727px) {
-    .image-container {
-      right: -150px;
-    }
-  }
-  @media screen and (max-width: 718px) {
-    .image-container {
-      right: -160px;
-    }
-  }
-
-  @media screen and (max-width: 702px) {
-    .image-container {
-      right: -180px;
-    }
-  }
-
-  @media screen and (max-width: 641px) {
-    .image-container {
-      right: -200px;
-    }
-    .text-up {
-      font-size: 1.9rem;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    .text-down {
-      font-size: 1.5rem;
-    }
-  }
-
-  @media screen and (max-width: 608px) {
-    img {
-      width: 550px;
-    }
-    .text-up {
-      font-size: 1.8rem;
-      padding-top: 0;
-    }
-
-    .text-down {
-      font-size: 1.1rem;
-    }
-
-    .image-container {
-      right: -170px;
-    }
-
-    .btn {
-      font-size: 18px;
-    }
+    // Round small fixed button
     .fixed-btn {
       position: fixed !important;
       bottom: 30px !important;
@@ -436,6 +372,55 @@ img {
       .short-text {
         display: inline;
         font-size: 0.9rem;
+      }
+    }
+    @media screen and (max-width: 727px) {
+      .image-container {
+        right: -150px;
+      }
+    }
+    @media screen and (max-width: 718px) {
+      .image-container {
+        right: -160px;
+      }
+    }
+
+    @media screen and (max-width: 702px) {
+      .image-container {
+        right: -180px;
+      }
+    }
+
+    @media screen and (max-width: 641px) {
+      .image-container {
+        right: -200px;
+      }
+      .text-up {
+        font-size: 1.9rem;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .text-down {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 608px) {
+      img {
+        width: 550px;
+      }
+      .text-up {
+        font-size: 1.8rem;
+        padding-top: 0;
+      }
+
+      .text-down {
+        font-size: 1.1rem;
+      }
+
+      .image-container {
+        right: -170px;
       }
     }
 

@@ -164,9 +164,6 @@ main {
   .fa-brands {
     font-size: 1.3rem;
   }
-}
-
-@media (max-width: 575.98px) {
   #footer-container-up {
     padding: 30px 10px;
     display: flex;
@@ -178,7 +175,7 @@ main {
 
   #footer-container-down {
     height: 100px;
-    padding: 0; /* Aggiungi un padding verticale (top e bottom) se necessario */
+    padding: 0;
   }
 
   #footer-content {
@@ -186,10 +183,12 @@ main {
     padding: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Allinea gli elementi al centro */
-    gap: 45px; /* Spazio tra gli elementi */
+    align-items: center;
+    gap: 45px;
   }
+}
 
+@media (max-width: 575.98px) {
   #footer-container-up h4 {
     font-size: 1rem;
   }

@@ -444,9 +444,9 @@ details[open] .control-icon-expand {
 
   @media screen and (max-width: 767.98px) {
     details {
-      width: 350px;
-      max-width: 330px;
-      font-size: 0.9rem;
+      width: 320px;
+      max-width: 320px;
+      font-size: 0.8rem;
     }
   }
   @media (max-width: 575.98px) {
