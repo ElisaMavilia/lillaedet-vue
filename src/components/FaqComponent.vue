@@ -471,5 +471,12 @@ details[open] .control-icon-expand {
       font-size: 0.8rem;
     }
   }
+  @media screen and (max-width: 387px) {
+    details {
+      width: 250px;
+      max-width: 250px;
+      font-size: 0.7rem;
+    }
+  }
 }
 </style>

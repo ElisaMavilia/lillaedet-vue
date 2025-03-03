@@ -581,7 +581,7 @@ h2 {
   }
   /* Faq section */
   #faq-image-down {
-    width: 280px;
+    width: 240px;
   }
   /* Before-After Section */
   #before-after {
@@ -605,6 +605,12 @@ h2 {
   .wave-white {
     background: white;
     margin-bottom: -120px;
+  }
+
+  @media screen and (max-width: 387px) {
+    #before-after-title {
+      font-size: 1.3rem;
+    }
   }
 }
 </style>

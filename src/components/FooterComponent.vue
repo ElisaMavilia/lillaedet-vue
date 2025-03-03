@@ -220,5 +220,14 @@ main {
       font-size: 0.8rem;
     }
   }
+  @media screen and (max-width: 387px) {
+    #footer-container-up h4 {
+      font-size: 0.9rem;
+    }
+
+    table {
+      font-size: 0.6rem;
+    }
+  }
 }
 </style>

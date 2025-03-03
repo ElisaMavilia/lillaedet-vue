@@ -233,5 +233,15 @@ li {
       margin-right: 20px;
     }
   }
+  @media screen and (max-width: 387px) {
+    .logo {
+      width: 150px;
+      margin-top: -35px;
+    }
+
+    .navbar-toggler {
+      margin-right: 5px;
+    }
+  }
 }
 </style>

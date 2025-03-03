@@ -81,5 +81,14 @@ iframe {
       max-width: 70%;
     }
   }
+  @media screen and (max-width: 387px) {
+    #parking-text {
+      font-size: 0.8rem;
+      padding-left: 2px;
+    }
+    iframe {
+      max-width: 90%;
+    }
+  }
 }
 </style>
