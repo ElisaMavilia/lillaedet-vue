@@ -612,5 +612,11 @@ h2 {
       font-size: 1.3rem;
     }
   }
+  @media screen and (max-width: 348px) {
+    #concept-statement {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
 }
 </style>

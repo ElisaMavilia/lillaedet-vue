@@ -558,5 +558,24 @@ img {
       right: -150px;
     }
   }
+  @media screen and (max-width: 348px) {
+    .text-up {
+      font-size: 1.1rem;
+    }
+    .text-down {
+      font-size: 0.9rem;
+    }
+    img {
+      width: 400px;
+    }
+    .fixed-btn {
+      right: 5px !important;
+
+      .short-text {
+        display: inline;
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 </style>

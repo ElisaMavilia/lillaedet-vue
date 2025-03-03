@@ -229,5 +229,10 @@ main {
       font-size: 0.6rem;
     }
   }
+  @media screen and (max-width: 348px) {
+    #contact-info {
+      font-size: 0.6rem;
+    }
+  }
 }
 </style>

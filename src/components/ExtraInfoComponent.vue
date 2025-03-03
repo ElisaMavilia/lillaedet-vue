@@ -90,5 +90,10 @@ iframe {
       max-width: 90%;
     }
   }
+  @media screen and (max-width: 348px) {
+    #parking-text {
+      font-size: 0.7rem;
+    }
+  }
 }
 </style>
