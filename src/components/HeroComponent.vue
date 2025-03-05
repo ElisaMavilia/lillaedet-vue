@@ -1,44 +1,39 @@
 <template>
-  <section id="hero">
-    <div class="background-half d-flex align-items-center h-100">
-      <!-- Text Section -->
-      <div class="text-container">
-        <div class="text-up text-uppercase">Lilla Edet Tandläkarcenter</div>
-        <h2 class="ps-5 pt-3">
-          <span class="text-down text-uppercase"
-            >Din Tandklinik i Lilla Edet</span
+  <section class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="../assets/video/background.mp4" type="video/mp4" />
+      Il tuo browser non supporta il video.
+    </video>
+    <div class="hero-content">
+      <h1 class="text-uppercase">Välkommen till Lilla Edet Tandläkarcenter</h1>
+      <p>Din Tandklinik i Västergötland</p>
+      <div
+        id="pastel-button-container"
+        class="d-flex justify-content-center align-items-center"
+      >
+        <div class="frame">
+          <a
+            href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv"
+            class="btn btn1"
           >
-        </h2>
-        <!-- Buttons Section -->
-        <div
-          id="pastel-button-container"
-          class="d-flex align-items-center align-content-center"
-        >
-          <!-- Boka Tid Online Button (Muntra)-->
-          <div class="frame">
-            <a
-              href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv"
-              class="btn btn1"
-              :class="{ 'fixed-btn': isScrolled }"
-            >
-              <span class="full-text">Boka Tid Online</span>
-              <span class="d-none short-text">Boka</span>
-            </a>
-          </div>
-          <!-- Ring Oss Button -->
-          <div class="frame ms-3">
-            <a href="tel:+46520657724" class="btn btn2 btn-right">Ringa oss</a>
-          </div>
+            <span class="full-text">Boka Tid Online</span>
+            <span class="d-none short-text">Boka</span>
+          </a>
+        </div>
+        <div class="frame ms-3">
+          <a href="tel:+46520657724" class="btn btn2 btn-right">Ringa oss</a>
         </div>
       </div>
-      <!-- Image with overflow to general-content in the MainComponent -->
-      <div class="image-container">
-        <img src="../assets/img/equipment5.png" alt="Dental care equipment" />
-      </div>
     </div>
-  </section>
-  <section>
-    <WaveComponent />
+    <!-- Bottone fisso spostato fuori -->
+    <a
+      href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv"
+      class="btn btn1 fixed-btn"
+      v-if="isScrolled"
+    >
+      <span class="full-text">Boka Tid Online</span>
+      <span class="short-text">Boka</span>
+    </a>
   </section>
 </template>
 
@@ -76,35 +71,40 @@ export default {
 @use "../assets/styles/partials/variables" as *;
 
 /* General Customization */
-body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  font-family: $basefont;
-  width: 100%;
-}
-
-#hero {
-  width: 100%;
-  height: 600px;
+.hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-  z-index: 10;
+  width: 100%;
+  height: 70vh;
 }
 
-.background-half {
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: $light_pink;
-  display: flex;
-  align-items: center;
-  position: relative;
+  object-fit: cover; /* Per fare in modo che il video copra l'intera area */
+  z-index: -1; /* Per mettere il video dietro al contenuto */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 400;
+  font-family: $secondaryfont;
+  color: #6e6969;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+h1 {
+  font-size: 2.1rem;
+}
+
+p {
+  font-size: 1.8rem;
 }
 
 /* Text */
@@ -117,38 +117,7 @@ body {
   z-index: 10; // with this the text is on top of the image
 }
 
-.text-up {
-  font-size: 3rem;
-  font-weight: 400;
-  font-family: $secondaryfont;
-  display: flex;
-  text-align: left;
-  color: #6e6969;
-  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-}
-
-.text-down {
-  font-size: 1.6rem;
-  font-weight: 190;
-  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Image */
-.image-container {
-  position: absolute;
-  top: 60%;
-  right: -70px; // Modifica questo valore con la media query -> @MEDIA QUERY
-  transform: translateY(-50%);
-  z-index: 5;
-  pointer-events: none; // Assures that the image doesn't interfere with scrolling
-}
-
-img {
-  width: 800px;
-  height: auto;
-  transform: rotate(-10deg);
-}
-
+/* Buttons starting position */
 .frame {
   margin-top: 30px;
   display: flex;
@@ -156,7 +125,6 @@ img {
   align-items: center;
 }
 
-/* Buttons starting position */
 #pastel-button-container {
   display: flex;
   justify-content: flex-start;
@@ -548,9 +516,9 @@ img {
       width: 420px;
     }
 
-    .image-container {
+    /* .image-container {
       right: -150px;
-    }
+    } */
   }
   @media screen and (max-width: 348px) {
     .text-up {
@@ -573,3 +541,4 @@ img {
   }
 }
 </style>
+*/

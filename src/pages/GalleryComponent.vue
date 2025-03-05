@@ -61,7 +61,8 @@ export default {
   width: 100%;
   height: auto;
   padding-top: 150px;
-  margin-bottom: 150px;
+  padding-bottom: 150px;
+  /* margin-bottom: 150px; */
 }
 
 .card-container {
@@ -75,4 +76,10 @@ h2 {
   color: $fadedFont;
   text-align: center;
 }
+
+/* @media screen and (max-width: 1399px) {
+  .card-container {
+    width: calc((100% / 3) - 20px);
+  }
+} */
 </style>

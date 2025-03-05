@@ -139,6 +139,17 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/styles/partials/variables" as *;
 
+/* Debug */
+/* * {
+  outline: 1px solid red;
+}
+ */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /* Font Family */
 #general-content,
 #concept-statement,

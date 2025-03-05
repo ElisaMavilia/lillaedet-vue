@@ -1,11 +1,11 @@
 <template>
-  <header>
+  <header :class="{ 'header-scrolled': isScrolled }">
     <div class="nav-container navbar navbar-expand-lg text-uppercase py-4">
       <router-link to="/" class="navbar-brand" @click.native="goToHome">
         <img src="../assets/img/logo-transparent.png" alt="Logo" class="logo" />
       </router-link>
 
-      <!-- Pulsante Toggle -->
+      <!-- Toggle for mobile -->
       <button
         class="navbar-toggler"
         type="button"
@@ -17,7 +17,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Menu -->
       <div
         :class="['collapse', 'navbar-collapse', { show: isMenuOpen }]"
         id="navbarNav"
@@ -44,7 +43,8 @@ export default {
   name: "HeaderComponent",
   data() {
     return {
-      isMenuOpen: false, // Menu state initially closed
+      isScrolled: false,
+      isMenuOpen: false,
       menuItems: [
         { label: "Home", routeName: "home" },
         { label: "Träffa vårt team", routeName: "about-us" },
@@ -56,20 +56,28 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen; // Changes the menu state
+      this.isMenuOpen = !this.isMenuOpen;
     },
     closeMenu() {
-      this.isMenuOpen = false; // Closes the menu after navigation click
+      this.isMenuOpen = false;
     },
     goToHome() {
       if (this.$route.name === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        this.$router.push({ name: "home" }).then(() => {
-          this.isMenuOpen = false; // Closes the menu after navigation
-        });
+        this.$router.push({ name: "home" });
       }
     },
+    handleScroll() {
+      // It changes when the scroll goes over x number of px
+      this.isScrolled = window.scrollY > 300;
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>
@@ -83,12 +91,18 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  height: 90px;
+  max-width: 100vw;
+  height: 70px;
   z-index: 3000;
-  background: $light_pink;
   display: flex;
   align-items: center;
-  color: $fadedFont;
+  color: black;
+  transition: background 0.3s ease;
+}
+
+.header-scrolled {
+  background: $light_pink;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -98,7 +112,6 @@ header {
   width: 100%;
   height: 100%;
   padding: 0 40px 20px 40px;
-  color: $fadedFont;
 }
 
 .logo {
@@ -127,7 +140,7 @@ header {
 
 .nav-link {
   text-decoration: none;
-  color: $fadedFont;
+  color: black;
   padding: 10px;
 }
 
@@ -152,7 +165,7 @@ li {
     height: auto;
     position: relative;
     z-index: 1001;
-    margin-top: -45px; // Moves the logo up
+    margin-top: -45px;
   }
 
   .navbar-toggler {
@@ -162,12 +175,11 @@ li {
     position: relative;
     z-index: 1002;
     margin-top: -20px;
-    color: $fadedFont;
+    color: black;
   }
 
   .navbar-toggler-icon {
-    filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%)
-      hue-rotate(190deg) brightness(90%) contrast(90%);
+    filter: brightness(0) invert(1);
   }
 
   .navbar-toggler:focus,
@@ -196,10 +208,6 @@ li {
     display: none;
   }
 
-  .navbar-collapse.show {
-    display: block;
-  }
-
   .navbar-nav {
     flex-direction: column;
     align-items: center;
@@ -219,29 +227,9 @@ li {
     font-size: 1rem;
   }
 
-  /* .nav-link:hover {
-    background: rgba(206, 158, 255, 0.2);
-  } */
-
   .nav-link.active {
     background: rgba(206, 158, 255, 0.2);
     border-radius: 5px;
-  }
-
-  @media screen and (max-width: 767.98px) {
-    .navbar-toggler {
-      margin-right: 20px;
-    }
-  }
-  @media screen and (max-width: 387px) {
-    .logo {
-      width: 150px;
-      margin-top: -35px;
-    }
-
-    .navbar-toggler {
-      margin-right: 5px;
-    }
   }
 }
 </style>

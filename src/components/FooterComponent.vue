@@ -103,10 +103,10 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  height: 100%;
 
   #footer-content {
     max-width: 1200px;
-    padding: 40px;
     text-align: center;
     padding: 90px;
   }

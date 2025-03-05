@@ -33,7 +33,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
   width: 100%;
 }
@@ -76,8 +76,68 @@ export default {
 .card-text {
   text-align: center;
   font-size: 0.7rem;
-  font-family: $secondaryfont;
+  font-family: "IBM Plex Mono" monospace;
   color: $fadedFont;
   padding-bottom: 5px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1399px) {
+  .card-container {
+    flex: calc((100% - (20px * 3)) / 3);
+    justify-content: center;
+  }
+  #card-box {
+    width: 300px;
+    aspect-ratio: 3 / 4;
+    padding-bottom: 15px;
+    padding-top: 20px;
+  }
+
+  .card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    padding: 15px 15px 40px 15px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .card-container {
+    flex: calc((100% - (20px * 3)) / 2);
+    justify-content: center;
+  }
+}
+#card-box {
+  width: 300px;
+  aspect-ratio: 3 / 4;
+  padding-bottom: 15px;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .card-container {
+    width: 100%;
+    flex: calc((100% - (20px * 3)));
+  }
+
+  #card-box {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+  }
+}
+
+#card-box {
+  width: 90%;
+  max-width: 300px;
+  aspect-ratio: 3 / 4;
+}
+
+.card-img-top {
+  padding: 20px;
 }
 </style>
