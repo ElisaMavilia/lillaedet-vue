@@ -449,12 +449,18 @@ details[open] .control-icon-expand {
       font-size: 0.8rem;
     }
   }
-  @media (max-width: 575.98px) {
+  @media screen and (max-width: 641px) {
     details {
       width: 380px;
       max-width: 380px;
       font-size: 0.9rem;
       margin-left: 90px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    details {
+      width: 380px;
+      max-width: 380px;
     }
   }
   @media screen and (max-width: 480px) {

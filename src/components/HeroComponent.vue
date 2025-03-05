@@ -404,6 +404,9 @@ img {
       .text-down {
         font-size: 1.5rem;
       }
+      .fixed-btn {
+        right: 20px !important;
+      }
     }
 
     @media screen and (max-width: 608px) {
@@ -421,6 +424,9 @@ img {
 
       .image-container {
         right: -170px;
+      }
+      .fixed-btn {
+        right: 25px !important;
       }
     }
 
@@ -485,6 +491,9 @@ img {
       .text-down {
         font-size: 1.1rem;
         padding: 0;
+      }
+      .fixed-btn {
+        right: 10px !important;
       }
     }
     @media screen and (max-width: 494px) {

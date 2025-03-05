@@ -194,7 +194,7 @@ input[type="range"]:focus::-moz-range-thumb {
     #comparison {
       width: 40vw;
       height: 40vw;
-      margin-right: 80px;
+      margin-right: 8px;
     }
     .overlay-text {
       font-size: 0.8rem;

@@ -508,19 +508,7 @@ h2 {
       flex-shrink: 0;
     }
   }
-  @media (max-width: 575.98px) {
-    //General Statement image
-    .image-container {
-      flex: 1.9;
-      padding-left: 0;
-    }
-    #concept-statement {
-      font-size: 1rem;
-    }
-    #treatments-container {
-      justify-content: center !important;
-    }
-    /* Faq section */
+  @media screen and (max-width: 641px) {
     #faq-image {
       display: none;
     }
@@ -539,12 +527,25 @@ h2 {
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
-      width: 300px;
+      width: 300px !important;
     }
 
     #before-after-title {
       font-size: 1rem;
       padding-left: 28px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    //General Statement image
+    .image-container {
+      flex: 1.9;
+      padding-left: 0;
+    }
+    #concept-statement {
+      font-size: 1rem;
+    }
+    #treatments-container {
+      justify-content: center !important;
     }
   }
   @media screen and (max-width: 480px) {
