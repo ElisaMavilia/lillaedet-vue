@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ 'header-scrolled': isScrolled }">
+  <header :class="{ 'header-scrolled': isScrolled, 'menu-open': isMenuOpen }">
     <div class="nav-container navbar navbar-expand-lg text-uppercase py-4">
       <router-link to="/" class="navbar-brand" @click.native="goToHome">
         <img src="../assets/img/logo-transparent.png" alt="Logo" class="logo" />
@@ -70,7 +70,7 @@ export default {
     },
     handleScroll() {
       // It changes when the scroll goes over x number of px
-      this.isScrolled = window.scrollY > 300;
+      this.isScrolled = window.scrollY > 150;
     },
   },
   mounted() {
@@ -90,10 +90,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  padding: 40px 0 30px 0;
   width: 100%;
   max-width: 100vw;
-  height: 70px;
-  z-index: 3000;
+  height: 80px;
+  z-index: 4000;
   display: flex;
   align-items: center;
   color: black;
@@ -153,11 +154,20 @@ li {
 }
 
 @media screen and (max-width: 991.98px) {
+  .menu-open {
+    background: $light_pink !important;
+  }
+
   .nav-container {
-    padding: 0px 20px !important;
     height: 70px;
-    position: relative;
     z-index: 1000;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 85px;
   }
 
   .logo {
@@ -165,21 +175,21 @@ li {
     height: auto;
     position: relative;
     z-index: 1001;
-    margin-top: -45px;
+    padding-bottom: 20px;
   }
 
   .navbar-toggler {
     border: none;
     background: transparent;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     position: relative;
     z-index: 1002;
-    margin-top: -20px;
+    margin-bottom: 10px;
     color: black;
   }
 
   .navbar-toggler-icon {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0);
   }
 
   .navbar-toggler:focus,
@@ -190,13 +200,17 @@ li {
 
   .navbar-collapse {
     position: absolute;
-    top: 100%;
+    top: 70px;
     left: 0;
     width: 100%;
     background: $light_pink;
     padding: 0;
     z-index: 999;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-open,
+  .navbar-collapse {
     transition: max-height 0.3s ease-in-out;
   }
 

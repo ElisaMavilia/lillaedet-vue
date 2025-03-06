@@ -74,7 +74,7 @@ export default {
 .hero {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
 }
 
 .hero-video {
@@ -83,8 +83,8 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Per fare in modo che il video copra l'intera area */
-  z-index: -1; /* Per mettere il video dietro al contenuto */
+  object-fit: cover;
+  z-index: -1;
 }
 
 .hero-content {
@@ -95,12 +95,13 @@ export default {
   text-align: center;
   font-weight: 400;
   font-family: $secondaryfont;
-  color: #6e6969;
+  color: $fadedFont;
   text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 h1 {
   font-size: 2.1rem;
+  white-space: nowrap; //Avoids line break
 }
 
 p {
@@ -140,7 +141,7 @@ p {
   color: #ce9eff;
   border-radius: 50px;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
   padding: 10px 20px;
@@ -182,7 +183,7 @@ p {
   border-radius: 50px;
   font-family: "Lato", sans-serif;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
 }
@@ -196,7 +197,7 @@ p {
 /* Button Ring Oss */
 .btn2 {
   background-color: #d3b1f5;
-  color: #f2edf7;
+  color: #f0e9f7;
 }
 
 /* Hover: Boka Tid Online Button */
@@ -221,53 +222,31 @@ p {
 
 /* Extra Large (xl) ≥1400px -> desktop */
 @media screen and (max-width: 1399.98px) {
-  .image-container {
-    position: absolute;
-    top: 65%;
-    right: -90px;
-  }
   // Fixed button
   .fixed-btn {
     right: 15px !important;
   }
 }
 
-@media screen and (max-width: 1332px) {
-  .image-container {
-    right: -120px;
-  }
+/* @media screen and (max-width: 1332px) {
 }
 
 @media screen and (max-width: 1268px) {
-  .image-container {
-    right: -200px;
-  }
-}
+} */
 
 /* Large (lg) ≥992px -> laptop */
 @media screen and (max-width: 1199.98px) {
-  .image-container {
-    position: absolute;
-    top: 75%;
-    right: -90px;
+  h1 {
+    font-size: 1.8rem;
   }
 
-  .text-up {
-    font-size: 2.6rem;
+  p {
+    font-size: 1.4rem;
   }
-
-  .text-down {
-    font-size: 1.5rem;
-  }
-
-  img {
-    width: 680px;
-  }
-
   // Buttons
   .btn {
     padding: 9px 19px;
-    font-size: 25px;
+    font-size: 1.2rem;
   }
 
   .fixed-btn {
@@ -285,39 +264,22 @@ p {
   }
 
   @media screen and (max-width: 991.98px) {
-    img {
-      width: 650px;
+    h1 {
+      font-size: 1.7rem;
     }
-    .image-container {
-      right: -140px;
-    }
-  }
 
-  @media screen and (max-width: 868px) {
-    img {
-      width: 590px;
-    }
-    .image-container {
-      right: -140px;
+    p {
+      font-size: 1.4rem;
     }
   }
 
   @media screen and (max-width: 770px) {
-    .text-up {
-      font-size: 2.3rem;
-      padding-top: 0;
+    h1 {
+      font-size: 1.5rem;
     }
 
-    .text-down {
-      font-size: 1.3rem;
-    }
-
-    .image-container {
-      right: -140px;
-    }
-
-    img {
-      width: 580px;
+    p {
+      font-size: 1.2rem;
     }
     // Round small fixed button
     .fixed-btn {
@@ -343,79 +305,26 @@ p {
       }
     }
     @media screen and (max-width: 727px) {
-      .image-container {
-        right: -150px;
-      }
     }
     @media screen and (max-width: 718px) {
-      .image-container {
-        right: -160px;
-      }
     }
 
     @media screen and (max-width: 702px) {
-      .image-container {
-        right: -180px;
-      }
     }
 
     @media screen and (max-width: 641px) {
-      .image-container {
-        right: -200px;
-      }
-      .text-up {
-        font-size: 1.9rem;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .text-down {
-        font-size: 1.5rem;
-      }
       .fixed-btn {
         right: 20px !important;
       }
     }
 
     @media screen and (max-width: 608px) {
-      img {
-        width: 550px;
-      }
-      .text-up {
-        font-size: 1.8rem;
-        padding-top: 0;
-      }
-
-      .text-down {
-        font-size: 1.1rem;
-      }
-
-      .image-container {
-        right: -170px;
-      }
       .fixed-btn {
         right: 25px !important;
       }
     }
 
     @media (max-width: 575.98px) {
-      .text-up {
-        font-size: 1.8rem;
-        padding-top: 0;
-      }
-
-      .text-down {
-        font-size: 1.1rem;
-      }
-
-      .image-container {
-        right: -170px;
-      }
-
-      img {
-        width: 550px;
-      }
-
       .btn {
         font-size: 18px;
       }
@@ -444,92 +353,25 @@ p {
       }
     }
     @media screen and (max-width: 567px) {
-      img {
-        width: 500px;
-      }
     }
     @media screen and (max-width: 518px) {
-      .image-container {
-        right: -160px;
-      }
-      .text-up {
-        font-size: 1.5rem;
-        padding: 0;
-      }
-      .text-down {
-        font-size: 1.1rem;
-        padding: 0;
-      }
       .fixed-btn {
         right: 10px !important;
       }
     }
     @media screen and (max-width: 494px) {
-      .text-up {
-        font-size: 1.5rem;
-      }
     }
     @media screen and (max-width: 480px) {
-      .text-up {
-        font-size: 1.4rem;
-        padding: 0 20px 0 20px;
-      }
-
-      .text-down {
-        font-size: 1.2rem;
-      }
-
-      .image-container {
-        right: -140px;
-      }
-
-      img {
-        width: 450px;
-      }
-
       .btn {
         font-size: 14px;
       }
     }
   }
   @media screen and (max-width: 425px) {
-    .text-up {
-      font-size: 1.3rem;
-      padding: 0 22px 0 22px;
-    }
-
-    .text-down {
-      font-size: 1.1rem;
-    }
   }
   @media screen and (max-width: 387px) {
-    .text-up {
-      font-size: 1.2rem;
-      padding: 0;
-    }
-
-    .text-down {
-      font-size: 1rem;
-    }
-
-    img {
-      width: 420px;
-    }
-
-    /* .image-container {
-      right: -150px;
-    } */
   }
   @media screen and (max-width: 348px) {
-    .text-up {
-      font-size: 1.1rem;
-    }
-    .text-down {
-      font-size: 0.9rem;
-    }
-    img {
-      width: 400px;
-    }
     .fixed-btn {
       right: 5px !important;
 
