@@ -453,21 +453,22 @@ h2 {
     }
   }
 
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     /* General Statement Section  */
-    .image-container {
-      flex: 1.5;
-      padding-left: 0;
-    }
-
-    .general-text-content {
-      flex: 1.2;
+    #statement-image {
+      width: 600px;
+      height: auto;
+      margin: 50px 10px 50px 0px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     #concept-statement {
-      padding-top: 50px;
-      padding-right: 10px;
       font-size: 1.2rem;
+      font-weight: 200;
+      color: #333;
+      text-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
     }
 
     .wave {
@@ -498,28 +499,11 @@ h2 {
       padding-bottom: 20px;
     }
 
-    /* Faq section */
-    #faq-image {
-      width: 340px;
-      height: auto;
-      transform: translate(8px, 90px);
-      flex-shrink: 0;
-    }
     /* Before & After Section  */
     #before-after-title {
       font-size: 1.2rem;
       padding-right: 70px;
     }
-  }
-  @media screen and (max-width: 767.98px) {
-    #faq-image {
-      width: 310px;
-
-      transform: translate(8px, 85px);
-      flex-shrink: 0;
-    }
-  }
-  @media screen and (max-width: 641px) {
     #faq-image {
       display: none;
     }
@@ -540,7 +524,9 @@ h2 {
       align-items: center !important;
       width: 300px !important;
     }
+  }
 
+  @media screen and (max-width: 641px) {
     #before-after-title {
       font-size: 1rem;
       padding-left: 28px;

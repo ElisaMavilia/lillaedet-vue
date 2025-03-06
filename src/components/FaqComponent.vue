@@ -442,18 +442,23 @@ details[open] .control-icon-expand {
     }
   }
 
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     details {
-      width: 320px;
-      max-width: 320px;
-      font-size: 0.8rem;
+      width: 550px;
+      max-width: 550px;
+      font-size: 0.9rem;
+    }
+    #faq-content {
+      margin-right: 0px;
+      margin-top: 80px;
+      cursor: pointer;
     }
   }
   @media screen and (max-width: 641px) {
     details {
       width: 380px;
       max-width: 380px;
-      font-size: 0.9rem;
+
       margin-left: 90px;
     }
   }

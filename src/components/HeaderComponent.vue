@@ -14,7 +14,15 @@
         :aria-expanded="isMenuOpen"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span
+          :class="[
+            'navbar-toggler-icon',
+            {
+              'navbar-toggler-icon-dark':
+                !isHomePage || isScrolled || isMenuOpen,
+            },
+          ]"
+        ></span>
       </button>
 
       <div
@@ -67,10 +75,11 @@ export default {
       } else {
         this.$router.push({ name: "home" });
       }
+      this.closeMenu();
     },
     handleScroll() {
       // It changes when the scroll goes over x number of px
-      this.isScrolled = window.scrollY > 150;
+      this.isScrolled = window.scrollY > 100;
     },
   },
   mounted() {
@@ -78,6 +87,11 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
+  },
+  computed: {
+    isHomePage() {
+      return this.$route.name === "home"; // Check if the current route is the home page in order to change the color if another page is active
+    },
   },
 };
 </script>
@@ -112,7 +126,7 @@ header {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 40px 20px 40px;
+  padding: 0 40px 0px 40px;
 }
 
 .logo {
@@ -161,7 +175,8 @@ li {
   .nav-container {
     height: 70px;
     z-index: 1000;
-    padding: 0 20px;
+    padding-right: 20px;
+    padding-left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -189,7 +204,12 @@ li {
   }
 
   .navbar-toggler-icon {
-    filter: brightness(0) invert(0);
+    filter: brightness(0) invert(1); /* Bianco di default */
+    transition: filter 0.3s ease;
+  }
+
+  .navbar-toggler-icon-dark {
+    filter: brightness(0) invert(0); /* Nero quando lo sfondo diventa light-pink */
   }
 
   .navbar-toggler:focus,
@@ -238,7 +258,7 @@ li {
     display: block;
     width: 100%;
     padding: 12px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .nav-link.active {

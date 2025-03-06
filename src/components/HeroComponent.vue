@@ -74,7 +74,7 @@ export default {
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
 }
 
 .hero-video {
@@ -101,6 +101,7 @@ export default {
 }
 h1 {
   font-size: 2.1rem;
+  font-weight: 600;
   white-space: nowrap; //Avoids line break
 }
 
@@ -246,7 +247,7 @@ p {
   // Buttons
   .btn {
     padding: 9px 19px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .fixed-btn {
@@ -264,6 +265,9 @@ p {
   }
 
   @media screen and (max-width: 991.98px) {
+    .hero {
+      height: 50vh;
+    }
     h1 {
       font-size: 1.7rem;
     }
@@ -324,7 +328,7 @@ p {
         font-size: 1.2rem;
       }
       p {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       .frame {
         margin-top: 10px;
@@ -338,8 +342,14 @@ p {
     }
 
     @media (max-width: 575.98px) {
+      h1 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
       .btn {
-        font-size: 18px;
+        font-size: 0.9rem;
       }
 
       .fixed-btn {
@@ -365,24 +375,43 @@ p {
         }
       }
     }
-    @media screen and (max-width: 567px) {
-    }
+
     @media screen and (max-width: 518px) {
+      h1 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
       .fixed-btn {
-        right: 10px !important;
-      }
-    }
-    @media screen and (max-width: 494px) {
-    }
-    @media screen and (max-width: 480px) {
-      .btn {
-        font-size: 14px;
+        right: 20px !important;
       }
     }
   }
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 470px) {
+    h1 {
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    .fixed-btn {
+      right: 8px !important;
+    }
   }
-  @media screen and (max-width: 387px) {
+  @media screen and (max-width: 408px) {
+    h1 {
+      font-size: 0.7rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+  @media screen and (max-width: 371px) {
+    .btn {
+      font-size: 0.8rem;
+    }
   }
   @media screen and (max-width: 348px) {
     .fixed-btn {
@@ -396,4 +425,3 @@ p {
   }
 }
 </style>
-*/
