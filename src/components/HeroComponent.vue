@@ -163,10 +163,10 @@ p {
   font-size: 1.2rem;
 }
 
-#pastel-button-container {
+/* #pastel-button-container {
   position: relative;
   margin-right: 0;
-}
+} */
 
 //Buttons style
 .btn {
@@ -304,23 +304,36 @@ p {
         font-size: 0.9rem;
       }
     }
-    @media screen and (max-width: 727px) {
-    }
-    @media screen and (max-width: 718px) {
-    }
-
-    @media screen and (max-width: 702px) {
+    @media screen and (max-width: 722px) {
+      h1 {
+        font-size: 1.4rem;
+      }
     }
 
-    @media screen and (max-width: 641px) {
+    @media screen and (max-width: 671px) {
+      h1 {
+        font-size: 1.3rem;
+      }
       .fixed-btn {
         right: 20px !important;
       }
     }
 
-    @media screen and (max-width: 608px) {
+    @media screen and (max-width: 594px) {
+      h1 {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      .frame {
+        margin-top: 10px;
+      }
+      .btn {
+        font-size: 1rem;
+      }
       .fixed-btn {
-        right: 25px !important;
+        right: 5px !important;
       }
     }
 
