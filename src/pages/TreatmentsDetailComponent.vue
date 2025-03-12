@@ -204,4 +204,96 @@ h2 {
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (max-width: 890px) {
+  .container {
+    padding: 150px 50px;
+  }
+  .card {
+    max-width: 800px;
+  }
+
+  .treatment-name {
+    font-size: 1.9rem;
+  }
+
+  .treatment-image-wrapper {
+    max-width: 350px;
+    height: 350px;
+  }
+
+  .treatment-image {
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .card {
+    max-width: 760px;
+  }
+  .treatment-name {
+    font-size: 1.5rem;
+  }
+  .treatment-image {
+    width: 260px;
+    height: 260px;
+    max-width: 300px;
+  }
+  .treatment-description {
+    font-size: 0.9rem;
+    padding: 10px 20px 30px 20px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding: 150px 20px;
+  }
+  .card {
+    max-width: 90%; // Mantiene un po' di margine ai lati
+    width: auto; // Evita stiramenti
+    padding: 10px; // Riduce il padding interno
+    margin: 15px auto; // Evita troppo spazio sopra/sotto
+  }
+
+  .treatment-name {
+    font-size: 1.2rem; // Font più piccolo per evitare che occupi troppo spazio
+    margin-bottom: 10px;
+  }
+
+  .treatment-image-wrapper {
+    max-width: 250px;
+    height: 250px;
+  }
+
+  .treatment-image {
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .treatment-description {
+    font-size: 0.85rem;
+    padding: 10px;
+    line-height: 1.4;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    text-align: center;
+    width: auto;
+  }
+}
 </style>
