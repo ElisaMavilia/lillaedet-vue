@@ -450,7 +450,7 @@ details[open] .control-icon-expand {
     }
     #faq-content {
       margin-right: 0px;
-      margin-top: 80px;
+      margin-top: 50px;
       cursor: pointer;
     }
   }
