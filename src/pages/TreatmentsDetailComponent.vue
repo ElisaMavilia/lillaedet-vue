@@ -259,14 +259,14 @@ h2 {
     padding: 150px 20px;
   }
   .card {
-    max-width: 90%; // Mantiene un po' di margine ai lati
-    width: auto; // Evita stiramenti
-    padding: 10px; // Riduce il padding interno
-    margin: 15px auto; // Evita troppo spazio sopra/sotto
+    max-width: 90%;
+    width: auto;
+    padding: 10px;
+    margin: 15px auto;
   }
 
   .treatment-name {
-    font-size: 1.2rem; // Font più piccolo per evitare che occupi troppo spazio
+    font-size: 1.2rem;
     margin-bottom: 10px;
   }
 

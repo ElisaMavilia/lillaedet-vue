@@ -125,4 +125,18 @@ h2 {
     padding-left: 40px;
   }
 }
+@media screen and (max-width: 450px) {
+  thead,
+  th,
+  td {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  thead,
+  th,
+  td {
+    font-size: 0.8rem;
+  }
+}
 </style>
