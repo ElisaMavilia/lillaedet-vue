@@ -186,7 +186,7 @@ export default {
       height: 230px;
     }
   }
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     #card-box {
       box-sizing: border-box;
       width: 220px;

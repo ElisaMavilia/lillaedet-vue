@@ -161,7 +161,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
   .language-card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); // Two columns

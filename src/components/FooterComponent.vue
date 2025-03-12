@@ -147,7 +147,7 @@ main {
   }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
   #footer-container-up {
     padding: 30px 10px;
   }

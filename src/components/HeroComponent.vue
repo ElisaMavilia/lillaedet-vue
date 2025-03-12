@@ -74,7 +74,7 @@ export default {
 .hero {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
 }
 
 .hero-video {
@@ -237,6 +237,9 @@ p {
 
 /* Large (lg) ≥992px -> laptop */
 @media screen and (max-width: 1199.98px) {
+  .hero {
+    height: 40vh;
+  }
   h1 {
     font-size: 1.8rem;
   }
@@ -264,6 +267,12 @@ p {
     font-size: 1.2rem;
   }
 
+  @media screen and (max-width: 1199.98px) {
+    .hero {
+      height: 70vh;
+    }
+  }
+
   @media screen and (max-width: 991.98px) {
     .hero {
       height: 50vh;
@@ -277,14 +286,7 @@ p {
     }
   }
 
-  @media screen and (max-width: 770px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
+  @media screen and (max-width: 820px) {
     // Round small fixed button
     .fixed-btn {
       position: fixed !important;
@@ -305,7 +307,17 @@ p {
 
       .short-text {
         display: inline;
-        font-size: 0.9rem;
+        font-size: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
       }
     }
     @media screen and (max-width: 722px) {
@@ -359,8 +371,8 @@ p {
         color: white;
         background: #d2b1f4;
         border-radius: 50%;
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -371,7 +383,7 @@ p {
 
         .short-text {
           display: inline;
-          font-size: 0.9rem;
+          font-size: 0.8rem;
         }
       }
     }

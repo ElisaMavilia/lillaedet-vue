@@ -178,8 +178,8 @@ input[type="range"]:focus::-moz-range-thumb {
 
   @media screen and (max-width: 991.98px) {
     #comparison {
-      width: 30vw;
-      height: 30vw;
+      width: 35vw;
+      height: 35vw;
     }
   }
 

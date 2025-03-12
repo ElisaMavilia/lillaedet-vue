@@ -458,8 +458,6 @@ details[open] .control-icon-expand {
     details {
       width: 380px;
       max-width: 380px;
-
-      margin-left: 90px;
     }
   }
   @media (max-width: 575.98px) {

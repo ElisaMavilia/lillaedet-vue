@@ -61,7 +61,7 @@ iframe {
   padding: 20px 0 40px 0px;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
   #pin {
     width: 90px;
   }
@@ -78,7 +78,7 @@ iframe {
     }
 
     iframe {
-      max-width: 70%;
+      max-width: 80%;
     }
   }
   @media screen and (max-width: 387px) {

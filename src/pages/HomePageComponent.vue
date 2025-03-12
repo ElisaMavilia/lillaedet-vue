@@ -144,11 +144,6 @@ export default {
   outline: 1px solid red;
 }
  */
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
 
 /* Font Family */
 #general-content,
@@ -456,7 +451,7 @@ h2 {
   @media screen and (max-width: 768px) {
     /* General Statement Section  */
     #statement-image {
-      width: 600px;
+      width: 500px;
       height: auto;
       margin: 50px 10px 50px 0px;
       border-radius: 20px;
@@ -465,7 +460,7 @@ h2 {
     }
 
     #concept-statement {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 200;
       color: #333;
       text-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
@@ -504,6 +499,7 @@ h2 {
       font-size: 1.2rem;
       padding-right: 70px;
     }
+
     #faq-image {
       display: none;
     }
@@ -536,7 +532,7 @@ h2 {
     //General Statement image
     .image-container {
       flex: 1.9;
-      padding-left: 0;
+      padding-left: 40px;
     }
     #concept-statement {
       font-size: 1rem;
@@ -587,8 +583,9 @@ h2 {
     padding: 150px 0 50px 0;
   }
   /* Faq section */
+
   #faq-image-down {
-    width: 240px;
+    width: 220px !important;
   }
   /* Before-After Section */
   #before-after {
@@ -615,6 +612,10 @@ h2 {
   }
 
   @media screen and (max-width: 387px) {
+    #statement-image {
+      margin: 0 auto;
+      width: 250px;
+    }
     #before-after-title {
       font-size: 1.3rem;
     }
