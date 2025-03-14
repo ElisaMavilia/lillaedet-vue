@@ -272,7 +272,6 @@ textarea {
   text-decoration: none;
 }
 
-/* Button Boka Tid Online */
 .btn1 {
   background-color: #e8d1ff;
   color: #ce9eff;
@@ -310,6 +309,11 @@ textarea {
   img {
     width: 100%;
     height: auto;
+  }
+}
+@media screen and (max-width: 490px) {
+  .btn {
+    font-size: 1rem;
   }
 }
 </style>

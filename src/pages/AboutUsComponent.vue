@@ -4,7 +4,7 @@
   <div id="about-us">
     <h2 id="title" class="text-center text-uppercase">Vilka vi är</h2>
     <section
-      class="container d-flex justify-content-around align-items-center"
+      class="container d-flex justify-content-around align-items-center align-content-center"
       v-for="(employee, index) in employees"
       :key="employee.id"
       :class="{ 'reverse-layout': index % 2 !== 0 }"
@@ -114,5 +114,58 @@ p {
 
 .reverse-layout {
   flex-direction: row-reverse; /* Image on the right, Text on the left */
+}
+
+@media screen and (max-width: 900px) {
+  img {
+    width: 300px;
+  }
+
+  .text-container {
+    margin-left: -70px;
+  }
+
+  #name-text,
+  p {
+    color: $fadedFont;
+    padding-left: 140px;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  img {
+    width: 250px;
+  }
+  #name-text,
+  p {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 567px) {
+  section {
+    justify-content: center !important;
+  }
+  .text-container {
+    margin-left: 0px;
+  }
+  img {
+    width: 200px;
+  }
+  #name-text,
+  p {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
 }
 </style>
