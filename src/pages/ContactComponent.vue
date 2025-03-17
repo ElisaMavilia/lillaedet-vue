@@ -9,7 +9,7 @@
           <div class="my-2">Meddelandet skickas...</div>
           <div>Vänligen uppdatera inte sidan</div>
           <div class="loader-image">
-            <img src="../../public/images/tooth-loader.png" alt="loading" />
+            <img src="../../public/images/email.png" alt="loading" />
           </div>
         </div>
       </div>
@@ -288,7 +288,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,7 +300,7 @@ textarea {
   padding: 20px;
   text-align: center;
   border-radius: 10px;
-  color: $fadedFont;
+  color: white;
 }
 
 .loader-image {
@@ -309,6 +309,7 @@ textarea {
   img {
     width: 100%;
     height: auto;
+    filter: invert(100%);
   }
 }
 @media screen and (max-width: 490px) {
