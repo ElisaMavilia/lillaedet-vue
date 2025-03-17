@@ -78,19 +78,32 @@ export default {
       this.closeMenu();
     },
     handleScroll() {
-      // It changes when the scroll goes over x number of px
       this.isScrolled = window.scrollY > 100;
+    },
+    handleClickOutside(event) {
+      const menu = this.$el.querySelector(".navbar-collapse");
+      const toggleButton = this.$el.querySelector(".navbar-toggler");
+
+      if (
+        this.isMenuOpen &&
+        !menu.contains(event.target) &&
+        !toggleButton.contains(event.target)
+      ) {
+        this.closeMenu();
+      }
     },
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
+    document.addEventListener("click", this.handleClickOutside); // Ascolta i click globali
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
+    document.removeEventListener("click", this.handleClickOutside); // Rimuovi il listener per evitare memory leaks
   },
   computed: {
     isHomePage() {
-      return this.$route.name === "home"; // Check if the current route is the home page in order to change the color if another page is active
+      return this.$route.name === "home";
     },
   },
 };
