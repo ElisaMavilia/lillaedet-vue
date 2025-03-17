@@ -86,7 +86,8 @@ img {
 }
 
 .text-container {
-  margin-left: -70px;
+  padding-left: 40px;
+  color: $fadedFont;
 }
 
 #title {
@@ -156,7 +157,7 @@ p {
     flex-direction: column !important;
   }
   .text-container {
-    margin-left: 0px;
+    padding-left: 80px;
   }
   img {
     width: 230px;
