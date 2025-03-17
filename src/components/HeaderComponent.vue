@@ -81,6 +81,7 @@ export default {
       this.isScrolled = window.scrollY > 100;
     },
     handleClickOutside(event) {
+      //It closes the menu while tapping outside the menu itself
       const menu = this.$el.querySelector(".navbar-collapse");
       const toggleButton = this.$el.querySelector(".navbar-toggler");
 
@@ -95,11 +96,11 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
-    document.addEventListener("click", this.handleClickOutside); // Ascolta i click globali
+    document.addEventListener("click", this.handleClickOutside);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
-    document.removeEventListener("click", this.handleClickOutside); // Rimuovi il listener per evitare memory leaks
+    document.removeEventListener("click", this.handleClickOutside);
   },
   computed: {
     isHomePage() {
@@ -217,12 +218,12 @@ li {
   }
 
   .navbar-toggler-icon {
-    filter: brightness(0) invert(1); /* Bianco di default */
+    filter: brightness(0) invert(1);
     transition: filter 0.3s ease;
   }
 
   .navbar-toggler-icon-dark {
-    filter: brightness(0) invert(0); /* Nero quando lo sfondo diventa light-pink */
+    filter: brightness(0) invert(0); // The toggler becomes dark when the background is light_pink
   }
 
   .navbar-toggler:focus,
