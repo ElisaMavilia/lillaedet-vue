@@ -80,22 +80,32 @@ export default {
 section {
   padding-top: 150px;
   background-color: $light_pink;
+  color: $fadedFont;
 }
 #integritet-wrapper {
-  max-width: 1200px;
-  min-width: 150px;
+  max-width: 750px;
   width: 100%;
   margin-bottom: 150px;
 }
 .em-card {
-  max-width: 900px; // Adjust the max-width as with media queries
-  min-width: 150px;
+  max-width: 100%; // Adjust the max-width with media queries
   width: 100%;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  /*   padding: 150px; */
+  padding: 50px;
   margin: 30px auto;
   background-color: #f5eaf2;
+}
+@media screen and (max-width: 480px) {
+  #integritet-wrapper {
+    max-width: 320px;
+    width: 100%;
+  }
+  .em-card {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 20px;
+  }
 }
 </style>
