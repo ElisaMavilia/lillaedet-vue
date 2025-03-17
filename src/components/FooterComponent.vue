@@ -24,6 +24,19 @@
         <div>Telefon: 0520 65 77 244</div>
         <div class="pt-2">e-mail: info@lillaedetandlakarcenter.se</div>
       </div>
+      <div class="extra-info">
+        <h4 class="text-uppercase">Extra Info</h4>
+        <div>
+          <router-link class="router-link-class" to="/integritetspolicy"
+            >Integritetspolicy</router-link
+          >
+        </div>
+        <div>
+          <router-link class="router-link-class" to="/credits"
+            >Credits</router-link
+          >
+        </div>
+      </div>
     </div>
   </div>
   <div id="footer-container-down">
@@ -139,6 +152,9 @@ main {
   font-size: 1.5rem;
   padding-right: 80px;
   color: #f9fafa;
+}
+.router-link-class {
+  color: $pink;
 }
 
 @media screen and (max-width: 991.98px) {

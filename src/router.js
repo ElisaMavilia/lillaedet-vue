@@ -12,6 +12,7 @@ import PricesListComponent from "./pages/PricesListComponent.vue";
 import GalleryComponent from "./pages/GalleryComponent.vue";
 import NotFoundComponent from "./pages/NotFoundComponent.vue";
 import IntegritetComponent from "./pages/IntegritetComponent.vue";
+import CreditsComponent from "./pages/CreditsComponent.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -83,6 +84,11 @@ const router = createRouter({
       path: "/integritetspolicy",
       name: "integritetspolicy",
       component: IntegritetComponent,
+    },
+    {
+      path: "/credits",
+      name: "credits",
+      component: CreditsComponent,
     },
     {
       path: "/:pathMatch(om|om-)",
