@@ -528,7 +528,7 @@ h2 {
       padding-left: 28px;
     }
   }
-  @media (max-width: 575.98px) {
+  @media screen and (max-width: 575.98px) {
     //General Statement image
     .image-container {
       flex: 1.9;

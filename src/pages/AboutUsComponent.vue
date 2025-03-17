@@ -12,7 +12,7 @@
       <img src="../assets/img/nima.png" alt="Nimas bild" />
       <div class="text-container flex-direction-column">
         <h2 id="name-text">{{ employee.name }} {{ employee.surname }}</h2>
-        <p>{{ employee.role }}</p>
+        <p id="role-text">{{ employee.role }}</p>
         <p>
           {{ employee.notes }}
         </p>
@@ -98,13 +98,12 @@ img {
   padding-top: 150px;
 }
 
-#name-text,
-p {
+#name-text p {
   color: $fadedFont;
   padding-left: 140px;
 }
 
-h2 {
+#name-text h2 {
   padding-top: 100px;
 }
 
@@ -129,6 +128,9 @@ p {
   p {
     color: $fadedFont;
     padding-left: 140px;
+  }
+
+  #name-text {
     font-size: 1.5rem;
   }
 
@@ -140,8 +142,7 @@ p {
   img {
     width: 250px;
   }
-  #name-text,
-  p {
+  #name-text {
     font-size: 1.3rem;
   }
 
@@ -152,20 +153,29 @@ p {
 @media screen and (max-width: 567px) {
   section {
     justify-content: center !important;
+    flex-direction: column !important;
   }
   .text-container {
     margin-left: 0px;
   }
   img {
-    width: 200px;
+    width: 230px;
   }
-  #name-text,
-  p {
-    font-size: 1.2rem;
+  #name-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #role-text {
+    text-align: center;
   }
 
   p {
     font-size: 0.8rem;
+  }
+  #name-text,
+  p {
+    padding: 0 20px 0 15px;
   }
 }
 </style>

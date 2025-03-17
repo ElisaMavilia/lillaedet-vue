@@ -71,4 +71,9 @@ img {
   background-color: #ce9eff;
   color: white;
 }
+@media screen and (max-width: 520px) {
+  .not-found-content {
+    max-width: 320px;
+  }
+}
 </style>
