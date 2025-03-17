@@ -105,7 +105,7 @@ section {
   .em-card {
     width: 100%;
     font-size: 0.9rem;
-    padding: 20px;
+    padding: 40px 20px;
   }
 }
 </style>
