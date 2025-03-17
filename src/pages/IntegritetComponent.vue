@@ -19,7 +19,7 @@
           <li>E-postadress</li>
           <li>Meddelandeinnhåll</li>
         </ul>
-        <div>
+        <div class="pt-2 pb-4">
           Vi samlar endast in de uppgifter du själv lämnar genom att fylla i
           formuläret.
         </div>
@@ -30,12 +30,12 @@
           <li>Kommunicera med dig om din fråga</li>
           <li>Förbättra våra tjänster baserat på din feedback</li>
         </ul>
-        <div>
+        <div class="pt-2 pb-4">
           Vi delar inte dina uppgifter med tredje part utan ditt uttryckliga
           samtycke, om det inte krävs enligt lag.
         </div>
         <li class="fw-bold">Lagring av personuppgifter</li>
-        <div>
+        <div class="pt-2 pb-4">
           Vi sparar dina uppgifter endast så länge som det är nödvändigt för att
           besvara din förfrågan eller enligt gällande lagkrav.
         </div>
@@ -47,12 +47,12 @@
           <li>Begära radering av dina uppgifter om de inte längre behövs</li>
           <li>Invända mot eller begränsa behandlingen av dina uppgifter</li>
         </ul>
-        <div>
+        <div class="pt-2 pb-4">
           För att utöva dina rättigheter, vänligen kontakta oss på:
           info@lillaedetandlakarcenter.se
         </div>
         <li class="fw-bold">Säkerhet</li>
-        <div>
+        <div class="pt-2 pb-4">
           Vi vidtar lämpliga säkerhetsåtgärder för att skydda dina
           personuppgifter från obehörig åtkomst eller förlust.
         </div>
@@ -61,7 +61,9 @@
           Vi kan uppdatera denna integritetspolicy vid behov. Senaste versionen
           finns alltid tillgänglig på vår webbplats. <br />Om du har frågor om
           vår integritetspolicy, kontakta oss på:
-          info@lillaedettandlakarcenter.se
+          <a href="mailto: info@lillaedettandlakarcenter.se"
+            >info@lillaedettandlakarcenter.se</a
+          >
         </div>
       </ol>
     </div>
@@ -96,6 +98,9 @@ section {
   padding: 50px;
   margin: 30px auto;
   background-color: #f5eaf2;
+}
+a {
+  color: $pink;
 }
 @media screen and (max-width: 480px) {
   #integritet-wrapper {
