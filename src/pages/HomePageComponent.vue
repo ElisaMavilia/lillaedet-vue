@@ -14,9 +14,10 @@
     </div>
     <div class="general-text-content">
       <p id="concept-statement" class="">
-        Högkvalitativ tandvård och <br />
-        personlig service i en <br />
-        varm och välkomnande miljö
+        Vi erbjuder högkvalitativ tandvård med stort fokus på patientens
+        välmående. I en lugn och personlig miljö ser vi till att du känner dig
+        trygg och omhändertagen genom hela behandlingen. Vi välkomnar dig i en
+        avslappnad atmosfär där din komfort alltid är i centrum.
       </p>
     </div>
   </section>
