@@ -5,7 +5,7 @@
       id="footer-content"
       class="container d-flex justify-content-around align-content-center"
     >
-      <div id="opening-hours">
+      <div id="opening-hours" class="text-container">
         <h4 class="text-uppercase">Öppettider</h4>
         <table>
           <tr v-for="(day, index) in openingHours" :key="index">
@@ -13,28 +13,35 @@
             <td class="opening-time">{{ day.time }}</td>
           </tr>
         </table>
+        <div class="extra-info">
+          <h4 class="text-uppercase pt-5">Extra Info</h4>
+          <div>
+            <router-link
+              class="router-link-class footer-text-content"
+              to="/integritetspolicy"
+              >Integritetspolicy</router-link
+            >
+          </div>
+          <div>
+            <router-link
+              class="router-link-class footer-text-content"
+              to="/credits"
+              >Credits</router-link
+            >
+          </div>
+        </div>
       </div>
       <div id="address">
         <h4 class="text-uppercase">Address</h4>
-        <div>Majorsgatan 3A,</div>
-        <div class="pt-2">46330 Lilla Edet</div>
-      </div>
-      <div id="contact-info">
-        <h4 class="text-uppercase">Kontakta Oss</h4>
-        <div>Telefon: 0520 65 77 244</div>
-        <div class="pt-2">e-mail: info@lillaedetandlakarcenter.se</div>
-      </div>
-      <div class="extra-info">
-        <h4 class="text-uppercase">Extra Info</h4>
-        <div>
-          <router-link class="router-link-class" to="/integritetspolicy"
-            >Integritetspolicy</router-link
-          >
-        </div>
-        <div>
-          <router-link class="router-link-class" to="/credits"
-            >Credits</router-link
-          >
+        <div class="footer-text-content">Majorsgatan 3A,</div>
+        <div class="pt-2 footer-text-content">46330 Lilla Edet</div>
+        <div id="contact-info">
+          <h4 class="text-uppercase pt-5">Kontakta Oss</h4>
+          <div class="footer-text-content">Telefon: 0520 65 77 244</div>
+          <div class="pt-2 footer-text-content">
+            e-mail: <br />
+            info@lillaedetandlakarcenter.se
+          </div>
         </div>
       </div>
     </div>
@@ -98,7 +105,7 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/styles/partials/variables" as *;
 
-body {
+/* body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -106,7 +113,7 @@ body {
 
 main {
   flex-grow: 1;
-}
+} */
 
 #footer-container-up,
 #footer-container-down {
@@ -116,7 +123,11 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 100%;
+  height: auto;
+  min-height: 100px;
+  transform: translateZ(
+    0
+  ); //it reduces rendering problems (the white line between footer-container-up and footer-container-down appearing with different zoom sizing has gone)
 
   #footer-content {
     max-width: 1200px;
@@ -126,13 +137,23 @@ main {
 
   #footer-container-up {
     min-height: 400px;
-    padding: 50px 20px;
+    padding: 50px 20px 0 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  #footer-container-down {
+    margin-top: -1px;
   }
 
   h4 {
     font-weight: 600;
     font-size: 1.3rem;
     padding-bottom: 10px;
+  }
+
+  .text-container {
+    padding: 0px;
+    font-size: 0.6rem;
   }
 
   .opening-time {
@@ -150,7 +171,7 @@ main {
 
 .fa-brands {
   font-size: 1.5rem;
-  padding-right: 80px;
+  padding: 0 80px 0 80px;
   color: #f9fafa;
 }
 .router-link-class {
@@ -159,11 +180,15 @@ main {
 
 @media screen and (max-width: 991.98px) {
   #footer-content {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
+.footer-text-content,
+td {
+  font-size: 0.9rem;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 790px) {
   #footer-container-up {
     padding: 30px 10px;
   }
@@ -174,11 +199,14 @@ main {
   }
 
   #footer-container-up h4 {
-    font-size: 1.2rem;
-  }
-
-  .fa-brands {
     font-size: 1.3rem;
+  }
+  #footer-container-up td,
+  .footer-text-content {
+    font-size: 0.9rem;
+  }
+  .fa-brands {
+    padding: 0 20px 0 20px;
   }
   #footer-container-up {
     padding: 30px 10px;
@@ -222,7 +250,6 @@ main {
 
   .fa-brands {
     font-size: 1.5rem;
-    padding-right: 50px;
     color: #f9fafa;
   }
 
@@ -237,7 +264,11 @@ main {
   }
   @media screen and (max-width: 387px) {
     #footer-container-up h4 {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+    }
+    .footer-text-content,
+    #footer-container-up td {
+      font-size: 0.7rem;
     }
 
     table {

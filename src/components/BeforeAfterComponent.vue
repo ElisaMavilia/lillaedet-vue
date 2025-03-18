@@ -183,13 +183,6 @@ input[type="range"]:focus::-moz-range-thumb {
     }
   }
 
-  @media screen and (max-width: 767.98px) {
-    #comparison {
-      width: 35vw;
-      height: 35vw;
-    }
-  }
-
   @media (max-width: 575.98px) {
     #comparison {
       width: 40vw;

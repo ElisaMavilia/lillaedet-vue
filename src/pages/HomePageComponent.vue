@@ -4,8 +4,8 @@
   <section>
     <HeroComponent />
   </section>
-  <section id="general-content" class="d-flex flex-wrap">
-    <div class="image-container container">
+  <section id="general-content" class="d-flex flex-wrap container">
+    <div class="image-container">
       <img
         id="statement-image"
         src="../assets/img/treatment.jpg"
@@ -13,11 +13,13 @@
       />
     </div>
     <div class="general-text-content">
-      <p id="concept-statement" class="">
+      <p id="concept-statement">
         Vi erbjuder högkvalitativ tandvård med stort fokus på patientens
-        välmående. I en lugn och personlig miljö ser vi till att du känner dig
-        trygg och omhändertagen genom hela behandlingen. Vi välkomnar dig i en
-        avslappnad atmosfär där din komfort alltid är i centrum.
+        välmående. Vi erbjuder högkvalitativ tandvård med stort fokus på
+        patientens välmående. I en lugn och intim miljö skapar vi en avslappnad
+        atmosfär där du kan känna dig trygg och omhändertagen genom hela
+        behandlingen. Vi välkomnar dig i en avslappnad atmosfär där din komfort
+        alltid är i centrum.
       </p>
     </div>
   </section>
@@ -169,8 +171,8 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  /*  padding: 20px; */
   margin-top: 40px;
   z-index: 0;
   width: 100%;
@@ -182,14 +184,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 180px;
+  /* padding-left: 180px; */
 }
 
 #statement-image {
   max-width: 100%;
   width: 500px;
   height: auto;
-  margin: 50px 0 50px 80px;
+  margin: 100px 0px 50px 0px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -197,7 +199,7 @@ export default {
 // Text
 .general-text-content {
   flex: 1; // Proportional text width
-  padding: 20px;
+  padding: 80px 80px 0 50px;
   text-align: left;
 }
 
@@ -423,145 +425,22 @@ h2 {
   }
 
   @media screen and (max-width: 991.98px) {
-    // General Statement Section
-    #concept-statement {
-      font-size: 1.4rem;
-    }
-    // Treatment Section
-    .card-container {
-      width: calc(100% / 2);
-    }
-
-    #treatments-container {
-      justify-content: center !important;
-    }
-    // Spoken Languages Section
-    #spoken-languages {
-      width: 100%;
-      gap: 30px;
-      height: 430px;
-      margin-bottom: 25px;
-    }
-    /* FAQ Section */
-    #faq-image {
-      width: 340px;
-      transform: translateY(75px); // Moves the image down
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    /* General Statement Section  */
-    #statement-image {
-      width: 500px;
-      height: auto;
-      margin: 50px 10px 50px 0px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    #concept-statement {
-      font-size: 1rem;
-      font-weight: 200;
-      color: #333;
-      text-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
-    }
-
-    .wave {
-      height: 155px;
-    }
-
-    /* Treatment Section */
-    #behandlingar {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    /* Spoken Languages Section */
-    #spoken-languages {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #spoken-languages {
-      width: 100%;
-      height: 540px;
-    }
-
-    #spoken-languages-title {
-      padding-bottom: 20px;
-    }
-
-    /* Before & After Section  */
-    #before-after-title {
-      font-size: 1.2rem;
-      padding-right: 70px;
-    }
-
-    #faq-image {
-      display: none;
-    }
-
-    .faq-content {
-      padding: 0 !important;
-    }
-
-    #faq-down {
-      display: flex !important;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #faq-image-down {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      width: 300px !important;
-    }
-  }
-
-  @media screen and (max-width: 641px) {
-    #before-after-title {
-      font-size: 1rem;
-      padding-left: 28px;
-    }
-  }
-  @media screen and (max-width: 575.98px) {
-    //General Statement image
-    .image-container {
-      flex: 1.9;
-      padding-left: 40px;
-    }
-    #concept-statement {
-      font-size: 1rem;
-    }
-    #treatments-container {
-      justify-content: center !important;
-    }
-  }
-  @media screen and (max-width: 480px) {
     /* General Statement Section */
     #general-content {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-
-    #general-content {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       padding: 20px;
       margin-top: 40px;
       z-index: 0;
       width: 100%;
       height: auto;
     }
-
+    .general-text-content {
+      padding: 20px 30px 0 30px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
     .image-container {
       display: flex;
       justify-content: center;
@@ -572,13 +451,145 @@ h2 {
     #statement-image {
       max-width: 100%;
       width: 300px;
-      margin: 30px 0 30px 30px;
-    }
-
-    #concept-statement {
-      font-size: 1rem;
+      margin: 30px 0px 0px 0px;
     }
   }
+  // General Statement Section
+  #concept-statement {
+    font-size: 1.2rem;
+  }
+  // Treatment Section
+  .card-container {
+    width: calc(100% / 2);
+  }
+
+  #treatments-container {
+    justify-content: center !important;
+  }
+  // Spoken Languages Section
+  #spoken-languages {
+    width: 100%;
+    gap: 30px;
+    height: 430px;
+    margin-bottom: 0px;
+  }
+  /* FAQ Section */
+  #faq-image {
+    width: 340px;
+    transform: translateY(75px); // Moves the image down
+  }
+}
+
+@media screen and (max-width: 850px) {
+  /* General Statement Section  */
+  #statement-image {
+    width: 500px;
+  }
+
+  #concept-statement {
+    font-size: 1.5rem;
+  }
+  //FAQ Content Layout
+  .faq-content {
+    gap: 5px;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* General Statement Section  */
+  #statement-image {
+    width: 450px;
+    height: auto;
+    margin: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  #concept-statement {
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: #333;
+    text-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
+  }
+
+  .wave {
+    height: 153px;
+  }
+
+  /* Treatment Section */
+  #behandlingar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Spoken Languages Section */
+  #spoken-languages {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #spoken-languages {
+    width: 100%;
+    height: 540px;
+  }
+
+  #spoken-languages-title {
+    padding-bottom: 0px;
+  }
+
+  /* Before & After Section  */
+  #before-after-title {
+    font-size: 1.2rem;
+    padding-right: 0px;
+  }
+
+  #faq-image {
+    display: none;
+  }
+
+  .faq-content {
+    padding: 0 !important;
+  }
+
+  #faq-down {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #faq-image-down {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  #before-after-title {
+    font-size: 1rem;
+    padding-left: 28px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  //General Statement image
+  #statement-image {
+    width: 300px;
+    margin: 0px;
+  }
+  #concept-statement {
+    font-size: 1rem;
+  }
+  // Treatments Section
+  #treatments-container {
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 480px) {
   /* Treatment Section */
   #treatments-title {
     padding: 150px 0 50px 0;
@@ -599,7 +610,7 @@ h2 {
   #before-after-title {
     font-size: 1.5rem;
     text-align: center;
-    padding-left: 60px;
+    padding-left: 0px;
     padding-bottom: 20px;
   }
 
