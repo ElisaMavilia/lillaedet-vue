@@ -17,6 +17,12 @@
       <h2 class="text-center text-uppercase">Kontakta oss</h2>
 
       <!-- Card Wrapper -->
+      <p class="info-form">
+        Du kan använda detta kontaktformulär för att ställa frågor om våra
+        behandlingar, priser, bokningar eller andra funderingar du har. Vi
+        svarar så snart som möjligt och hjälper dig gärna med den information du
+        behöver.
+      </p>
       <div class="card">
         <div class="row">
           <form @submit.prevent="sendForm" class="col-12 text-start">
@@ -210,13 +216,23 @@ h2 {
 
 /* Card */
 .card {
-  max-width: 800px;
-  width: 100%;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   background-color: #f5eaf2;
   padding: 30px;
+}
+
+.info-form,
+.card {
+  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.info-form {
+  padding: 10px 10px 30px 10px;
+  color: $fadedFont;
+  font-size: 1.2rem;
 }
 
 label,
