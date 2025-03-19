@@ -15,11 +15,10 @@
     <div class="general-text-content">
       <p id="concept-statement">
         Vi erbjuder högkvalitativ tandvård med stort fokus på patientens
-        välmående. Vi erbjuder högkvalitativ tandvård med stort fokus på
-        patientens välmående. I en lugn och intim miljö skapar vi en avslappnad
-        atmosfär där du kan känna dig trygg och omhändertagen genom hela
-        behandlingen. Vi välkomnar dig i en avslappnad atmosfär där din komfort
-        alltid är i centrum.
+        välmående. I en lugn och intim miljö skapar vi en avslappnad atmosfär
+        där du kan känna dig trygg och omhändertagen genom hela behandlingen.
+        <br />
+        Din komfort är alltid i centrum.
       </p>
     </div>
   </section>

@@ -45,35 +45,36 @@
         </div>
       </div>
     </div>
-  </div>
-  <div id="footer-container-down">
-    <div
-      class="container d-flex justify-content-center align-content-around flex-wrap"
-    >
-      <a
-        href="https://www.facebook.com/profile.php?id=61564619731548&name=xhp_nt__fb__action__open_user&_rdr"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
+    <div id="footer-container-down" class="pt-4">
+      <div
+        id="icons-section"
+        class="container d-flex justify-content-center align-content-around flex-wrap"
       >
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/lilla_edet_tandlakarcenter/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-      >
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/company/lilla-edet-tandl%C3%A4karcenter/posts/?feedView=allm"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-      >
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61564619731548&name=xhp_nt__fb__action__open_user&_rdr"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/lilla_edet_tandlakarcenter/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/lilla-edet-tandl%C3%A4karcenter/posts/?feedView=allm"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -132,17 +133,22 @@ main {
   #footer-content {
     max-width: 1200px;
     text-align: center;
-    padding: 90px;
+    padding: 50px 0;
   }
 
   #footer-container-up {
     min-height: 400px;
     padding: 50px 20px 0 20px;
-    padding-bottom: 0;
     margin-bottom: 0;
+    border-bottom: none;
   }
   #footer-container-down {
-    margin-top: -1px;
+    margin-top: 0px;
+    border-top: none;
+  }
+  #icons-section {
+    margin-top: 0px;
+    padding-top: 0px;
   }
 
   h4 {

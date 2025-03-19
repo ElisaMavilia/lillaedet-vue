@@ -116,7 +116,11 @@ p {
   flex-direction: row-reverse; /* Image on the right, Text on the left */
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
+  section {
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
   img {
     width: 300px;
   }
@@ -128,7 +132,7 @@ p {
   #name-text,
   p {
     color: $fadedFont;
-    padding-left: 140px;
+    padding-left: 0px;
   }
 
   #name-text {
@@ -152,10 +156,6 @@ p {
   }
 }
 @media screen and (max-width: 567px) {
-  section {
-    justify-content: center !important;
-    flex-direction: column !important;
-  }
   .text-container {
     padding-left: 80px;
   }
