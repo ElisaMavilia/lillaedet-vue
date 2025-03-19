@@ -232,7 +232,7 @@ h2 {
 .info-form {
   padding: 10px 10px 30px 10px;
   color: $fadedFont;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 label,
