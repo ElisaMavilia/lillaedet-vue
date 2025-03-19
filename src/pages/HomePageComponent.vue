@@ -16,9 +16,9 @@
       <p id="concept-statement">
         Vi erbjuder högkvalitativ tandvård med stort fokus på patientens
         välmående. I en lugn och intim miljö skapar vi en avslappnad atmosfär
-        där du kan känna dig trygg och omhändertagen genom hela behandlingen.
+        där du kan känna dig trygg och omhändertagen genom hela besöket.
         <br />
-        Din komfort är alltid i centrum.
+        Din komfort och säkerhet är alltid i centrum.
       </p>
     </div>
   </section>

@@ -40,7 +40,11 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
         </svg>
       </summary>
-      <p>Totally. Totally does.</p>
+      <p class="pt-3">
+        Kostnaden för en behandling kan variera beroende på din specifika
+        situation. För att få en uppfattning om våra priser kan du besöka vår
+        prislista eller boka en tid för en kostnadsförslag.
+      </p>
     </details>
 
     <details>
@@ -66,7 +70,10 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
         </svg>
       </summary>
-      <p>Of course you can, we won't stop you.</p>
+      <p class="pt-2">
+        Självklart, vi samarbetar med <strong>Resurs Bank</strong> för
+        delbetalningar.
+      </p>
     </details>
 
     <details>
@@ -92,7 +99,13 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
         </svg>
       </summary>
-      <p>Only your imagination my friend. Go forth!</p>
+      <p class="pt-2">
+        Det går bra att boka, ändra eller avboka en tid genom att ringa till
+        nummer: <strong>0520-65 77 24</strong>, att skicka ett mejl till
+        <strong>info@lillaedettandlakarcenter.se </strong>eller ett meddelande
+        via vår kontaktsida. Det är också möjligt att boka direkt genom vårt
+        onlinebokningssystem här på vår hemsida.
+      </p>
     </details>
 
     <details>
@@ -118,12 +131,12 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
         </svg>
       </summary>
-      <p>Only your imagination my friend. Go forth!</p>
+      <p class="pt-2">Ja, vi är anslutna till Försäkringskassan.</p>
     </details>
 
     <details>
       <summary>
-        Är ni anslutna till Försäkringskassan?
+        Samarbetar ni med Västra Götalandsregionen?
         <svg
           class="control-icon control-icon-expand"
           width="24"
@@ -144,12 +157,15 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
         </svg>
       </summary>
-      <p>Only your imagination my friend. Go forth!</p>
+      <p class="pt-2">
+        Vi är anslutna till Västra Götalandsregionen och vi accepterar
+        <strong>Frikort</strong>
+      </p>
     </details>
 
     <details>
       <summary>
-        Är ni anslutna till Försäkringskassan?
+        Jag lider av tandläkarskräck, hur kan ni hjälpa mig?
         <svg
           class="control-icon control-icon-expand"
           width="24"
@@ -170,7 +186,25 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
         </svg>
       </summary>
-      <p>Only your imagination my friend. Go forth!</p>
+      <p class="pt-2">
+        Om du lider av tandläkarskräck, finns det flera sätt att göra
+        behandlingen mer bekväm och mindre stressande för dig: 
+        <ul>
+          <li><strong>Kommunicera med oss:</strong> Berätta för oss om din tandläkarskräck. Vi kan anpassa behandlingen för att göra den så lugn som möjligt för dig. Vi lyssnar på dina behov och skapar en trygg miljö.</li>
+          <li><strong>Lokalbedövning:</strong> Vi använder lokalbedövning
+          för att säkerställa att du inte känner smärta under behandlingen. Du kan även få extra bedövning om du känner att du behöver det.</li>
+          <li><strong>Avslappningstekniker:</strong> Vi kan hjälpa dig att använd avslappningstekniker, som djupandning, för att minska stressen innan och under behandlingen.
+          </li>
+          <li><strong>Lugnande musik eller filmer:</strong> Vi erbjuder     möjligheten att lyssna på din favorit musik eller titta på filmer under behandlingen för att hålla tankarna fokuserade på något annat. Fråga personalen om du vill lyssna eller tippa på en film under behandlingen.
+          </li>
+          <li><strong>Sedering:</strong> I vissa fall kan vi erbjuda sedering (lättare lugnande medel) för att göra dig mer avslappnad under behandlingen. Detta kan diskuteras i förväg med din tandläkare.
+          </li>
+          <li><strong>Tydlig information:</strong> Vi förklarar vad som kommer att hända under behandlingen så att du känner dig mer förberedd och inte överraskad.</li>
+        </ul> 
+        Kom ihåg att du inte är ensam om att känna så här, och vi
+        gör vårt bästa för att du ska känna dig trygg och bekväm. Tveka inte att
+        prata med oss om dina känslor inför behandlingen!
+      </p>
     </details>
   </section>
 </template>
