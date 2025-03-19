@@ -3,7 +3,7 @@
   <div id="footer-container-up">
     <div
       id="footer-content"
-      class="container d-flex justify-content-around align-content-center"
+      class="container d-flex justify-content-around align-content-center flex-wrap"
     >
       <div id="opening-hours" class="text-container">
         <h4 class="text-uppercase">Öppettider</h4>
@@ -35,13 +35,13 @@
         <h4 class="text-uppercase">Address</h4>
         <div class="footer-text-content">Majorsgatan 3A,</div>
         <div class="pt-2 footer-text-content">46330 Lilla Edet</div>
-        <div id="contact-info">
-          <h4 class="text-uppercase pt-5">Kontakta Oss</h4>
-          <div class="footer-text-content">Telefon: 0520 65 77 244</div>
-          <div class="pt-2 footer-text-content">
-            e-mail: <br />
-            info@lillaedetandlakarcenter.se
-          </div>
+      </div>
+      <div id="contact-info">
+        <h4 class="text-uppercase">Kontakta Oss</h4>
+        <div class="footer-text-content">Telefon: 0520 65 77 244</div>
+        <div class="pt-2 footer-text-content">
+          e-mail: <br />
+          info@lillaedetandlakarcenter.se
         </div>
       </div>
     </div>
@@ -129,16 +129,15 @@ main {
   transform: translateZ(
     0
   ); //it reduces rendering problems (the white line between footer-container-up and footer-container-down appearing with different zoom sizing has gone)
-
   #footer-content {
     max-width: 1200px;
     text-align: center;
-    padding: 50px 0;
+    padding: 80px 0;
   }
 
   #footer-container-up {
     min-height: 400px;
-    padding: 50px 20px 0 20px;
+    padding: 50px 200px 0 20px;
     margin-bottom: 0;
     border-bottom: none;
   }
@@ -158,7 +157,7 @@ main {
   }
 
   .text-container {
-    padding: 0px;
+    padding: 0;
     font-size: 0.6rem;
   }
 
