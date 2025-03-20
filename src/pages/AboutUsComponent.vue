@@ -13,7 +13,7 @@
       <div class="flex-direction-column text-container">
         <h2 id="name-text">{{ employee.name }} {{ employee.surname }}</h2>
         <p id="role-text">{{ employee.role }}</p>
-        <p>
+        <p class="pb-5">
           {{ employee.notes }}
         </p>
       </div>
@@ -153,6 +153,10 @@ p {
 
   p {
     font-size: 0.9rem;
+  }
+  #name-text,
+  p {
+    padding: 0 40px 0 40px;
   }
 }
 @media screen and (max-width: 567px) {
