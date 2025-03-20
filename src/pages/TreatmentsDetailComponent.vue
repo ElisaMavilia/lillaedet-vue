@@ -22,7 +22,7 @@
         </div>
         <!-- Button -->
         <div class="frame">
-          <a href="/#behandlingar" class="btn btn2 me-4">
+          <a href="/#behandlingar" id="treatments-btn" class="btn btn2 me-4">
             Tillbaka till Behandlingar
           </a>
           <a
@@ -297,10 +297,13 @@ h2 {
   }
 
   .btn {
-    font-size: 14px;
-    padding: 8px 12px;
+    font-size: 0.7rem;
+    padding: 8px 8px;
     text-align: center;
     width: auto;
+  }
+  #treatments-btn {
+    margin-right: 5px !important;
   }
 }
 </style>
