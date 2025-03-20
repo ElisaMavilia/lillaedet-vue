@@ -3,7 +3,7 @@
   <div id="footer-container-up">
     <div
       id="footer-content"
-      class="container d-flex justify-content-around align-content-center flex-wrap"
+      class="container d-flex flex-wrap align-content-center justify-content-around"
     >
       <div id="opening-hours" class="text-container">
         <h4 class="text-uppercase">Öppettider</h4>
@@ -17,14 +17,14 @@
           <h4 class="text-uppercase pt-5">Extra Info</h4>
           <div>
             <router-link
-              class="router-link-class footer-text-content"
+              class="footer-text-content router-link-class"
               to="/integritetspolicy"
               >Integritetspolicy</router-link
             >
           </div>
           <div>
             <router-link
-              class="router-link-class footer-text-content"
+              class="footer-text-content router-link-class"
               to="/credits"
               >Credits</router-link
             >
@@ -32,14 +32,14 @@
         </div>
       </div>
       <div id="address">
-        <h4 class="text-uppercase">Address</h4>
+        <h4 class="text-uppercase">Besökadress</h4>
         <div class="footer-text-content">Majorsgatan 3A,</div>
-        <div class="pt-2 footer-text-content">46330 Lilla Edet</div>
+        <div class="footer-text-content pt-2">46330 Lilla Edet</div>
       </div>
       <div id="contact-info">
         <h4 class="text-uppercase">Kontakta Oss</h4>
         <div class="footer-text-content">Telefon: 0520 65 77 244</div>
-        <div class="pt-2 footer-text-content">
+        <div class="footer-text-content pt-2">
           e-mail: <br />
           info@lillaedetandlakarcenter.se
         </div>
@@ -48,7 +48,7 @@
     <div id="footer-container-down" class="pt-4">
       <div
         id="icons-section"
-        class="container d-flex justify-content-center align-content-around flex-wrap"
+        class="container d-flex flex-wrap align-content-around justify-content-center"
       >
         <a
           href="https://www.facebook.com/profile.php?id=61564619731548&name=xhp_nt__fb__action__open_user&_rdr"

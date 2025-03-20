@@ -4,13 +4,13 @@
   <div id="about-us">
     <h2 id="title" class="text-center text-uppercase">Vilka vi är</h2>
     <section
-      class="container d-flex justify-content-around align-items-center align-content-center"
+      class="container d-flex align-content-center align-items-center justify-content-around"
       v-for="(employee, index) in employees"
       :key="employee.id"
       :class="{ 'reverse-layout': index % 2 !== 0 }"
     >
       <img src="../assets/img/nima.png" alt="Nimas bild" />
-      <div class="text-container flex-direction-column">
+      <div class="flex-direction-column text-container">
         <h2 id="name-text">{{ employee.name }} {{ employee.surname }}</h2>
         <p id="role-text">{{ employee.role }}</p>
         <p>
@@ -143,7 +143,7 @@ p {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   img {
     width: 250px;
   }

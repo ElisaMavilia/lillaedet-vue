@@ -2,6 +2,16 @@
   <SpinnerComponent v-if="loading" :loading="loading" />
   <section id="list">
     <h2 class="text-center text-uppercase">Prislista</h2>
+    <div id="prislista-intro" class="flex-direction-column p-4">
+      När vi fastställer priser i vår offert prioriterar vi alltid förebyggande
+      vård och långsiktigt hållbara resultat. Vi lägger stor vikt vid säkerhet,
+      kvalitet och tandhälsa som är hållbar över tid. Vår prislista speglar
+      detta synsätt – den är utformad för att erbjuda transparenta och rättvisa
+      priser som återspeglar den höga kvaliteten på våra behandlingar. Genom att
+      investera i förebyggande vård och långsiktiga lösningar hjälper vi dig att
+      undvika onödiga kostnader i framtiden, samtidigt som vi säkerställer en
+      trygg och hållbar tandvård och munhälsa.
+    </div>
     <div class="table-container">
       <table class="modern-table">
         <thead>
@@ -80,6 +90,15 @@ h2 {
   text-align: center;
 }
 
+#prislista-intro {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  /* padding: 0 10px 20px 10px; */
+  font-size: 1rem;
+  color: $fadedFont;
+}
+
 .table-container {
   display: flex;
   justify-content: center;
@@ -126,6 +145,10 @@ h2 {
   }
 }
 @media screen and (max-width: 450px) {
+  #prislista-intro {
+    max-width: 350px;
+    font-size: 0.9rem;
+  }
   thead,
   th,
   td {

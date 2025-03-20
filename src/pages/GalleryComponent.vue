@@ -1,8 +1,19 @@
 <template>
   <SpinnerComponent v-if="loading" :loading="loading" />
   <section id="gallery">
-    <h2 id="gallery-title" class="text-uppercase text-center">Galleri</h2>
-    <div class="container d-flex justify-content-around flex-wrap">
+    <h2 id="gallery-title" class="text-center text-uppercase">Galleri</h2>
+    <div id="gallery-intro" class="p-4">
+      Vår klinik är vackert belägen precis framför Göta Älv, i hjärtat av Lilla
+      Edet, med en stor och alltid gratis parkering. Vi har utformat vårt
+      väntrum med patientens välmående i fokus. Vi vet att väntan ibland kan
+      skapa oro och stress, och därför har vi använt färgterapi för att skapa en
+      lugnande atmosfär. Rosa är känt för sina avslappnande egenskaper och
+      bidrar till en behaglig upplevelse innan din behandling. Dessutom har vi
+      valt hållbara material som mikrocement och silkplaster för att skapa en
+      miljövänlig och estetiskt tilltalande inredning. Här kan du känna dig
+      trygg och avslappnad medan du väntar på din tandvård.
+    </div>
+    <div class="container d-flex flex-wrap justify-content-around">
       <GalleryCardComponent
         v-for="gallery in galleries"
         :key="gallery.id"
@@ -77,6 +88,20 @@ h2 {
   text-align: center;
 }
 
+#gallery-intro {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  /* padding: 0 10px 20px 10px; */
+  font-size: 1rem;
+  color: $fadedFont;
+}
+@media screen and (max-width: 450px) {
+  #gallery-intro {
+    max-width: 380px;
+    font-size: 0.9rem;
+  }
+}
 /* @media screen and (max-width: 1399px) {
   .card-container {
     width: calc((100% / 3) - 20px);

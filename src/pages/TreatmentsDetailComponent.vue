@@ -5,7 +5,7 @@
       <!-- Checking if treatment is loaded -->
       <div class="card" v-if="treatment">
         <!-- Treatment name -->
-        <h2 class="text-uppercase treatment-name pt-5">{{ treatment.name }}</h2>
+        <h2 class="text-uppercase pt-5 treatment-name">{{ treatment.name }}</h2>
 
         <!-- Treatment image -->
         <div class="treatment-image-wrapper">
@@ -22,12 +22,14 @@
         </div>
         <!-- Button -->
         <div class="frame">
-          <a
-            href="/#behandlingar"
-            class="btn btn1"
-            :class="{ 'fixed-btn': isScrolled }"
-          >
+          <a href="/#behandlingar" class="btn btn2 me-4">
             Tillbaka till Behandlingar
+          </a>
+          <a
+            href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv"
+            class="btn btn1"
+          >
+            <span class="full-text">Boka Tid Online</span>
           </a>
         </div>
       </div>
@@ -203,6 +205,11 @@ h2 {
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+/* Button Ring Oss */
+.btn2 {
+  background-color: #d3b1f5;
+  color: #f0e9f7;
 }
 
 @media screen and (max-width: 890px) {

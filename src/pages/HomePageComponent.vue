@@ -4,7 +4,7 @@
   <section>
     <HeroComponent />
   </section>
-  <section id="general-content" class="d-flex flex-wrap container">
+  <section id="general-content" class="container d-flex flex-wrap">
     <div class="image-container">
       <img
         id="statement-image"
@@ -18,7 +18,7 @@
         välmående. I en lugn och intim miljö skapar vi en avslappnad atmosfär
         där du kan känna dig trygg och omhändertagen genom hela besöket.
         <br />
-        Din komfort och säkerhet är alltid i centrum.
+        Din munhälsa och komfort är alltid i centrum.
       </p>
     </div>
   </section>
@@ -28,7 +28,7 @@
     <h2 id="treatments-title" class="text-uppercase">Våra Behandlingar</h2>
     <div
       id="treatments-container"
-      class="container d-flex justify-content-around flex-wrap"
+      class="container d-flex flex-wrap justify-content-around"
     >
       <CardComponent
         v-if="treatments.length"
@@ -42,7 +42,7 @@
   <div class="wave wave-purple"></div>
   <!-- Languages Section -->
   <section class="container text-center" id="spoken-languages">
-    <h2 id="spoken-languages-title" class="text-uppercase pt-5 text-center">
+    <h2 id="spoken-languages-title" class="text-center text-uppercase pt-5">
       Språk vi pratar
     </h2>
     <ScrollingCardComponent />
@@ -51,10 +51,10 @@
   <div class="wave wave-white"></div>
   <!-- Faq Section -->
   <section id="faq" class="d-flex flex-column">
-    <h2 id="faq-title" class="w-100 text-center text-uppercase">
+    <h2 id="faq-title" class="text-center text-uppercase w-100">
       Tandläkaren svarar
     </h2>
-    <div class="faq-content d-flex justify-content-center pt-5">
+    <div class="d-flex justify-content-center faq-content pt-5">
       <img id="faq-image" src="../assets/img/nima.png" alt="FAQ Image" />
       <FaqComponent />
     </div>
