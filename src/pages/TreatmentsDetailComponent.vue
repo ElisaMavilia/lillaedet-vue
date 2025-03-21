@@ -298,7 +298,7 @@ h2 {
 
   .btn {
     font-size: 0.7rem;
-    padding: 8px 8px;
+    padding: 8px 5px;
     text-align: center;
     width: auto;
   }

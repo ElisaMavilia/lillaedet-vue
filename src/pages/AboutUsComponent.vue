@@ -4,12 +4,15 @@
   <div id="about-us">
     <h2 id="title" class="text-center text-uppercase">Vilka vi är</h2>
     <section
-      class="container d-flex align-content-center align-items-center justify-content-around"
+      class="container d-flex align-content-center align-items-center align-content-center justify-content-around"
       v-for="(employee, index) in employees"
       :key="employee.id"
       :class="{ 'reverse-layout': index % 2 !== 0 }"
     >
-      <img src="../assets/img/nima.png" alt="Nimas bild" />
+      <img
+        :src="`${store.imgBasePath}${employee.image}`"
+        :alt="employee.name"
+      />
       <div class="flex-direction-column text-container">
         <h2 id="name-text">{{ employee.name }} {{ employee.surname }}</h2>
         <p id="role-text">{{ employee.role }}</p>
@@ -35,7 +38,13 @@ export default {
     return {
       employees: [],
       loading: false,
+      store,
     };
+  },
+  computed: {
+    imgBasePath() {
+      return store.imgBasePath;
+    },
   },
   methods: {
     GetEmployees() {
