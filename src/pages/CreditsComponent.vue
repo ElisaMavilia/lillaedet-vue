@@ -33,6 +33,16 @@
         <br />
       </div>
       <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Placeholder image person <br />
+        <strong>Author:</strong> juicy_fish <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-vector/male-female-users-silhouette-style_168221770.htm#fromView=search&page=1&position=13&uuid=fa5b89e6-24a0-4f52-85a1-0045d47a3a32&query=Person+Placeholder"
+          >Image by juicy_fish on Freepik</a
+        >
+        <br />
+      </div>
+      <div class="credit-item pb-4">
         <strong>Bildbeskrivning:</strong> Hompage, Behandlingar section icons
         <br />
         <strong>Author:</strong> Flaticon <br />

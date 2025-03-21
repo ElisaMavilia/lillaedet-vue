@@ -1,16 +1,19 @@
 <template>
   <SpinnerComponent v-if="loading" :loading="loading" />
-  <!--  {{ employees }} -->
   <div id="about-us">
     <h2 id="title" class="text-center text-uppercase">Vilka vi är</h2>
     <section
-      class="container d-flex align-content-center align-items-center align-content-center justify-content-around"
+      class="container d-flex align-content-center align-items-center justify-content-around"
       v-for="(employee, index) in employees"
       :key="employee.id"
       :class="{ 'reverse-layout': index % 2 !== 0 }"
     >
       <img
-        :src="`${store.imgBasePath}${employee.image}`"
+        :src="
+          employee.image
+            ? `${store.imgBasePath}${employee.image}`
+            : placeholderImage
+        "
         :alt="employee.name"
       />
       <div class="flex-direction-column text-container">
@@ -28,6 +31,7 @@
 import axios from "axios";
 import { store } from "../store";
 import SpinnerComponent from "@/components/SpinnerComponent.vue";
+import placeholderImage from "@/assets/img/placeholder.jpg";
 
 export default {
   name: "AboutUsComponent",
@@ -39,12 +43,8 @@ export default {
       employees: [],
       loading: false,
       store,
+      placeholderImage,
     };
-  },
-  computed: {
-    imgBasePath() {
-      return store.imgBasePath;
-    },
   },
   methods: {
     GetEmployees() {
@@ -59,7 +59,6 @@ export default {
           console.error("Error fetching employees:", error);
         })
         .finally(() => {
-          // Aggiunto `()` per `finally`
           setTimeout(() => {
             this.loading = false;
           }, 200);
@@ -80,14 +79,6 @@ export default {
   background-color: $light_pink;
 }
 
-/* section {
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  margin-top: 100px;
-  margin-bottom: 180px;
-} */
-
 img {
   margin: 0 0 50px;
   width: 400px;
@@ -96,7 +87,15 @@ img {
 
 .text-container {
   padding-left: 40px;
+  padding-top: 40px;
+  vertical-align: middle;
   color: $fadedFont;
+  border-left: 10px solid #5d1425;
+}
+
+.text-container,
+img {
+  margin-bottom: 100px;
 }
 
 #title {
@@ -122,7 +121,12 @@ p {
 }
 
 .reverse-layout {
-  flex-direction: row-reverse; /* Image on the right, Text on the left */
+  flex-direction: row-reverse;
+}
+
+.reverse-layout .text-container {
+  border-right: 10px solid #5d1425;
+  border-left: none;
 }
 
 @media screen and (max-width: 990px) {
@@ -153,6 +157,13 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
+  .text-container {
+    border-left: none;
+  }
+  .reverse-layout .text-container {
+    border-right: none;
+    border-left: none;
+  }
   img {
     width: 250px;
   }
@@ -171,6 +182,7 @@ p {
 @media screen and (max-width: 567px) {
   .text-container {
     padding-left: 80px;
+    padding-top: 0px;
   }
   img {
     width: 230px;
