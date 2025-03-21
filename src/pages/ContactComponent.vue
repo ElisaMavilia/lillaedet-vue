@@ -142,10 +142,10 @@ export default {
           this.$router.push({ name: "TackComponent" });
         } catch (error) {
           this.loading = false;
-          this.$router.push({ name: "ErrorPageComponent" });
+          this.$router.push({ name: "oh-nej" });
         }
       } else {
-        this.$router.push({ name: "ErrorPageComponent" });
+        this.$router.push({ name: "oh-nej" });
       }
     },
     validateName() {
