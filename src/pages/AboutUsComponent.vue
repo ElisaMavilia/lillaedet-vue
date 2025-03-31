@@ -31,7 +31,7 @@
 import axios from "axios";
 import { store } from "../store";
 import SpinnerComponent from "@/components/SpinnerComponent.vue";
-import placeholderImage from "@/assets/img/placeholder.jpg";
+import placeholderImage from "@/assets/img/placeholder.png";
 
 export default {
   name: "AboutUsComponent",
@@ -90,12 +90,11 @@ img {
   padding-top: 40px;
   vertical-align: middle;
   color: $fadedFont;
-  border-left: 10px solid #5d1425;
 }
 
 .text-container,
 img {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 #title {
@@ -124,9 +123,8 @@ p {
   flex-direction: row-reverse;
 }
 
-.reverse-layout .text-container {
-  border-right: 10px solid #5d1425;
-  border-left: none;
+.reverse-layout img {
+  margin-left: 50px;
 }
 
 @media screen and (max-width: 990px) {
@@ -135,7 +133,7 @@ p {
     flex-direction: column !important;
   }
   img {
-    width: 300px;
+    width: 450px;
   }
 
   .text-container {
@@ -165,7 +163,7 @@ p {
     border-left: none;
   }
   img {
-    width: 250px;
+    width: 350px;
   }
   #name-text {
     font-size: 1.3rem;
@@ -185,7 +183,7 @@ p {
     padding-top: 0px;
   }
   img {
-    width: 230px;
+    width: 300px;
   }
   #name-text {
     font-size: 1rem;
