@@ -155,7 +155,6 @@ export default {
         };
 
         try {
-          // Recupera il token CSRF dal cookie
           const csrfToken = this.getCookie("XSRF-TOKEN");
 
           const res = await axios.post(
@@ -163,10 +162,10 @@ export default {
             data,
             {
               headers: {
-                "X-CSRF-TOKEN": csrfToken, // Usa il token dal cookie
+                "X-CSRF-TOKEN": csrfToken,
                 "Content-Type": "application/json",
               },
-              withCredentials: true, // Assicura che i cookie vengano inviati con la richiesta
+              withCredentials: true,
             }
           );
 
