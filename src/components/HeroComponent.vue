@@ -440,16 +440,7 @@ p {
       height: 100vh;
     }
     .hero-content {
-      position: absolute;
       top: 55%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-weight: 400;
-      font-family: $secondaryfont;
-      color: $fadedFont;
-      text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-      z-index: 1;
     }
   }
 }

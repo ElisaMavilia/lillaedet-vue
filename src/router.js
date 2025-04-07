@@ -33,7 +33,7 @@ const router = createRouter({
       component: TreatmentsDetailComponent,
       beforeEnter: async (to, from, next) => {
         const slug = to.params.slug;
-        console.log("Slug ricevuto:", slug);
+        /* console.log("Received slug:", slug); */
 
         try {
           const response = await axios.get(

@@ -62,7 +62,7 @@ export default {
         .get(`${this.store.apiBaseUrl}/behandlingar/${this.$route.params.slug}`)
         .then((res) => {
           console.log("Treatment-detail:", res.data);
-          console.log("Detail image path:", res.data.results.detail_image);
+          /*   console.log("Detail image path:", res.data.results.detail_image); */
           this.treatment = res.data.results;
         })
         .catch((err) => {
