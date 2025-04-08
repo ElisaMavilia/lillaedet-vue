@@ -71,8 +71,7 @@
         </svg>
       </summary>
       <p class="pt-3">
-        Självklart, vi samarbetar med <strong>Resurs Bank</strong> för
-        delbetalningar.
+        Självklart, vi samarbetar med <strong>Resurs Bank</strong> och med <strong>Payzmart</strong> för räntefria delbetalningar.
       </p>
     </details>
 
@@ -159,7 +158,7 @@
       </summary>
       <p class="pt-3">
         Vi är anslutna till Västra Götalandsregionen och vi accepterar
-        <strong>Frikort</strong>
+        <strong>Frikort</strong>.
       </p>
     </details>
     <details>
@@ -213,23 +212,19 @@
         </svg>
       </summary>
       <p class="pt-3">
-        Om du lider av tandläkarskräck, finns det flera sätt att göra
-        behandlingen mer bekväm och mindre stressande för dig: 
+        Om du lider av tandläkarskräck, kom ihåg att du inte är ensam om att känna så. Vi gör alltid vårt bästa för att du ska känna dig trygg och bekväm. Tveka inte att prata med oss om dina känslor inför behandlingen – det finns flera sätt att göra besöket mer behagligt och mindre stressande för dig:
         <ul>
           <li class="pt-2"><strong>Kommunicera med oss:</strong> Berätta för oss om din tandläkarskräck. Vi kan anpassa behandlingen för att göra den så lugn som möjligt för dig. Vi lyssnar på dina behov och skapar en trygg miljö.</li>
+          <li class="pt-2"><strong>Tydlig information:</strong> Vi förklarar vad som kommer att hända under behandlingen så att du känner dig mer förberedd och inte överraskad.</li>
           <li class="pt-2"><strong>Lokalbedövning:</strong> Vi använder lokalbedövning
           för att säkerställa att du inte känner smärta under behandlingen. Du kan även få extra bedövning om du känner att du behöver det.</li>
           <li class="pt-2"><strong>Avslappningstekniker:</strong> Vi kan hjälpa dig att använd avslappningstekniker, som djupandning, för att minska stressen innan och under behandlingen.
           </li>
-          <li class="pt-2"><strong>Lugnande musik eller filmer:</strong> Vi erbjuder     möjligheten att lyssna på din favorit musik eller titta på filmer under behandlingen för att hålla tankarna fokuserade på något annat. Fråga personalen om du vill lyssna eller tippa på en film under behandlingen.
+          <li class="pt-2"><strong>Lugnande musik eller filmer:</strong> Vi erbjuder möjligheten att lyssna på din favorit musik eller titta på filmer under behandlingen för att hålla tankarna fokuserade på något annat. Fråga personalen om du vill lyssna eller tippa på en film under behandlingen.
           </li>
           <li class="pt-2"><strong>Sedering:</strong> I vissa fall kan vi erbjuda sedering (lättare lugnande medel) för att göra dig mer avslappnad under behandlingen. Detta kan diskuteras i förväg med din tandläkare.
           </li>
-          <li class="pt-2"><strong>Tydlig information:</strong> Vi förklarar vad som kommer att hända under behandlingen så att du känner dig mer förberedd och inte överraskad.</li>
         </ul> 
-        Kom ihåg att du inte är ensam om att känna så här, och vi
-        gör vårt bästa för att du ska känna dig trygg och bekväm. Tveka inte att
-        prata med oss om dina känslor inför behandlingen!
       </p>
     </details>
   </section>

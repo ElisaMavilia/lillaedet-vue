@@ -455,7 +455,7 @@ h2 {
     /* FAQ Section */
     #faq-image {
       width: 350px;
-      transform: translateY(180px); // Moves the image down
+      transform: translateY(180px);
     }
   }
   // General Statement Section
