@@ -21,7 +21,16 @@
         Du kan använda detta kontaktformulär för att ställa frågor om våra
         behandlingar, priser, bokningar eller andra funderingar du har. Vi
         svarar så snart som möjligt och hjälper dig gärna med den information du
-        behöver.
+        behöver. <br />Du är också välkommen att kontakta oss via telefon på:
+        <br /><a class="router-link-class" href="tel:0520657724"
+          >0520-65 77 24</a
+        ><br />
+        eller mejla oss på: <br />
+        <a
+          class="router-link-class"
+          href="mailto:info@lillaedettandlakarcenter.se"
+          >info@lillaedettandlakarcenter.se</a
+        >
       </p>
       <div class="card">
         <div class="row">
@@ -77,16 +86,11 @@
             </div>
             <div class="privacy-policy">
               Vi använder cookies för att säkerställa att vårt kontaktformulär
-              fungerar korrekt och för att skydda mot obehöriga förfrågningar
-              (CSRF-skydd). Dessa cookies är tekniska och krävs för att
-              webbplatsen ska fungera korrekt. <br />
-              Vilka cookies använder vi? <br />
-              XSRF-TOKEN: Denna cookie används för att skydda din data och
-              förhindra skadliga attacker genom att säkerställa att endast
-              giltiga förfrågningar skickas från din webbläsare. Dessa cookies
-              lagrar ingen personlig information och kräver inget samtycke
-              enligt gällande lagstiftning. Genom att använda vårt
+              fungerar korrekt och för att skydda mot obehöriga förfrågningar.
+              Dessa cookies lagrar ingen personlig information och kräver inget
+              samtycke enligt gällande lagstiftning. Genom att använda vårt
               kontaktformulär accepterar du att dessa cookies används.
+              <br />
             </div>
             <div class="privacy-policy">
               Genom att skicka ditt meddelande godkänner du att vi behandlar

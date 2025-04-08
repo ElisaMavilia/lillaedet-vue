@@ -56,7 +56,22 @@
           Vi vidtar lämpliga säkerhetsåtgärder för att skydda dina
           personuppgifter från obehörig åtkomst eller förlust.
         </div>
-        <li class="fw-bold">Ändringar i policyn</li>
+        <li class="fw-bold">Cookies</li>
+        <div class="pt-2 pb-4">
+          Vi använder cookies för att säkerställa att vårt kontaktformulär
+          fungerar korrekt och för att skydda mot obehöriga förfrågningar. Dessa
+          cookies lagrar ingen personlig information och kräver inget samtycke
+          enligt gällande lagstiftning. Genom att använda vårt kontaktformulär
+          accepterar du att dessa cookies används (CSRF-skydd). Dessa cookies är
+          tekniska och krävs för att webbplatsen ska fungera korrekt.
+        </div>
+        <div>
+          <strong>Vilka cookies använder vi? </strong><br />
+          XSRF-TOKEN: Denna cookie används för att skydda din data och förhindra
+          skadliga attacker genom att säkerställa att endast giltiga
+          förfrågningar skickas från din webbläsare.
+        </div>
+        <li class="fw-bold pt-4">Ändringar i policyn</li>
         <div>
           Vi kan uppdatera denna integritetspolicy vid behov. Senaste versionen
           finns alltid tillgänglig på vår webbplats. <br />Om du har frågor om
