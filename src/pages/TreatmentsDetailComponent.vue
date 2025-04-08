@@ -29,7 +29,7 @@
             href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv"
             class="btn btn1"
           >
-            <span class="full-text">Boka Tid Online</span>
+            <span class="full-text">Boka Tid</span>
           </a>
         </div>
       </div>
@@ -298,7 +298,7 @@ h2 {
 
   .btn {
     font-size: 0.7rem;
-    padding: 8px 5px;
+    padding: 10px;
     text-align: center;
     width: auto;
   }

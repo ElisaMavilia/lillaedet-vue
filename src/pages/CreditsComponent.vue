@@ -120,6 +120,78 @@
         >
         <br />
       </div>
+
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Behandlingar: Läs mer sida <br />
+        <strong>Author:</strong> gpointstudio via Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/two-dentists-doing-their-work-dentist-s-clinic_17296158.htm#fromView=search&page=1&position=3&uuid=fbf45104-ddbe-45f8-9b9a-d1a3a3bfa50e&query=dental+treatments"
+          >Image by gpointstudio on Freepik</a
+        >
+        <br />
+      </div>
+
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Behandlingar: Läs mer sida <br />
+        <strong>Author:</strong> wavebreakmedia_micro via Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/dentist-examining-female-patient-teeth_8403932.htm#fromView=search&page=2&position=33&uuid=fbf45104-ddbe-45f8-9b9a-d1a3a3bfa50e&query=dental+treatments"
+          >Image by wavebreakmedia_micro on Freepik</a
+        >
+        <br />
+      </div>
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Behandlingar: Läs mer sida <br />
+        <strong>Author:</strong> KamranAydinov via Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/dentist-assistant-with-tool-makes-some-manipulations-patient-s-mouth_7607637.htm#fromView=search&page=5&position=46&uuid=fbf45104-ddbe-45f8-9b9a-d1a3a3bfa50e&query=dental+treatments"
+          >Image by KamranAydinov on Freepik</a
+        >
+        <br />
+      </div>
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Behandlingar: Läs mer sida <br />
+        <strong>Author:</strong> prostooleh via Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/model-tooth-dentist-doctor-shows-patient-tooth-reception-dentist-s-office_10706473.htm#fromView=image_search&page=1&position=0&uuid=287b3d90-d7a6-4ffe-81ab-f2151ecf46a2&query=dental+treatments"
+          >Image by prostooleh on Freepik</a
+        >
+        <br />
+      </div>
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Behandlingar: Läs mer sida <br />
+        <strong>Author:</strong> senivpetro via Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/shaken-steel-human-dentistry-retro_1102572.htm#fromView=image_search&page=1&position=1&uuid=5d130201-c02e-4d90-b0d5-a5288677f640&query=dental+treatments"
+          >Image by senivpetro on Freepik</a
+        >
+        <br />
+      </div>
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Behandlingar: Läs mer sida <br />
+        <strong>Author:</strong> jannoon028 via Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/woman-whitening-treatment_969612.htm#fromView=image_search&page=1&position=0&uuid=c6434565-c351-49cb-b706-b50f310b20de&query=dental+treatments"
+          >Image by jannoon028 on Freepik</a
+        >
+        <br />
+      </div>
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Behandlingar: Läs mer sida <br />
+        <strong>Author:</strong> Holiak via Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/dentist-white-teeth_25948219.htm#fromView=image_search_similar&page=1&position=2&uuid=af1fa13a-0095-4923-97b3-1fdb83952a7c&query=dental+treatments"
+          >Image by Holiak on Freepik</a
+        >
+        <br />
+      </div>
       <h2>Upphovsrätt och licensvillkor</h2>
       <p>
         Alla bilder används i enlighet med deras licensvillkor. Om du är en
