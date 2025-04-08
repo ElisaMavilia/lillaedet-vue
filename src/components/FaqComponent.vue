@@ -162,7 +162,33 @@
         <strong>Frikort</strong>
       </p>
     </details>
-
+    <details>
+      <summary>
+        Vad är skillnaden mellan Folktandvården och privat tandvård?
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <p class="pt-3">
+        Folktandvården är den offentliga tandvården i Sverige och drivs av regionerna. De erbjuder tandvård till fasta priser och följer nationella riktlinjer. Privat tandvård drivs av privata kliniker och kan erbjuda mer flexibla tider, kortare väntetider och ibland olika behandlingar eller priser. Både Folktandvården och privata kliniker omfattas av samma statliga tandvårdsstöd, vilket innebär att kostnaden för patienter kan vara liknande beroende på behandling.
+      </p>
+    </details>
     <details>
       <summary>
         Jag lider av tandläkarskräck, hur kan ni hjälpa mig?

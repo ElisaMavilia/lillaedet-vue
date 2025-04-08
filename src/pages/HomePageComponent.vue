@@ -254,10 +254,10 @@ h2 {
 
 //FAQ Image
 #faq-image {
-  width: 400px;
+  width: 450px;
   height: auto;
   flex-shrink: 0;
-  transform: translateY(68px);
+  transform: translateY(120px);
 }
 
 //FAQ Component Styles
@@ -413,8 +413,8 @@ h2 {
 
   /* FAQ Section */
   #faq-image {
-    width: 350px;
-    transform: translateY(110px); // Moves the image down
+    width: 360px;
+    transform: translateY(240px); // Moves the image down
   }
 
   /* Before & After Section */
@@ -452,6 +452,11 @@ h2 {
       width: 300px;
       margin: 30px 0px 0px 0px;
     }
+    /* FAQ Section */
+    #faq-image {
+      width: 350px;
+      transform: translateY(180px); // Moves the image down
+    }
   }
   // General Statement Section
   #concept-statement {
@@ -473,10 +478,6 @@ h2 {
     margin-bottom: 0px;
   }
   /* FAQ Section */
-  #faq-image {
-    width: 340px;
-    transform: translateY(75px); // Moves the image down
-  }
 }
 
 @media screen and (max-width: 850px) {
