@@ -14,7 +14,7 @@
         framtiden, samtidigt som vi säkerställer en trygg och hållbar tandvård
         och munhälsa.
 
-        <!-- Contenitore per l'input e il label -->
+        <!-- input field -->
         <div class="input-container">
           <label for="search">Sök efter en behandling</label>
           <input
@@ -37,9 +37,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="pricelist in getFilteredName" :key="pricelist.id">
-            <td>{{ pricelist.name }}</td>
-            <td>{{ pricelist.price_formatted }} kr</td>
+          <template v-if="getFilteredName.length > 0">
+            <tr v-for="pricelist in getFilteredName" :key="pricelist.id">
+              <td>{{ pricelist.name }}</td>
+              <td>{{ pricelist.price_formatted }}</td>
+            </tr>
+          </template>
+          <tr v-else>
+            <td class="ps5" colspan="2">Tyvärr, inga resultat hittades</td>
           </tr>
         </tbody>
       </table>
@@ -130,11 +135,11 @@ h2 {
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 label {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.9rem;
   margin: 0;
 }
@@ -169,7 +174,7 @@ input {
 
 .modern-table {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   border-collapse: collapse;
   border-radius: 15px;
   overflow: hidden;
@@ -216,7 +221,7 @@ input {
     font-size: 0.9rem;
   }
   label {
-    font-size: 0.8rem;
+    font-size: 0.79rem;
   }
 }
 @media screen and (max-width: 390px) {
@@ -226,7 +231,7 @@ input {
     font-size: 0.8rem;
   }
   label {
-    font-size: 0.69rem;
+    font-size: 0.68rem;
   }
 }
 </style>
