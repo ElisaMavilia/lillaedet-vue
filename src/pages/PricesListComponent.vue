@@ -2,16 +2,32 @@
   <SpinnerComponent v-if="loading" :loading="loading" />
   <section id="list">
     <h2 class="text-center text-uppercase">Prislista</h2>
-    <div id="prislista-intro" class="flex-direction-column p-4">
-      När vi fastställer priser i vår offert prioriterar vi alltid förebyggande
-      vård och långsiktigt hållbara resultat. Vi lägger stor vikt vid säkerhet,
-      kvalitet och tandhälsa som är hållbar över tid. Vår prislista speglar
-      detta synsätt – den är utformad för att erbjuda transparenta och rättvisa
-      priser som återspeglar den höga kvaliteten på våra behandlingar. Genom att
-      investera i förebyggande vård och långsiktiga lösningar hjälper vi dig att
-      undvika onödiga kostnader i framtiden, samtidigt som vi säkerställer en
-      trygg och hållbar tandvård och munhälsa.
+    <div class="d-flex flex-direction-column p-4">
+      <div id="prislista-intro">
+        När vi fastställer priser i vår offert prioriterar vi alltid
+        förebyggande vård och långsiktigt hållbara resultat. Vi lägger stor vikt
+        vid säkerhet, kvalitet och tandhälsa som är hållbar över tid. Vår
+        prislista speglar detta synsätt – den är utformad för att erbjuda
+        transparenta och rättvisa priser som återspeglar den höga kvaliteten på
+        våra behandlingar. Genom att investera i förebyggande vård och
+        långsiktiga lösningar hjälper vi dig att undvika onödiga kostnader i
+        framtiden, samtidigt som vi säkerställer en trygg och hållbar tandvård
+        och munhälsa.
+
+        <!-- Contenitore per l'input e il label -->
+        <div class="input-container">
+          <label for="search">Sök efter en behandling</label>
+          <input
+            id="search"
+            type="text"
+            v-model="searchText"
+            placeholder="Sök"
+            :class="{ active: searchText.length > 0 }"
+          />
+        </div>
+      </div>
     </div>
+
     <div class="table-container">
       <table class="modern-table">
         <thead>
@@ -21,9 +37,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="pricelist in priceslist" :key="pricelist.id">
+          <tr v-for="pricelist in getFilteredName" :key="pricelist.id">
             <td>{{ pricelist.name }}</td>
-            <td>{{ pricelist.price }} kr</td>
+            <td>{{ pricelist.price_formatted }} kr</td>
           </tr>
         </tbody>
       </table>
@@ -45,6 +61,8 @@ export default {
     return {
       priceslist: [],
       loading: false,
+      searchText: "",
+      isActive: false,
     };
   },
   methods: {
@@ -71,6 +89,13 @@ export default {
   mounted() {
     this.GetPriceslist();
   },
+  computed: {
+    getFilteredName() {
+      return this.priceslist.filter((pricelist) =>
+        pricelist.name.toLowerCase().includes(this.searchText.toLowerCase())
+      );
+    },
+  },
 };
 </script>
 
@@ -94,9 +119,45 @@ h2 {
   margin: 0 auto;
   max-width: 900px;
   width: 100%;
-  /* padding: 0 10px 20px 10px; */
   font-size: 1rem;
   color: $fadedFont;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+input {
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+
+  &::placeholder {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+
+  &:focus {
+    border-color: $pink;
+    outline: none;
+  }
+
+  &.active {
+    border-color: $pink;
+  }
 }
 
 .table-container {
@@ -154,12 +215,18 @@ h2 {
   td {
     font-size: 0.9rem;
   }
+  label {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (max-width: 390px) {
   thead,
   th,
   td {
     font-size: 0.8rem;
+  }
+  label {
+    font-size: 0.69rem;
   }
 }
 </style>
