@@ -282,6 +282,9 @@ h2 {
   #gallery-up {
     margin: 0;
   }
+  .wave {
+    height: 95px;
+  }
 }
 /* @media screen and (max-width: 1399px) {
   .card-container {
