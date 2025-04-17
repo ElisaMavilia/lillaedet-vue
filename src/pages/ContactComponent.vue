@@ -84,7 +84,7 @@
             <div class="privacy-policy text-uppercase">
               Användning av cookies
             </div>
-            <div class="privacy-policy">
+            <div class="privacy-policy pb-3">
               Vi använder cookies för att säkerställa att vårt kontaktformulär
               fungerar korrekt och för att skydda mot obehöriga förfrågningar.
               Dessa cookies lagrar ingen personlig information och kräver inget
