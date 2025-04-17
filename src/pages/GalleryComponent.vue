@@ -18,9 +18,9 @@
           är känt för sina avslappnande egenskaper och bidrar till en behaglig
           upplevelse innan din behandling. Dessutom har vi valt
           <strong>hållbara material</strong> som mikrocement och silkplaster för
-          att skapa en miljövänlig och estetiskt tilltalande inredning. Här kan
+          att skapa en miljövänlig och estetiskt tilltalande inredning.
           <strong
-            >du känna dig trygg och avslappnad medan du väntar på din
+            >Här kan du känna dig trygg och avslappnad medan du väntar på din
             tandvård.</strong
           >
         </div>
@@ -229,6 +229,22 @@ h2 {
   background: $shocking_purple;
   margin-top: -50px;
 }
+
+@media screen and (max-width: 1050px) {
+  #gallery-intro-container {
+    flex-direction: column;
+  }
+
+  #gallery-intro {
+    width: 80%;
+    padding-left: 0;
+  }
+
+  #gallery-up img {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 990px) {
   #gallery {
     /*  background: $light_pink; */
