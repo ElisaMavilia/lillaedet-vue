@@ -250,7 +250,7 @@ h2 {
     /*  background: $light_pink; */
     width: 100%;
     height: auto;
-    padding-top: 80px;
+    padding-top: 30px;
     padding-bottom: 150px;
     background: $light_pink;
     /* margin-bottom: 150px; */
@@ -271,6 +271,9 @@ h2 {
 }
 
 @media screen and (max-width: 450px) {
+  #gallery {
+    padding-top: 80px;
+  }
   #gallery-intro {
     max-width: 380px;
     font-size: 0.9rem;
