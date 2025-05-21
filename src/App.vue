@@ -1,17 +1,19 @@
 <template>
   <div class="d-flex flex-column">
-    <!-- Header: elemento sempre visibile -->
+    <!-- Header-->
     <HeaderComponent />
 
-    <!-- Contenuto dinamico -->
     <router-view />
 
-    <!-- Footer: elemento sempre visibile -->
+    <FeedbackComponent />
+
+    <!-- Footer -->
     <FooterComponent />
   </div>
 </template>
 
 <script>
+import FeedbackComponent from "./components/FeedbackComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 import HeaderComponent from "./components/HeaderComponent.vue";
 import { store } from "./store";
@@ -22,6 +24,7 @@ export default {
 
   components: {
     HeaderComponent,
+    FeedbackComponent,
     FooterComponent,
   },
   data() {

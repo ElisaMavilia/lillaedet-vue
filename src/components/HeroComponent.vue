@@ -139,7 +139,7 @@ p {
   right: 40px !important;
   z-index: 99999 !important;
   background-color: #e8d1ff;
-  color: #ce9eff;
+  color: #7f43bb;
   border-radius: 50px;
   font-weight: bold;
   font-size: 1rem;

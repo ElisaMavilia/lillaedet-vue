@@ -76,6 +76,8 @@
       <BeforeAfterComponent />
     </div>
   </section>
+  <!-- Feedback Section -->
+  <section id="feedback"><FeedbackComponent /></section>
   <!-- Footer -->
 </template>
 
@@ -89,6 +91,7 @@ import WaveComponent from "../components/WaveComponent.vue";
 import SpinnerComponent from "../components/SpinnerComponent.vue";
 import axios from "axios";
 import { store } from "../store";
+import FeedbackComponent from "@/components/FeedbackComponent.vue";
 
 export default {
   name: "MainComponent",
@@ -100,6 +103,7 @@ export default {
     WaveComponent,
     BeforeAfterComponent,
     SpinnerComponent,
+    FeedbackComponent,
   },
   data() {
     return {
@@ -281,6 +285,12 @@ h2 {
   font-size: 2rem;
   text-align: center;
   text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Feedback Section */
+#feedback {
+  width: 100%;
+  background-color: $shocking_purple;
 }
 
 /* Waves */
