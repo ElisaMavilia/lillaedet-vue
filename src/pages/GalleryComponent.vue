@@ -223,7 +223,6 @@ h2 {
   z-index: 0;
 }
 
-/* White Wave */
 /* Purple Wave */
 .wave-purple {
   background: $shocking_purple;

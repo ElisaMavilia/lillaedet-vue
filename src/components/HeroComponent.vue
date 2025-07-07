@@ -24,8 +24,12 @@
           <a href="tel:+46520657724" class="btn btn2 btn-right">Ringa oss</a>
         </div>
       </div>
+      <!-- Overlay Reco Badge -->
+      <div class="overlay-badge">
+        <div class="badge-wrapper" id="reco-badge-2025"></div>
+      </div>
     </div>
-    <!-- Bottone fisso spostato fuori -->
+    <!-- Fixed position button -->
     <a
       href="https://www.muntra.com/lilla-edet-tandlakarcenter/c/5840?language=sv"
       class="btn btn1 fixed-btn"
@@ -53,6 +57,12 @@ export default {
   mounted() {
     // Scroll event listener
     window.addEventListener("scroll", this.handleScroll);
+    // Reco Badge
+    const script = document.createElement("script");
+    script.src = "https://widget.reco.se/badge/2025/5912418.js";
+    script.async = true;
+    script.onerror = () => console.error("Error loading Reco Badge script");
+    document.body.appendChild(script);
   },
   beforeDestroy() {
     // Removes the listener
@@ -217,6 +227,19 @@ p {
     -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Badge */
+.overlay-badge {
+  position: fixed;
+  bottom: 2vh; /* distanza dal basso in base all’altezza viewport */
+  left: 2vw; /* distanza da sinistra in base alla larghezza viewport */
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 10vw; /* limita larghezza massima per non crescere troppo */
+  max-height: 10vh; /* limita altezza massima */
 }
 
 /* MEDIA QUERIES Computer first */

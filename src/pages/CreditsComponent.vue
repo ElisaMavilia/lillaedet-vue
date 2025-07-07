@@ -192,6 +192,16 @@
         >
         <br />
       </div>
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Prislista <br />
+        <strong>Author:</strong> Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/workplace-items-marble-table-top-view_14457119.htm#fromView=search&page=1&position=3&uuid=57d1f153-56b3-4955-8111-e83fc29b56a0&query=working+desk+mint+green"
+          >Image by freepik</a
+        >
+        <br />
+      </div>
       <h2>Upphovsrätt och licensvillkor</h2>
       <p>
         Alla bilder används i enlighet med deras licensvillkor. Om du är en

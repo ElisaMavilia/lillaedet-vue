@@ -13,9 +13,20 @@
             <td class="opening-time">{{ day.time }}</td>
           </tr>
         </table>
-        <div class="extra-info">
-          <h4 class="text-uppercase pt-5">Extra Info</h4>
-          <div>
+        <div class="extra-info"></div>
+      </div>
+      <div id="address">
+        <h4 class="text-uppercase">Besökadress</h4>
+        <div class="footer-text-content">Majorsgatan 3A,</div>
+        <div class="footer-text-content pt-2">46330 Lilla Edet</div>
+      </div>
+      <div id="contact-info">
+        <h4 class="text-uppercase">Kontakta Oss</h4>
+        <div class="footer-text-content">Telefon: 0520 65 77 244</div>
+        <div class="footer-text-content pt-2">
+          e-mail: info@lillaedetandlakarcenter.se
+          <!--  <h4 class="text-uppercase pt-5">Extra Info</h4> -->
+          <div class="pt-5">
             <router-link
               class="footer-text-content router-link-class"
               to="/integritetspolicy"
@@ -29,19 +40,6 @@
               >Credits</router-link
             >
           </div>
-        </div>
-      </div>
-      <div id="address">
-        <h4 class="text-uppercase">Besökadress</h4>
-        <div class="footer-text-content">Majorsgatan 3A,</div>
-        <div class="footer-text-content pt-2">46330 Lilla Edet</div>
-      </div>
-      <div id="contact-info">
-        <h4 class="text-uppercase">Kontakta Oss</h4>
-        <div class="footer-text-content">Telefon: 0520 65 77 244</div>
-        <div class="footer-text-content pt-2">
-          e-mail: <br />
-          info@lillaedetandlakarcenter.se
         </div>
       </div>
     </div>
@@ -77,6 +75,10 @@
       </div>
     </div>
   </div>
+
+  <div id="copyright" class="text-center py-2">
+    © 2025 Lilla Edet Tandlakarcenter AB. Design & Development by Elisa Mavilia
+  </div>
 </template>
 
 <script>
@@ -90,11 +92,11 @@ export default {
   data() {
     return {
       openingHours: [
-        { day: "Måndag", time: "09:00 - 17:00" },
-        { day: "Tisdag", time: "09:00 - 17:00" },
-        { day: "Onsdag", time: "09:00 - 17:00" },
-        { day: "Torsdag", time: "09:00 - 17:00" },
-        { day: "Fredag", time: "09:00 - 17:00" },
+        { day: "Måndag", time: "09:00 - 18:00" },
+        { day: "Tisdag", time: "09:00 - 18:00" },
+        { day: "Onsdag", time: "09:00 - 18:00" },
+        { day: "Torsdag", time: "09:00 - 18:00" },
+        { day: "Fredag", time: "09:00 - 18:00" },
         { day: "Lördag", time: "Stängd" },
         { day: "Söndag", time: "Stängd" },
       ],
@@ -181,6 +183,12 @@ main {
 }
 .router-link-class {
   color: $pink;
+}
+
+#copyright {
+  background-color: $footer_primary;
+  color: #f9fafa;
+  font-size: 0.7rem;
 }
 
 @media screen and (max-width: 991.98px) {

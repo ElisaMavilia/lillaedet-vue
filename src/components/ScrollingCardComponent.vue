@@ -19,7 +19,11 @@ export default {
   data() {
     return {
       cards: [
-        { title: "Svenska", content: "Välkommen!", animationClass: "" },
+        {
+          title: "Svenska",
+          content: "Välkommen!",
+          animationClass: "",
+        },
         { title: "Engelska", content: "Welcome!", animationClass: "" },
         { title: "Persiska", content: "!خوش آمدید", animationClass: "" },
         {
