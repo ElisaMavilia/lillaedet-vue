@@ -274,6 +274,10 @@ td {
     table {
       font-size: 0.8rem;
     }
+
+    #copyright {
+      font-size: 0.5rem;
+    }
   }
   @media screen and (max-width: 387px) {
     #footer-container-up h4 {

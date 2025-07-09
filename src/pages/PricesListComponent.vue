@@ -2,13 +2,10 @@
   <SpinnerComponent v-if="loading" :loading="loading" />
   <section id="list">
     <section id="prislista-up">
-      <div id="prislista-intro-container" class="container">
-        <img
-          src="../assets/img/desk.jpg"
-          alt="Wrking desk with stationery"
-          class="pt-5"
-        />
-        <div class="prislista-intro">
+      <div id="prislista-intro-container" class="container d-flex">
+        <img src="../assets/img/desk.jpg" alt="Working desk with stationery" />
+
+        <div id="prislista-intro">
           <h2 id="prislista-title" class="text-uppercase">Prislista</h2>
           När vi fastställer priser i vår offert prioriterar vi alltid
           <strong>förebyggande vård och långsiktigt hållbara resultat.</strong>
@@ -144,18 +141,21 @@ h2 {
   font-weight: 400;
   color: black;
 }
-.prislista-intro {
+#prislista-intro {
   width: 45%;
   font-size: 1.2rem;
   color: $fadedFont;
   padding-bottom: 90px;
   padding-top: 60px;
   padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #prislista-up {
   margin: 50px 0;
-  padding-top: 70px;
+  padding-top: 10px;
   width: 100%;
   background-color: $shocking_purple;
 }
@@ -167,12 +167,18 @@ h2 {
   color: black;
 } */
 
+/* .img-wrapper {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+} */
 #prislista-up img {
   width: 50%;
+  border-radius: 20px;
   height: auto;
   object-fit: cover;
   object-position: center;
-  border-radius: 20px;
+  align-self: center;
 }
 
 #prislista-intro-container {
@@ -354,7 +360,7 @@ input {
     flex-direction: column;
   }
 
-  .prislista-intro {
+  #prislista-intro {
     width: 80%;
     padding-left: 0;
   }
@@ -391,15 +397,15 @@ input {
 
 @media screen and (max-width: 450px) {
   #list {
-    padding-top: 80px;
+    padding-top: 70px;
   }
-  .prislista-intro {
+  #prislista-intro {
     max-width: 380px;
     font-size: 0.9rem;
     padding-left: 0px;
   }
   #prislista-intro-container {
-    padding: 60px 20px;
+    padding: 0px;
   }
   #prislista-up {
     margin: 0;

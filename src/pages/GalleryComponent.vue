@@ -111,7 +111,7 @@ h2 {
 
 #gallery-up {
   margin: 50px 0;
-  padding-top: 70px;
+  padding-top: 10px;
   width: 100%;
   background-color: $shocking_purple;
 }
@@ -122,6 +122,7 @@ h2 {
   object-fit: cover;
   object-position: center;
   border-radius: 20px;
+  align-self: center;
 }
 
 #gallery-intro-container {
@@ -140,7 +141,11 @@ h2 {
   padding-bottom: 90px;
   padding-top: 60px;
   padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .wave {
   width: 100%;
   height: 90px;
@@ -226,7 +231,7 @@ h2 {
 /* Purple Wave */
 .wave-purple {
   background: $shocking_purple;
-  margin-top: -50px;
+  margin-top: -60px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -279,7 +284,7 @@ h2 {
     padding-left: 0px;
   }
   #gallery-intro-container {
-    padding: 60px 20px;
+    padding: 0px 20px;
   }
   #gallery-up {
     margin: 0;

@@ -202,6 +202,17 @@
         >
         <br />
       </div>
+      <div class="credit-item pb-4">
+        <strong>Bildbeskrivning:</strong> Kontakta oss <br />
+        <strong>Author:</strong> Freepik <br />
+        <strong>Källa: </strong>
+        <a
+          href="https://www.freepik.com/free-photo/vintage-pink-telephone-assortment_13360514.htm#fromView=search&page=3&position=14&uuid=cf28a6ad-93b2-4c77-81eb-b9e360917211&query=contact+us"
+          >Image by freepik</a
+        >
+        >
+        <br />
+      </div>
       <h2>Upphovsrätt och licensvillkor</h2>
       <p>
         Alla bilder används i enlighet med deras licensvillkor. Om du är en
