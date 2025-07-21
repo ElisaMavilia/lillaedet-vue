@@ -23,6 +23,8 @@
     <div class="wave wave-purple"></div>
 
     <section v-for="(employee, index) in employees" :key="employee.id">
+      <div v-if="index % 2 !== 0" class="wave wave-white"></div>
+
       <section class="row-outer" :class="{ 'reverse-layout': index % 2 !== 0 }">
         <div class="row-inner">
           <img
@@ -40,7 +42,6 @@
           </div>
         </div>
       </section>
-
       <div v-if="index % 2 !== 0" class="wave wave-reversed"></div>
     </section>
   </section>
@@ -98,7 +99,6 @@ export default {
 #about-us {
   width: 100%;
   padding-top: 40px;
-  padding-bottom: 150px;
 }
 
 #about-us-reversed {
@@ -162,11 +162,12 @@ h2 {
 
 .about-row.reverse-layout {
   background-color: $shocking_purple;
+  padding-top: 100px;
 }
 
 .row-outer {
   width: 100%;
-  padding: 60px 0;
+  /*   padding: 60px 0; */
 }
 
 .row-inner {
@@ -177,7 +178,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 0 20px;
+  padding: 40px 20px;
 
   img {
     width: 30%;
@@ -193,7 +194,13 @@ h2 {
 
 .reverse-layout .row-inner {
   flex-direction: row-reverse;
+  padding-top: 100px;
 }
+
+.reverse-layout .row-inner img {
+  width: 25%;
+}
+
 .wave {
   width: 100%;
   height: 90px;
@@ -284,12 +291,12 @@ h2 {
 
 .wave-white {
   background: white;
-  margin-bottom: -150px;
+  margin-bottom: -80px;
 }
 
 .wave-reversed {
   display: block;
-  margin-top: -20px;
+  margin-top: -10px;
   background: $shocking_purple;
 }
 
