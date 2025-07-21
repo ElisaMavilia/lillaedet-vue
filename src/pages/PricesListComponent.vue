@@ -43,7 +43,7 @@
         <table class="modern-table">
           <thead>
             <tr>
-              <th>Kategori</th>
+              <th>Behandling</th>
               <th>Pris</th>
             </tr>
           </thead>
@@ -276,7 +276,7 @@ h2 {
 }
 .input-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: center;
   gap: 10px;
   margin: 40px;
