@@ -143,7 +143,7 @@ h2 {
 }
 #prislista-intro {
   width: 45%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: $fadedFont;
   padding-bottom: 90px;
   padding-top: 60px;
@@ -272,7 +272,7 @@ h2 {
 }
 .wave-purple {
   background: $shocking_purple;
-  margin-top: -50px;
+  margin-top: -90px;
 }
 .input-container {
   display: flex;

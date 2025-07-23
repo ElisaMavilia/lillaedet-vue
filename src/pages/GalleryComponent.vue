@@ -136,7 +136,7 @@ h2 {
 
 #gallery-intro {
   width: 45%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: $fadedFont;
   padding-bottom: 90px;
   padding-top: 60px;
@@ -231,7 +231,7 @@ h2 {
 /* Purple Wave */
 .wave-purple {
   background: $shocking_purple;
-  margin-top: -60px;
+  margin-top: -90px;
 }
 
 @media screen and (max-width: 1050px) {

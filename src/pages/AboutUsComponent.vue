@@ -10,12 +10,26 @@
         />
         <div id="about-intro">
           <h2 id="about-title" class="text-uppercase">Vilka vi är</h2>
-          <div>
-            Tänder, skratt och teamwork &ndash; det är vad vår vardag handlar
-            om! Bakom varje leende finns vi: ett litet, men sammansvetsat team
-            som brinner för att du ska känna dig trygg, sedd och le &ndash; på
-            riktigt.
-          </div>
+
+          <strong>Tänder, skratt och teamwork</strong> &ndash; det är kärnan i
+          vår vardag! Vi är ett litet men oerhört sammansvetsat team som brinner
+          för att skapa
+          <strong>en trygg och positiv upplevelse för dig.</strong> Bakom varje
+          leende finns vår passion och engagemang. Vi vill att du ska känna dig
+          både sedd och omhändertagen –&ndash;
+          <strong>inte bara som en patient, utan som en person.</strong> Vi vet
+          att tandvård ibland kan kännas lite nervöst eller stelt, därför jobbar
+          vi hårt för att skapa
+          <strong
+            >en miljö där du kan slappna av, skratta och känna dig
+            välkommen.</strong
+          >
+          Genom att arbeta tätt tillsammans som ett team kan vi ge dig bästa
+          möjliga vård, där varje detalj räknas. För oss handlar det om mer än
+          bara tänder &ndash;<strong
+            >det handlar om att bygga relationer och ge dig trygghet,
+          </strong>
+          så att ditt leende blir äkta, både på utsidan och inifrån.
         </div>
       </div>
     </section>
@@ -42,7 +56,12 @@
           </div>
         </div>
       </section>
-      <div v-if="index % 2 !== 0" class="wave wave-reversed"></div>
+      <!--   <div v-if="index % 2 !== 0" class="wave wave-reversed"></div> -->
+      <div
+        v-if="index !== employees.length - 1"
+        :class="index % 2 !== 0 ? 'wave wave-reversed' : 'wave wave-white'"
+      ></div>
+      <div v-else class="last-section"></div>
     </section>
   </section>
 </template>
@@ -119,7 +138,7 @@ h2 {
   background-color: $shocking_purple;
 }
 
-#about-up img {
+#about-intro-container img {
   width: 50%;
   height: auto;
   object-fit: cover;
@@ -139,7 +158,7 @@ h2 {
 
 #about-intro {
   width: 45%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: $fadedFont;
   padding-bottom: 90px;
   padding-top: 60px;
@@ -187,7 +206,7 @@ h2 {
   }
 
   .text-container {
-    width: 45%;
+    width: 70%;
     color: $fadedFont;
   }
 }
@@ -286,7 +305,7 @@ h2 {
 /* Purple Wave */
 .wave-purple {
   background: $shocking_purple;
-  margin-top: -50px;
+  margin-top: -100px;
 }
 
 .wave-white {
@@ -352,6 +371,10 @@ p {
 
 .even-layout {
   width: 100%;
+}
+
+.last-section {
+  border-bottom: 1px solid white;
 }
 
 @media screen and (max-width: 1050px) {
