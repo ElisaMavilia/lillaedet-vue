@@ -9,16 +9,17 @@
         />
         <div id="gallery-intro">
           <h2 id="gallery-title" class="text-uppercase">Galleri</h2>
+          Ta en titt på våra bilder för att se hur en arbetsdag ser ut hos oss.
+          <br />
           Vår klinik är vackert belägen precis framför Göta Älv, i hjärtat av
           Lilla Edet, med en stor och
-          <strong> alltid gratis parkering </strong>. Vi har utformat vårt
+          <strong> alltid gratis parkering.</strong> Vi har utformat vårt
           väntrum med patientens välmående i fokus. Vi vet att väntan ibland kan
-          skapa oro och stress, och därför har vi använt
-          <strong>färgterapi </strong>för att skapa en lugnande atmosfär. Rosa
-          är känt för sina avslappnande egenskaper och bidrar till en behaglig
-          upplevelse innan din behandling. Dessutom har vi valt
-          <strong>hållbara material</strong> som mikrocement och silkplaster för
-          att skapa en miljövänlig och estetiskt tilltalande inredning.
+          färgterapi för att skapa en lugnande atmosfär. Rosa är känt för sina
+          avslappnande egenskaper och bidrar till en behaglig upplevelse innan
+          din behandling. Dessutom har vi valt hållbara material som mikrocement
+          och silkplaster för att skapa en miljövänlig och estetiskt tilltalande
+          inredning.
           <strong
             >Här kan du känna dig trygg och avslappnad medan du väntar på din
             tandvård.</strong

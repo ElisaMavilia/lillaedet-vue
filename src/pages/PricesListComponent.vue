@@ -7,6 +7,11 @@
 
         <div id="prislista-intro">
           <h2 id="prislista-title" class="text-uppercase">Prislista</h2>
+          <strong
+            >Vänligen notera att priserna är ungefärliga och kan variera
+            beroende på din munhälsa.</strong
+          >
+          <br />
           När vi fastställer priser i vår offert prioriterar vi alltid
           <strong>förebyggande vård och långsiktigt hållbara resultat.</strong>
           Vi lägger stor vikt vid
@@ -14,13 +19,11 @@
             >säkerhet, kvalitet och tandhälsa som är hållbar över tid.</strong
           >
           Vår prislista speglar detta synsätt – den är utformad för att erbjuda
-          transparenta och rättvisa priser som återspeglar den höga kvaliteten
-          på våra behandlingar. Genom att investera i förebyggande vård och
-          långsiktiga lösningar hjälper vi dig att undvika
-          <strong
-            >onödiga kostnader i framtiden, samtidigt som vi säkerställer en
-            trygg och hållbar tandvård och munhälsa i fokus.</strong
-          >.
+          <strong>transparenta och rättvisa priser</strong> som återspeglar den
+          höga kvaliteten på våra behandlingar. Genom att investera i
+          förebyggande vård och långsiktiga lösningar hjälper vi dig att undvika
+          <strong> onödiga kostnader i framtiden,</strong> samtidigt som vi
+          säkerställer en trygg och hållbar tandvård med munhälsa i fokus.
         </div>
       </div>
     </section>

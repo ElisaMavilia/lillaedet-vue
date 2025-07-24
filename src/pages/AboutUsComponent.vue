@@ -15,8 +15,8 @@
           vår vardag! Vi är ett litet men oerhört sammansvetsat team som brinner
           för att skapa
           <strong>en trygg och positiv upplevelse för dig.</strong> Bakom varje
-          leende finns vår passion och engagemang. Vi vill att du ska känna dig
-          både sedd och omhändertagen –&ndash;
+          leende finns vår passion och engagemang. <br />Vi vill att du ska
+          känna dig både sedd och omhändertagen &ndash;
           <strong>inte bara som en patient, utan som en person.</strong> Vi vet
           att tandvård ibland kan kännas lite nervöst eller stelt, därför jobbar
           vi hårt för att skapa

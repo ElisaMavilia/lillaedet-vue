@@ -1,11 +1,12 @@
-<
 <template>
   <section id="cards-section" class="language-card-container" ref="cardSection">
     <div
       v-for="(card, index) in cards"
       :key="index"
       :class="['card', card.animationClass]"
-      :style="card.title === 'Italienska' ? { paddingTop: '22px' } : {}"
+      :style="
+        card.title === 'Svenska och Engelska' ? { paddingTop: '25px' } : {}
+      "
       ref="cardElements"
     >
       <h3>{{ card.title }}</h3>
@@ -20,17 +21,20 @@ export default {
     return {
       cards: [
         {
-          title: "Svenska",
-          content: "Välkommen!",
+          title: "Svenska och Engelska",
           animationClass: "",
         },
-        { title: "Engelska", content: "Welcome!", animationClass: "" },
-        { title: "Persiska", content: "!خوش آمدید", animationClass: "" },
+        {
+          title: "Persiska",
+          content: "فارسی",
+          animationClass: "",
+        },
         {
           title: "Italienska",
-          content: "Benvenuti e Benvenute!",
+          content: "Italiano",
           animationClass: "",
         },
+        { title: "Arabiska", content: "العربية", animationClass: "" },
       ],
       hasSectionEntered: false, // Flag to trigger animation only once
     };
@@ -89,6 +93,7 @@ export default {
   justify-content: space-around;
   gap: 20px;
   margin: 100px 0 150px 50px;
+  width: 100%;
 }
 
 .card {
@@ -100,21 +105,25 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Start hidden */
-  transform: translateX(0); /* Start position */
+  opacity: 0; // Start hidden
+  transform: translateX(0); // Start position
   transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.card h3 {
+  font-size: 1.3rem;
+}
+
 /* Slide-in animations */
 .slide-in-left {
-  opacity: 1; /* Fully visible */
-  transform: translateX(0); /* Return to default position */
+  opacity: 1;
+  transform: translateX(0); //Return to default position
 }
 
 .slide-in-right {
-  opacity: 1; /* Fully visible */
-  transform: translateX(0); /* Return to default position */
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Initial states for cards before animation */
@@ -131,7 +140,7 @@ export default {
 /* Large (lg) ≥992px -> laptop */
 @media screen and (max-width: 1199.98px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 /* MEDIA QUERIES */
@@ -181,8 +190,9 @@ export default {
     height: 180px;
   }
 
-  h3 {
-    font-size: 1.2rem;
+  .card h3 {
+    font-size: 0.9rem;
+    padding: 10px;
   }
 
   p {

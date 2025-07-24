@@ -42,9 +42,18 @@
   <div class="wave wave-purple"></div>
   <!-- Languages Section -->
   <section class="container text-center" id="spoken-languages">
-    <h2 id="spoken-languages-title" class="text-center text-uppercase pt-5">
-      Språk vi pratar
+    <h2
+      id="spoken-languages-title"
+      class="text-center text-uppercase pt-5 pb-4"
+    >
+      Språk vi talar på kliniken
     </h2>
+    <h6 class="pt-3 text-uppercase">
+      Il tuo dentista in italiano, vicino Gothenburg
+    </h6>
+    <h6 class="pt-3">دندانپزشک ایرانی شما نزدیک گوتنبرگ</h6>
+    <h6 class="pt-3">هنا يمكنك التحدث باللغة العربية</h6>
+
     <ScrollingCardComponent />
   </section>
   <!-- White Wave -->
@@ -229,7 +238,19 @@ h2 {
 /* Spoken Languages Section */
 #spoken-languages {
   width: 100%;
-  height: 430px;
+  height: auto;
+}
+
+#spoken-languages img {
+  width: 30%;
+}
+
+#language-info-container {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
 }
 
 /* FAQ Section */
@@ -474,9 +495,7 @@ h2 {
   }
   // Spoken Languages Section
   #spoken-languages {
-    width: 100%;
     gap: 30px;
-    height: 430px;
     margin-bottom: 0px;
   }
   /* FAQ Section */
@@ -527,16 +546,9 @@ h2 {
 
   /* Spoken Languages Section */
   #spoken-languages {
-    width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  #spoken-languages {
-    width: 100%;
-    height: 540px;
   }
 
   #spoken-languages-title {
