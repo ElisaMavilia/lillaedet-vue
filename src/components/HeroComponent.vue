@@ -24,10 +24,6 @@
           <a href="tel:+46520657724" class="btn btn2 btn-right">Ringa oss</a>
         </div>
       </div>
-      <!-- Overlay Reco Badge -->
-      <div class="overlay-badge">
-        <div class="badge-wrapper" id="reco-badge-2025"></div>
-      </div>
     </div>
     <!-- Fixed position button -->
     <a
@@ -38,6 +34,8 @@
       <span class="full-text">Boka Tid Online</span>
       <span class="short-text">Boka</span>
     </a>
+    <!-- Overlay Reco Badge -->
+    <div id="reco--badge-2025"></div>
   </section>
 </template>
 
@@ -61,7 +59,6 @@ export default {
     const script = document.createElement("script");
     script.src = "https://widget.reco.se/badge/2025/5912418.js";
     script.async = true;
-    script.onerror = () => console.error("Error loading Reco Badge script");
     document.body.appendChild(script);
   },
   beforeDestroy() {
@@ -230,16 +227,15 @@ p {
 }
 
 /* Badge */
-.overlay-badge {
-  position: fixed;
-  bottom: 2vh; /* distanza dal basso in base all’altezza viewport */
-  left: 2vw; /* distanza da sinistra in base alla larghezza viewport */
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 10vw; /* limita larghezza massima per non crescere troppo */
-  max-height: 10vh; /* limita altezza massima */
+#reco--badge-2025 {
+  transform: scale(
+    0.9
+  ); // Resizes external elements. Use it in the media queries
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  z-index: 10;
+  opacity: 0.8;
 }
 
 /* MEDIA QUERIES Computer first */
@@ -374,6 +370,15 @@ p {
       .fixed-btn {
         right: 5px !important;
       }
+
+      #reco--badge-2025 {
+        transform: scale(
+          0.5
+        ); // Resizes external elements. Use it in the media queries
+        position: absolute;
+        bottom: 0px;
+        left: 5px;
+      }
     }
 
     @media (max-width: 575.98px) {
@@ -433,6 +438,11 @@ p {
     }
     .fixed-btn {
       right: 8px !important;
+    }
+
+    #reco--badge-2025 {
+      bottom: 0px;
+      left: 0px;
     }
   }
   @media screen and (max-width: 408px) {
