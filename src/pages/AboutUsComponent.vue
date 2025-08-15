@@ -305,7 +305,7 @@ h2 {
 /* Purple Wave */
 .wave-purple {
   background: $shocking_purple;
-  margin-top: -100px;
+  margin-top: -90px;
 }
 
 .wave-white {
