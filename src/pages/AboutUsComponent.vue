@@ -52,7 +52,7 @@
           <div class="text-container">
             <h2>{{ employee.name }} {{ employee.surname }}</h2>
             <p>{{ employee.role }}</p>
-            <p>{{ employee.notes }}</p>
+            <p class="notes">{{ employee.notes }}</p>
           </div>
         </div>
       </section>
@@ -377,6 +377,16 @@ p {
   border-bottom: 1px solid white;
 }
 
+@media screen and (max-width: 1190px) {
+  .text-container h2 {
+    font-size: 1.5rem;
+  }
+  .notes {
+    font-size: 1rem;
+    padding-right: 30px;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   #about-intro-container {
     flex-direction: column;
@@ -445,11 +455,11 @@ p {
   }
 
   .reverse-layout .text-container h2 {
-    padding-left: 40px;
+    padding-left: 0px;
   }
 
   .reverse-layout p {
-    padding-left: 40px;
+    padding-left: 0px;
   }
 
   .row-inner {
@@ -474,8 +484,15 @@ p {
   .text-container h2 {
     font-size: 1.3rem;
   }
+  .notes {
+    font-size: 0.9rem;
+    padding-right: 0px;
+  }
 }
 @media screen and (max-width: 768px) {
+  .row-inner {
+    flex-direction: column !important;
+  }
   .text-container {
     border-left: none;
   }
@@ -484,10 +501,15 @@ p {
     border-left: none;
   }
   .row-inner img {
-    width: 90% !important;
+    width: 45% !important;
     max-width: 500px;
     margin: 0 auto 20px;
     display: block;
+  }
+
+  .notes,
+  p {
+    padding-left: 0;
   }
 
   #name-text {
@@ -497,14 +519,23 @@ p {
   p {
     font-size: 0.9rem;
   }
+
   #name-text,
   p {
-    padding: 0 40px 0 40px;
+    padding: 0 40px 0px 0px;
+  }
+
+  .row-inner h2 {
+    padding-left: 0;
+  }
+
+  .reverse-layout img {
+    width: 40% !important;
   }
 }
 @media screen and (max-width: 567px) {
   .text-container {
-    padding-left: 80px;
+    padding-left: 0px;
     padding-top: 0px;
   }
   img {
@@ -524,7 +555,7 @@ p {
   }
   #name-text,
   p {
-    padding: 0 20px 0 15px;
+    padding: 0 20px 0 0px;
   }
 }
 
