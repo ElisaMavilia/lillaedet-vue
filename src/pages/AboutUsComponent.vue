@@ -447,19 +447,20 @@ p {
     width: 30% !important;
     max-width: 400px;
     margin: 0;
-    padding-left: 0px;
+    padding-left: 20px;
   }
 
   .reverse-layout img {
     width: 25% !important;
+    padding-right: 10px;
   }
 
   .reverse-layout .text-container h2 {
-    padding-left: 0px;
+    padding-left: 40px;
   }
 
   .reverse-layout p {
-    padding-left: 0px;
+    padding-left: 40px;
   }
 
   .row-inner {
@@ -486,7 +487,7 @@ p {
   }
   .notes {
     font-size: 0.9rem;
-    padding-right: 0px;
+    padding-right: 40px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -575,6 +576,17 @@ p {
     margin: 0;
   }
 
+  .notes {
+    padding: 0;
+  }
+
+  .reverse-layout p {
+    padding: 0;
+  }
+
+  .reverse-layout .text-container h2 {
+    padding: 0;
+  }
   .wave {
     height: 95px;
   }
