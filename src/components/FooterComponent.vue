@@ -19,6 +19,11 @@
         <h4 class="text-uppercase">Besökadress</h4>
         <div class="footer-text-content">Majorsgatan 3A,</div>
         <div class="footer-text-content pt-2">46330 Lilla Edet</div>
+        <img
+          id="pt-logo"
+          src="../assets/img/privattandlakarna-logo.jpg"
+          alt="Logo som visar medlemskap i privattandlakarna"
+        />
       </div>
       <div id="contact-info">
         <h4 class="text-uppercase">Kontakta Oss</h4>
@@ -170,6 +175,10 @@ main {
     justify-content: center;
     align-items: center;
   }
+}
+
+#pt-logo {
+  padding-top: 50px;
 }
 
 #footer-container-down {
