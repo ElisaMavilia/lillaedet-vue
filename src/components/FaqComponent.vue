@@ -42,8 +42,7 @@
       </summary>
       <p class="pt-3">
         Kostnaden för en behandling kan variera beroende på din specifika
-        situation. För att få en uppfattning om våra priser kan du besöka vår
-        prislista eller boka en tid för en kostnadsförslag.
+        situation. För att få en uppfattning om våra priser kan du ringa oss eller boka en tid för en kostnadsförslag.
       </p>
     </details>
 
@@ -185,7 +184,7 @@
         </svg>
       </summary>
       <p class="pt-3">
-        Folktandvården är den offentliga tandvården i Sverige och drivs av regionerna. De erbjuder tandvård till fasta priser och följer nationella riktlinjer. Privat tandvård drivs av privata kliniker och kan erbjuda mer flexibla tider, kortare väntetider och ibland olika behandlingar eller priser. Både Folktandvården och privata kliniker omfattas av samma statliga tandvårdsstöd, vilket innebär att kostnaden för patienter kan vara liknande beroende på behandling.
+        Folktandvården är den offentliga tandvården i Sverige och drivs av regionerna. Privat tandvård drivs av privata kliniker och kan erbjuda mer flexibla tider, kortare väntetider och ibland olika behandlinga. Både Folktandvården och privata kliniker omfattas av samma statliga tandvårdsstöd, vilket innebär att kostnaden för patienter kan vara liknande beroende på behandling.
       </p>
     </details>
     <details>
