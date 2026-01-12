@@ -97,11 +97,11 @@ export default {
   data() {
     return {
       openingHours: [
-        { day: "Måndag", time: "09:00 - 18:00" },
-        { day: "Tisdag", time: "09:00 - 18:00" },
-        { day: "Onsdag", time: "09:00 - 18:00" },
-        { day: "Torsdag", time: "09:00 - 18:00" },
-        { day: "Fredag", time: "09:00 - 18:00" },
+        { day: "Måndag", time: "09:00 - 17:00" },
+        { day: "Tisdag", time: "09:00 - 17:00" },
+        { day: "Onsdag", time: "09:00 - 17:00" },
+        { day: "Torsdag", time: "09:00 - 17:00" },
+        { day: "Fredag", time: "09:00 - 17:00" },
         { day: "Lördag", time: "Stängd" },
         { day: "Söndag", time: "Stängd" },
       ],

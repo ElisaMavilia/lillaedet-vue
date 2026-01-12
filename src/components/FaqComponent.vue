@@ -226,6 +226,33 @@
         </ul> 
       </p>
     </details>
+
+    <details>
+      <summary>
+        Vad är tiotandvård och vem omfattas?
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <p class="pt-3">
+        Tiotandvård är det nya statliga tandvårdsstödet som gäller från och med 1 januari 2026. Det innebär att du som är 67 år eller äldre endast betalar 10 % av referenspriset för många viktiga tandbehandlingar, medan staten via Försäkringskassan betalar resterande 90 %.      </p>
+    </details>
   </section>
 </template>
 

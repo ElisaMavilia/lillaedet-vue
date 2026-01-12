@@ -56,7 +56,6 @@ export default {
       menuItems: [
         { label: "Home", routeName: "home" },
         { label: "Träffa vårt team", routeName: "about-us" },
-        { label: "Prislista", routeName: "prislista" },
         { label: "Galleri", routeName: "galleri" },
         { label: "Kontakta oss", routeName: "kontakta-oss" },
       ],
